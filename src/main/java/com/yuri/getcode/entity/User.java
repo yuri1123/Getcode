@@ -16,13 +16,13 @@ public class User {
     private String nickname;
     private String email;
     private String phonenumber;
-    private String postcode;
+    private String postNumber;
     private String address1;
     private String address2;
     private String birthday;
     private String sex;
     private Role role;
-
+    private String regTime;
     }
 
 

@@ -18,7 +18,7 @@ public class UserDto {
     private String nickname;
     private String email;
     private String phonenumber;
-    private String postcode;
+    private String postNumber;
     private String address1;
     private String address2;
     private String birthday;

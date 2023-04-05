@@ -7,9 +7,25 @@
 	
 <!--    계정추가-->
         <insert id="signup" parameterType="com.yuri.getcode.dto.UserDto">
-          insert into user ()
+          insert into user (userid,)
                 values (#{},#{})
         </insert>
+
+
+        id bigint PK
+        userid varchar(45)
+        password varchar(45)
+        username varchar(45)
+        nickname varchar(45)
+        email varchar(45)
+        phonenumber varchar(45)
+        postnumber varchar(45)
+        address1 varchar(250)
+        address2 varchar(250)
+        birthday varchar(45)
+        sex varchar(45)
+        role varchar(45)
+        regTime
 
 
 </mapper>

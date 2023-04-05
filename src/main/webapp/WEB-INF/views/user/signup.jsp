@@ -81,8 +81,8 @@
                   <input type="text" id="phonenumber" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5">
-                  <label class="text-right form-label" for="postcode">postcode</label>
-                  <input type="text" id="postcode" class="form-control form-control-lg" />
+                  <label class="text-right form-label" for="postNumber">postcode</label>
+                  <input type="text" id="postNumber" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline form-white mb-4 col-md-10">
