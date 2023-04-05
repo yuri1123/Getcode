@@ -33,37 +33,89 @@
 <body>
     <%@ include file="../include/header.jsp"%>
 
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-10 col-sm-8">
-        <div class="card bg-dark text-white" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
+<section class="gradient-custom">
+  <div style="height: 80px;"></div>
+  <div class="container">
+    <div class="row d-flex justify-content-center align-items-center ">
+      <div class="col-md-10">
+        <div class="card bg-dark text-white " style="border-radius: 1rem;">
+          <div class="card-body ps-5 pe-5 text-center vh-70">
 
-            <div class="mb-md-5 mt-md-4 pb-5">
+            <div class="mb-md-5 mt-md-4 pb-5 ">
 
               <h2 class="fw-bold mb-2 text-uppercase">SIGN UP</h2>
               <p class="text-white-50 mb-5">Please Write your Information!</p>
 
-              <div class="form-outline form-white mb-4">
-                <label class="form-label" for="typeEmailX">ID</label>
-                <input type="email" id="typeEmailX" class="form-control form-control-lg" />
+              <div class="row ">
+
+              <div class="form-outline form-white mb-4 col-md-10 mr-1">
+                <label class="text-right form-label" for="userid">ID</label>
+                <input type="text" id="userid" class="form-control form-control-lg" />
+              </div>
+              <div class="form-outline form-white mb-4 col-md-5 mr-1">
+                <label class="text-right form-label" for="password">PASSWORD</label>
+                <input type="password" id="password" class="form-control form-control-lg" />
+              </div>
+                <div class="form-outline form-white mb-4 col-md-5 mr-1">
+                  <label class="text-right form-label" for="passwordcheck">PASSWORD 확인</label>
+                  <input type="password" id="passwordcheck" class="form-control form-control-lg" />
+                </div>
+
+              <div class="form-outline form-white mb-4 col-md-5 mr-1">
+                <label class="text-right form-label" for="username">NAME</label>
+                <input type="text" id="username" class="form-control form-control-lg" />
               </div>
 
-              <div class="form-outline form-white mb-4">
-                <label class="form-label" for="typePasswordX">PASSWORD</label>
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                <div class="form-outline form-white mb-4 col-md-5">
+                  <label class="text-right form-label" for="nickname">NICKNAME</label>
+                  <input type="text" id="nickname" class="form-control form-control-lg" />
+                </div>
+
+                <div class="form-outline form-white mb-4 col-md-5 mr-1">
+                  <label class="text-right form-label" for="email">EMAIL</label>
+                  <input type="email" id="email" class="form-control form-control-lg" />
+                </div>
+
+                <div class="form-outline form-white mb-4 col-md-5">
+                  <label class="text-right form-label" for="phonenumber">PHONE</label>
+                  <input type="text" id="phonenumber" class="form-control form-control-lg" />
+                </div>
+                <div class="form-outline form-white mb-4 col-md-5">
+                  <label class="text-right form-label" for="postcode">postcode</label>
+                  <input type="text" id="postcode" class="form-control form-control-lg" />
+                </div>
+
+                <div class="form-outline form-white mb-4 col-md-10">
+                  <label class="text-right form-label" for="address1">ADDRESS1</label>
+                  <input type="text" id="address1" class="form-control form-control-lg" />
+                </div>
+
+                <div class="form-outline form-white mb-4 col-md-10">
+                  <label class="text-right form-label" for="address2">ADDRESS2</label>
+                  <input type="text" id="address2" class="form-control form-control-lg" />
+                </div>
+                <div class="form-outline form-white mb-4 col-md-5 mr-1">
+                  <label class="text-right form-label" for="birthday">BIRTH</label>
+                  <input type="date" id="birthday" class="form-control form-control-lg" />
+                </div>
+                <div class="form-outline form-white mb-4 col-md-5">
+                  <label class="text-right form-label" for="sex">SEX</label>
+                  <input type="radio" id="sex" class="form-control form-control-lg" />
+                </div>
               </div>
 
               <button class="btn btn-outline-light btn-lg px-5" type="submit">SIGN UP</button>
+
+              </div>
 
             </div>
 
           </div>
         </div>
       </div>
+    <div style="height: 80px;"></div>
     </div>
-  </div>
+
 </section>
 
 

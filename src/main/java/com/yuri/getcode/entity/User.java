@@ -1,4 +1,4 @@
-package com.yuri.getcode.domain;
+package com.yuri.getcode.entity;
 
 import com.yuri.getcode.constant.Role;
 import lombok.Getter;
@@ -16,7 +16,7 @@ public class User {
     private String nickname;
     private String email;
     private String phonenumber;
-    private String postnumber;
+    private String postcode;
     private String address1;
     private String address2;
     private String birthday;
