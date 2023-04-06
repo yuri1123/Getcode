@@ -46,66 +46,67 @@
               <h2 class="fw-bold mb-2 text-uppercase">SIGN UP</h2>
               <p class="text-white-50 mb-5">Please Write your Information!</p>
 
+                <form action="/user/signup" role="form" method="post">
               <div class="row ">
 
               <div class="form-outline form-white mb-4 col-md-10 mr-1">
                 <label class="text-right form-label" for="userid">ID</label>
-                <input type="text" id="userid" class="form-control form-control-lg" />
+                <input type="text" id="userid" name="userid" class="form-control form-control-lg" />
               </div>
               <div class="form-outline form-white mb-4 col-md-5 mr-1">
                 <label class="text-right form-label" for="password">PASSWORD</label>
-                <input type="password" id="password" class="form-control form-control-lg" />
+                <input type="password" id="password" name="password" class="form-control form-control-lg" />
               </div>
                 <div class="form-outline form-white mb-4 col-md-5 mr-1">
                   <label class="text-right form-label" for="passwordcheck">PASSWORD 확인</label>
-                  <input type="password" id="passwordcheck" class="form-control form-control-lg" />
+                  <input type="password" id="passwordcheck"  class="form-control form-control-lg" />
                 </div>
 
               <div class="form-outline form-white mb-4 col-md-5 mr-1">
                 <label class="text-right form-label" for="username">NAME</label>
-                <input type="text" id="username" class="form-control form-control-lg" />
+                <input type="text" id="username" name="username" class="form-control form-control-lg" />
               </div>
 
                 <div class="form-outline form-white mb-4 col-md-5">
                   <label class="text-right form-label" for="nickname">NICKNAME</label>
-                  <input type="text" id="nickname" class="form-control form-control-lg" />
+                  <input type="text" id="nickname" name="nickname" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline form-white mb-4 col-md-5 mr-1">
                   <label class="text-right form-label" for="email">EMAIL</label>
-                  <input type="email" id="email" class="form-control form-control-lg" />
+                  <input type="email" id="email" name="email" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline form-white mb-4 col-md-5">
                   <label class="text-right form-label" for="phonenumber">PHONE</label>
-                  <input type="text" id="phonenumber" class="form-control form-control-lg" />
+                  <input type="text" id="phonenumber" name="phonenumber" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5">
-                  <label class="text-right form-label" for="postNumber">postcode</label>
-                  <input type="text" id="postNumber" class="form-control form-control-lg" />
+                  <label class="text-right form-label" for="postcode">postcode</label>
+                  <input type="text" id="postcode" name="postcode" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline form-white mb-4 col-md-10">
                   <label class="text-right form-label" for="address1">ADDRESS1</label>
-                  <input type="text" id="address1" class="form-control form-control-lg" />
+                  <input type="text" id="address1" name="address1" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline form-white mb-4 col-md-10">
                   <label class="text-right form-label" for="address2">ADDRESS2</label>
-                  <input type="text" id="address2" class="form-control form-control-lg" />
+                  <input type="text" id="address2" name="address2" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5 mr-1">
                   <label class="text-right form-label" for="birthday">BIRTH</label>
-                  <input type="date" id="birthday" class="form-control form-control-lg" />
+                  <input type="date" id="birthday" name="birthday" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5">
                   <label class="text-right form-label" for="sex">SEX</label>
-                  <input type="radio" id="sex" class="form-control form-control-lg" />
+                  <input type="text" id="sex" name="sex" class="form-control form-control-lg" />
                 </div>
               </div>
 
               <button class="btn btn-outline-light btn-lg px-5" type="submit">SIGN UP</button>
-
+              </form>
               </div>
 
             </div>
@@ -121,13 +122,13 @@
 
 <%@include file="../include/footer.jsp"%>
 
-    <script src="resources/vendor/jquery/jquery.min.js"></script>
-    <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="resources/assets/js/isotope.min.js"></script>
-    <script src="resources/assets/js/owl-carousel.js"></script>
-    <script src="resources/assets/js/tabs.js"></script>
-    <script src="resources/assets/js/popup.js"></script>
-    <script src="resources/assets/js/custom.js"></script>
+    <script src="/resources/vendor/jquery/jquery.min.js"></script>
+    <script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/resources/assets/js/isotope.min.js"></script>
+    <script src="/resources/assets/js/owl-carousel.js"></script>
+    <script src="/resources/assets/js/tabs.js"></script>
+    <script src="/resources/assets/js/popup.js"></script>
+    <script src="/resources/assets/js/custom.js"></script>
 
 
 </body>

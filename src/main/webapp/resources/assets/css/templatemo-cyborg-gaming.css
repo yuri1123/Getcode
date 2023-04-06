@@ -87,7 +87,7 @@ html, body {
 }
 
 a {
-	color: #CCC;
+	color: #ffffff;
   text-decoration: none !important;
 }
 a:hover {
@@ -199,13 +199,13 @@ p {
 }
 
 .border-no-active a {
-  border-color: #666;
-  color: #666;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 .border-no-active a:hover{
-  border-color: #666;
-  color: #666;
+  border-color: #ffffff;
+  color: #ffffff;
   background-color: transparent;
 }
 

@@ -7,25 +7,14 @@
 	
 <!--    계정추가-->
         <insert id="signup" parameterType="com.yuri.getcode.dto.UserDto">
-          insert into user (userid,)
-                values (#{},#{})
+          insert into user (userid, password, username, nickname, email, phonenumber,
+            postcode, address1, address2, birthday, sex, role, regDate)
+                values (#{userid},#{password}, #{username}, #{nickname},#{email},#{phonenumber},
+            #{postcode},#{address1},#{address2},#{birthday},#{sex},'USER',now())
         </insert>
 
-
-        id bigint PK
-        userid varchar(45)
-        password varchar(45)
-        username varchar(45)
-        nickname varchar(45)
-        email varchar(45)
-        phonenumber varchar(45)
-        postnumber varchar(45)
-        address1 varchar(250)
-        address2 varchar(250)
-        birthday varchar(45)
-        sex varchar(45)
-        role varchar(45)
-        regTime
-
-
+<!--    계정 로그인-->
+        <select id="login" parameterType="com.yuri.getcode.dto.UserDto" resultType="com.yuri.getcode.dto.UserDto">
+        select * from user where userid=#{userid} and password=#{password}
+        </select>
 </mapper>
