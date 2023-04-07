@@ -45,8 +45,8 @@
                 </div>
                 <!-- ***** Banner End ***** -->
 
-                <div class="container">
-                    <div class="row">
+<%--                <div class="container">--%>
+<%--                    <div class="row">--%>
                         <div class="col-lg-12">
                             <div class="page-content">
 
