@@ -7,11 +7,11 @@
 <title>유리의 GETCODE 사이트</title>
 
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" type="text/css" href="./resources/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/resources/vendor/bootstrap/css/bootstrap.min.css">
 
 <%--    <!-- Additional CSS Files -->--%>
-<link type="text/css" type="text/css" rel="stylesheet" href="./resources/assets/css/fontawesome.css">
-<link type="text/css" type="text/css" rel="stylesheet" href="./resources/assets/css/templatemo-cyborg-gaming.css">
-<link type="text/css" type="text/css" rel="stylesheet" href="./resources/assets/css/owl.css">
-<link type="text/css" type="text/css" rel="stylesheet" href="./resources/assets/css/animate.css">
-<link type="text/css" type="text/css" rel="stylesheet"href="./https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<link type="text/css" rel="stylesheet" href="/resources/assets/css/fontawesome.css">
+<link type="text/css" rel="stylesheet" href="/resources/assets/css/templatemo-cyborg-gaming.css">
+<link type="text/css" rel="stylesheet" href="/resources/assets/css/owl.css">
+<link type="text/css" rel="stylesheet" href="/resources/assets/css/animate.css">
+<link type="text/css" rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>

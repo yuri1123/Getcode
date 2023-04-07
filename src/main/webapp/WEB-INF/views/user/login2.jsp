@@ -33,13 +33,13 @@
 <body>
 <%@ include file="../include/header.jsp"%>
 
-<section class="gradient-custom">
-  <div style="height: 80px;"></div>
-  <div class="container">
-    <div class="row d-flex justify-content-center align-items-center ">
-      <div class="col-md-5">
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card bg-dark text-white" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
+
             <div class="mb-md-5 mt-md-4 pb-5">
 
               <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
@@ -76,8 +76,6 @@
 
           </div>
         </div>
-
-        </div>
       </div>
     </div>
     <div style="height: 80px;"></div>
@@ -85,16 +83,15 @@
 
 </section>
 
-
 <%@include file="../include/footer.jsp"%>
 
-<script src="resources/vendor/jquery/jquery.min.js"></script>
-<script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="resources/assets/js/isotope.min.js"></script>
-<script src="resources/assets/js/owl-carousel.js"></script>
-<script src="resources/assets/js/tabs.js"></script>
-<script src="resources/assets/js/popup.js"></script>
-<script src="resources/assets/js/custom.js"></script>
+<script src="/resources/vendor/jquery/jquery.min.js"></script>
+<script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="/resources/assets/js/isotope.min.js"></script>
+<script src="/resources/assets/js/owl-carousel.js"></script>
+<script src="/resources/assets/js/tabs.js"></script>
+<script src="/resources/assets/js/popup.js"></script>
+<script src="/resources/assets/js/custom.js"></script>
 
 
 </body>

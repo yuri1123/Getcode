@@ -122,13 +122,13 @@
 
 <%@include file="../include/footer.jsp"%>
 
-    <script src="/resources/vendor/jquery/jquery.min.js"></script>
-    <script src="/resources/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/resources/assets/js/isotope.min.js"></script>
-    <script src="/resources/assets/js/owl-carousel.js"></script>
-    <script src="/resources/assets/js/tabs.js"></script>
-    <script src="/resources/assets/js/popup.js"></script>
-    <script src="/resources/assets/js/custom.js"></script>
+    <script src="resources/vendor/jquery/jquery.min.js"></script>
+    <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="resources/assets/js/isotope.min.js"></script>
+    <script src="resources/assets/js/owl-carousel.js"></script>
+    <script src="resources/assets/js/tabs.js"></script>
+    <script src="resources/assets/js/popup.js"></script>
+    <script src="resources/assets/js/custom.js"></script>
 
 
 </body>

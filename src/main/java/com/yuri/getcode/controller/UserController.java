@@ -1,5 +1,6 @@
 package com.yuri.getcode.controller;
 
+import com.yuri.getcode.constant.Role;
 import com.yuri.getcode.dto.UserDto;
 import com.yuri.getcode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,9 @@ public class UserController {
     String login(UserDto userDto, HttpSession session,
                  HttpServletRequest request, Model model) throws UnsupportedEncodingException {
         request.setCharacterEncoding("UTF-8");
-            userService.login(userDto);
-        if(userDto != null){
-            session.setAttribute("User", userDto);
+            UserDto userDto1 = userService.login(userDto);
+        if(userDto1 != null){
+            session.setAttribute("User", userDto1);
             model.addAttribute("msg", "로그인되었습니다.");
         } else {
             System.out.println("로그인 중에 오류가 발생하였습니다.");
