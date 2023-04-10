@@ -21,7 +21,7 @@ public class User {
     private String address2;
     private String birthday;
     private String sex;
-    private Role role;
+    private String role;
     private String regDate;
     }
 

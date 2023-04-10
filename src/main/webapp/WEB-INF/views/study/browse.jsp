@@ -9,8 +9,8 @@
 <%@ include file="../include/header.jsp"%>
 
 <section class="gradient-custom">
-<%--    <div style="height: 80px;"></div>--%>
     <div class="container">
+    <div style="height: 80px;"></div>
         <div class="row d-flex justify-content-center align-items-center ">
             <div class="col-md-12">
 
@@ -18,10 +18,12 @@
 
                     <!-- ***** Most Popular Start ***** -->
                     <div class="most-popular">
-                        <div class="row">
-                            <div class="col-lg-12">
+                        <div class="row d-flex justify-content-end">
+                            <div class="col-lg-12 ">
                                 <div class="heading-section">
-                                    <h4><em>최고 인기!</em> 지금 바로!</h4>
+                                    <h4><em>Browse</em> your Study!</h4>
+                                    <a class="btn btn-warning" href="/study/create">스터디 만들기</a>
+                                    <a class="btn btn-warning" href="browse.html">스터디 검색</a>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-3 col-sm-6">
@@ -110,19 +112,13 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <div class="main-button">
-                                            <a href="browse.html">Discover Popular</a>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- ***** Most Popular End ***** -->
                 </div>
-
-
             </div>
         </div>
         <div style="height: 80px;"></div>

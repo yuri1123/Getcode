@@ -43,8 +43,8 @@
 
             <div class="mb-md-5 mt-md-4 pb-5 ">
 
-              <h2 class="fw-bold mb-2 text-uppercase">SIGN UP</h2>
-              <p class="text-white-50 mb-5">Please Write your Information!</p>
+              <h2 class="fw-bold mb-2 text-uppercase">Create Study!</h2>
+              <p class="text-white-50 mb-5">이제 모두와 함께 스터디를 시작해보세요!</p>
 
                 <form action="/user/signup" role="form" method="post">
               <div class="row">
