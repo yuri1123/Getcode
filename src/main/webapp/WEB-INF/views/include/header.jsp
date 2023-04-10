@@ -52,7 +52,7 @@
 </header>
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/">
             <img src="/resources/yuri/getcode2.png" class="logo img-fluid" alt="GetCodeLogo">
             <span>
                     Get Code!
@@ -75,14 +75,14 @@
                     </c:if>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_2">Home</a>
+                    <a class="nav-link click-scroll" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link click-scroll" href="#section_2">My Study</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_3">Search</a>
+                    <a class="nav-link click-scroll" href="study/browse">Search</a>
                 </li>
 
                 <li class="nav-item">
