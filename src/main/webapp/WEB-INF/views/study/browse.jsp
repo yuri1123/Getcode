@@ -13,13 +13,12 @@
         <div class="row justify-content-center align-items-center">
 
             <div class="col-lg-5 col-12 ms-auto">
-                <h2 class="mb-0">Make an impact. <br> Save lives.</h2>
+                <h2 class="mb-0">Make <br> your Study</h2>
             </div>
 
             <div class="col-lg-5 col-12">
-                <a href="#" class="me-4">Make a donation</a>
-
-                <a href="#section_4" class="custom-btn btn smoothscroll">Become a volunteer</a>
+                <a href="#section_4" class="custom-btn btn smoothscroll">button2</a>
+                <a href="/study/create" class="custom-btn btn smoothscroll">make study</a>
             </div>
 
         </div>
@@ -32,7 +31,7 @@
         <div class="row">
 
             <div class="col-lg-12 col-12 text-center mb-4">
-                <h2>Our Causes</h2>
+                <h2>Get Study</h2>
             </div>
 
             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
@@ -42,7 +41,7 @@
 
                     <div class="custom-block">
                         <div class="custom-block-body">
-                            <h5 class="mb-3">Children Education</h5>
+                            <h5 class="mb-3">율스 자바 스터디</h5>
 
                             <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito</p>
 
@@ -64,7 +63,7 @@
                             </div>
                         </div>
 
-                        <a href="kind/donate.html" class="custom-btn btn">Donate now</a>
+                        <a href="kind/donate.html" class="custom-btn btn">Join</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +75,7 @@
 
                     <div class="custom-block">
                         <div class="custom-block-body">
-                            <h5 class="mb-3">Poverty Development</h5>
+                            <h5 class="mb-3">자바스크립트 온라인 스터디</h5>
 
                             <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
                                 tempor</p>
@@ -99,7 +98,7 @@
                             </div>
                         </div>
 
-                        <a href="kind/donate.html" class="custom-btn btn">Donate now</a>
+                        <a href="kind/donate.html" class="custom-btn btn">Join</a>
                     </div>
                 </div>
             </div>
@@ -111,7 +110,7 @@
 
                     <div class="custom-block">
                         <div class="custom-block-body">
-                            <h5 class="mb-3">Supply drinking water</h5>
+                            <h5 class="mb-3">무무짱의 신나는 스프링 프로젝트 </h5>
 
                             <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                             </p>
@@ -134,7 +133,7 @@
                             </div>
                         </div>
 
-                        <a href="kind/donate.html" class="custom-btn btn">Donate now</a>
+                        <a href="kind/donate.html" class="custom-btn btn">Join</a>
                     </div>
                 </div>
             </div>
@@ -265,7 +264,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/header.jsp"%>>
+<%@include file="../include/js.jsp"%>>
 
 
 </body>
