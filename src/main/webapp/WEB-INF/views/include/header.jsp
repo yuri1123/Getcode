@@ -79,7 +79,7 @@
                     <a class="nav-link click-scroll" href="${contextPath}/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_2">My Study</a>
+                    <a class="nav-link click-scroll" href="${contextPath}/study/mystudy">My Study</a>
                 </li>
 
                 <li class="nav-item">
@@ -87,7 +87,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="#section_4">My Page</a>
+                    <a class="nav-link click-scroll" href="">My Page</a>
                 </li>
 
                 <li class="nav-item dropdown">
