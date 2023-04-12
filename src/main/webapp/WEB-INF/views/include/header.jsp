@@ -1,6 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page session="true" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }" />
 
 <header class="site-header">
     <div class="container">
@@ -52,7 +53,7 @@
 </header>
 <nav class="navbar navbar-expand-lg bg-light shadow-lg">
     <div class="container">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="${contextPath}/">
             <img src="/resources/yuri/getcode2.png" class="logo img-fluid" alt="GetCodeLogo">
             <span>
                     Get Code!
@@ -71,18 +72,18 @@
                     <!-- 회원이 ADMIN인 경우-->
                     <c:if test="${not empty sessionScope.User and sessionScope.User.role == 'ADMIN'}">
                         <li><a class="nav-link click-scroll"
-                               href="/admin" style="color:white;">Admin</a></li>
+                               href="${contextPath}/admin" style="color:white;">Admin</a></li>
                     </c:if>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="/">Home</a>
+                    <a class="nav-link click-scroll" href="${contextPath}/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link click-scroll" href="#section_2">My Study</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link click-scroll" href="study/browse">Search</a>
+                    <a class="nav-link click-scroll" href="${contextPath}/study/browse">Search</a>
                 </li>
 
                 <li class="nav-item">
@@ -103,11 +104,11 @@
                 <li class="nav-item ms-3">
                     <!-- 로그인 X session에 값이 없을때 -->
                     <c:if test="${User.userid == null}">
-                        <a  class="nav-link custom-btn custom-border-btn btn" href="/user/login" >LOGIN</a>
+                        <a  class="nav-link custom-btn custom-border-btn btn" href="${contextPath}/user/login" >LOGIN</a>
                     </c:if>
 
                     <c:if test="${User.userid != null}">
-                        <a class="nav-link custom-btn custom-border-btn btn" href="/user/logout">LOGOUT</a>
+                        <a class="nav-link custom-btn custom-border-btn btn" href="${contextPath}/user/logout">LOGOUT</a>
                     </c:if>
 <%--                    <a class="nav-link custom-btn custom-border-btn btn" href="kind/donate.html">Donate</a>--%>
                 </li>

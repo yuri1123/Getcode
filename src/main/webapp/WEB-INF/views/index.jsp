@@ -1,12 +1,13 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page session = "true" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }" />
 
 <head>
   <%@ include file="include/head.jsp"%>
 </head>
 
-<body id="section_1">
+<body>
 <%@ include file="include/header.jsp"%>
 
 <main>
@@ -123,7 +124,7 @@
     </div>
   </section>
 
-  <section class="section-padding section-bg" id="section_2">
+  <section class="section-padding section-bg" >
     <div class="container">
       <div class="row">
 
@@ -237,7 +238,7 @@
 
 
 
-  <section class="volunteer-section section-padding" id="section_4">
+  <section class="volunteer-section section-padding" >
     <div class="container">
       <div class="row">
 
@@ -298,7 +299,7 @@
     </div>
   </section>
 
-  <section class="news-section section-padding" id="section_5">
+  <section class="news-section section-padding" >
     <div class="container">
       <div class="row">
 
@@ -636,7 +637,7 @@
   </section>
 
 
-  <section class="contact-section section-padding" id="section_6">
+  <section class="contact-section section-padding" >
     <div class="container">
       <div class="row">
 

@@ -1,6 +1,5 @@
 package com.yuri.getcode.controller;
 
-import com.yuri.getcode.constant.Role;
 import com.yuri.getcode.dto.UserDto;
 import com.yuri.getcode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

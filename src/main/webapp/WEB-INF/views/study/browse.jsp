@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<c:set var="contextPath" value="${pageContext.request.contextPath }" />
 <html>
 <head>
    <%@include file="../include/head.jsp"%>>
@@ -18,7 +18,7 @@
 
             <div class="col-lg-5 col-12">
                 <a href="#section_4" class="custom-btn btn smoothscroll">button2</a>
-                <a href="/study/create" class="custom-btn btn smoothscroll">make study</a>
+                <a href="{contextPath}/study/create" class="custom-btn btn smoothscroll">make study</a>
             </div>
 
         </div>
@@ -141,126 +141,6 @@
         </div>
     </div>
 </section>
-
-
-
-<%--<section class="gradient-custom">--%>
-<%--    <div class="container">--%>
-<%--    <div style="height: 80px;"></div>--%>
-<%--        <div class="row d-flex justify-content-center align-items-center ">--%>
-<%--            <div class="col-md-12">--%>
-
-<%--&lt;%&ndash;                <div class="page-content">&ndash;%&gt;--%>
-
-<%--                    <!-- ***** Most Popular Start ***** -->--%>
-<%--                    <div class="most-popular">--%>
-<%--                        <div class="row d-flex justify-content-end">--%>
-<%--                            <div class="col-lg-12 ">--%>
-<%--                                <div class="heading-section">--%>
-<%--                                    <h4><em>Browse</em> your Study!</h4>--%>
-<%--                                    <a class="btn btn-warning" href="/study/create">스터디 만들기</a>--%>
-<%--                                    <a class="btn btn-warning" href="browse.html">스터디 검색</a>--%>
-<%--                                </div>--%>
-<%--                                <div class="row">--%>
-<%--                                    <div class="col-lg-3 col-sm-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <img src="/resources/assets/images/popular-01.jpg" alt="">--%>
-<%--                                            <h4>Fortnite<br><span>Sandbox</span></h4>--%>
-<%--                                            <ul>--%>
-<%--                                                <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                            </ul>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                    <div class="col-lg-3 col-sm-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <img src="/resources/assets/images/popular-02.jpg" alt="">--%>
-<%--                                            <h4>PubG<br><span>Battle S</span></h4>--%>
-<%--                                            <ul>--%>
-<%--                                                <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                            </ul>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                    <div class="col-lg-3 col-sm-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <img src="/resources/assets/images/popular-03.jpg" alt="">--%>
-<%--                                            <h4>Dota2<br><span>Steam-X</span></h4>--%>
-<%--                                            <ul>--%>
-<%--                                                <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                            </ul>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                    <div class="col-lg-3 col-sm-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <img src="/resources/assets/images/popular-04.jpg" alt="">--%>
-<%--                                            <h4>CS-GO<br><span>Legendary</span></h4>--%>
-<%--                                            <ul>--%>
-<%--                                                <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                            </ul>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                    <div class="col-lg-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <div class="row">--%>
-<%--                                                <div class="col-lg-6 col-sm-6">--%>
-<%--                                                    <div class="item inner-item">--%>
-<%--                                                        <img src="/resources/assets/images/popular-05.jpg" alt="">--%>
-<%--                                                        <h4>Mini Craft<br><span>Legendary</span></h4>--%>
-<%--                                                        <ul>--%>
-<%--                                                            <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                            <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                                        </ul>--%>
-<%--                                                    </div>--%>
-<%--                                                </div>--%>
-<%--                                                <div class="col-lg-6 col-sm-6">--%>
-<%--                                                    <div class="item">--%>
-<%--                                                        <img src="/resources/assets/images/popular-06.jpg" alt="">--%>
-<%--                                                        <h4>Eagles Fly<br><span>Matrix Games</span></h4>--%>
-<%--                                                        <ul>--%>
-<%--                                                            <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                            <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                                        </ul>--%>
-<%--                                                    </div>--%>
-<%--                                                </div>--%>
-<%--                                            </div>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                    <div class="col-lg-3 col-sm-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <img src="/resources/assets/images/popular-07.jpg" alt="">--%>
-<%--                                            <h4>Warface<br><span>Max 3D</span></h4>--%>
-<%--                                            <ul>--%>
-<%--                                                <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                            </ul>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-<%--                                    <div class="col-lg-3 col-sm-6">--%>
-<%--                                        <div class="item">--%>
-<%--                                            <img src="/resources/assets/images/popular-08.jpg" alt="">--%>
-<%--                                            <h4>Warcraft<br><span>Legend</span></h4>--%>
-<%--                                            <ul>--%>
-<%--                                                <li><i class="fa fa-star"></i> 4.8</li>--%>
-<%--                                                <li><i class="fa fa-download"></i> 2.3M</li>--%>
-<%--                                            </ul>--%>
-<%--                                        </div>--%>
-<%--                                    </div>--%>
-
-<%--                                </div>--%>
-<%--                            </div>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                    <!-- ***** Most Popular End ***** -->--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <div style="height: 80px;"></div>--%>
-<%--&lt;%&ndash;    </div>&ndash;%&gt;--%>
-
-<%--</section>--%>
 
 
 <%@include file="../include/footer.jsp"%>
