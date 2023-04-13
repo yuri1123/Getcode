@@ -51,7 +51,7 @@
                                 <c:forEach items="${questionDtoList}" var="list">
                                 <tr>
                                     <td>${list.id}</td>
-                                    <td><a href="${contextPath}/community/qnadetail">${list.subject}</a></td>
+                                    <td><a href="${contextPath}/community/qnadetail/${list.id}">${list.subject}</a></td>
                                     <td>${list.createdBy}</td>
                                     <td>${list.regDate}</td>
                                     <td>${list.viewcnt}</td>
