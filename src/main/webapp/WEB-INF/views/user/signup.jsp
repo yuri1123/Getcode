@@ -92,6 +92,7 @@
                   <label class="text-right form-label" for="sex">SEX</label>
                   <input type="text" id="sex" name="sex" class="form-control form-control-lg" />
                 </div>
+                <input type="hidden" value="${User.userid}" name="createdBy" id="createdBy">
               </div>
               <button class="nav-link custom-btn custom-border-btn btn" type="reset">RESET</button>
               <button class="nav-link custom-btn custom-border-btn btn" type="submit">SIGN UP</button>

@@ -25,4 +25,7 @@ public class UserDto {
     private String role;
     private String regDate;
 
+    private String modifyDate;
+    private String createdBy;
+    private String modifiedBy;
 }

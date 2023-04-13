@@ -6,7 +6,6 @@
 <html>
 <head>
   <%@include file="../include/head.jsp" %>
-  >
 
   <style>
     .colortitle {
@@ -20,7 +19,14 @@
 
 </head>
 <body>
-<%@ include file="../include/header.jsp" %>
+<%@ include file="../include/header.jsp"%>
+
+<<script>
+  const errorMessage = "${errormessage}";
+  if (errorMessage) {
+    alert(errorMessage);
+  }
+</script>
 
 <section class="gradient-custom">
   <div style="height: 80px;"></div>

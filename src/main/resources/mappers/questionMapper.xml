@@ -32,4 +32,9 @@
         <select id="delete" parameterType="java.lang.Long">
             delete from question where id=#{id}
         </select>
+
+<!--        조회수증가-->
+        <update id="updateview" parameterType="java.lang.Long">
+            update question set viewcnt=viewcnt+1 where id=#{id}
+        </update>
 </mapper>

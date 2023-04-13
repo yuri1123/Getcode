@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fac1807-773e-4e66-b256-8312b645c062" name="Changes" comment="- Qna 게시판 제작">
+    <list default="true" id="8fac1807-773e-4e66-b256-8312b645c062" name="Changes" comment="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정">
       <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -67,7 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/WEB-INF/views/admin",
+    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/resources/yuri",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -83,11 +83,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\Getcode\src\main\webapp\resources\yuri" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\admin" />
       <recent name="D:\Study\Getcode\src\main\webapp\resources\adminassets" />
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\WEB-INF\views\community" />
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\resources\mappers" />
-      <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\WEB-INF\views\study" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\WEB-INF\views\kind" />
@@ -214,7 +214,7 @@
       <workItem from="1681259994643" duration="5000" />
       <workItem from="1681285038738" duration="5103000" />
       <workItem from="1681363118459" duration="13266000" />
-      <workItem from="1681390177473" duration="8906000" />
+      <workItem from="1681390177473" duration="9301000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -293,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681373648343</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정">
+      <created>1681401285729</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681401285729</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +329,8 @@
     <MESSAGE value="commit" />
     <MESSAGE value="mystudy로 바꿈" />
     <MESSAGE value="- Qna 게시판 제작" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Qna 게시판 제작" />
+    <MESSAGE value="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

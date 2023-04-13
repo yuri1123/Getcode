@@ -14,4 +14,5 @@ public interface QuestionService {
     QuestionDto findbyid(Long id);
     List<QuestionDto> selectall();
     int delete(Long id);
+    int updateview(Long id);
 }

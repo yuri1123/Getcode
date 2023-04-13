@@ -7,10 +7,7 @@
 	
 <!--    계정추가-->
         <insert id="signup" parameterType="com.yuri.getcode.dto.UserDto">
-          insert into user (userid, password, username, nickname, email, phonenumber,
-            postcode, address1, address2, birthday, sex, role, regDate)
-                values (#{userid},#{password}, #{username}, #{nickname},#{email},#{phonenumber},
-            #{postcode},#{address1},#{address2},#{birthday},#{sex},'USER',now())
+          insert into user (userid,password,username,nickname,email,phonenumber,postcode,address1,address2,birthday,sex,role,regDate,modifyDate,createdBy,modifiedBy) values (#{userid},#{password},#{username},#{nickname},#{email},#{phonenumber},#{postcode},#{address1},#{address2},#{birthday},#{sex},'USER',now(),now(),#{createdBy},#{createdBy})
         </insert>
 
 <!--    계정 로그인-->

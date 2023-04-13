@@ -39,4 +39,9 @@ public class QuestionDaoImpl implements QuestionDao {
     public int delete(Long id) {
         return sqlSession.delete(namespace + ".delete",id);
     }
+
+    @Override
+    public int updateview(Long id) {
+        return sqlSession.update(namespace + ".updateview",id);
+    }
 }

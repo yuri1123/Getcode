@@ -40,4 +40,9 @@ public class QuestionServiceImpl implements QuestionService{
     public int delete(Long id) {
         return questionDao.delete(id);
     }
+
+    @Override
+    public int updateview(Long id) {
+        return questionDao.updateview(id);
+    }
 }

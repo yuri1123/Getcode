@@ -26,7 +26,7 @@
 </section>
 
 
-<section class="section-padding" id="section_3">
+<section class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-12 text-center mb-4">
