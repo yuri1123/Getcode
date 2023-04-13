@@ -91,13 +91,13 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link click-scroll dropdown-toggle" href="#section_5"
+                    <a class="nav-link click-scroll dropdown-toggle" href=""
                        id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">Community</a>
 
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="kind/news.html">Notice</a></li>
-                        <li><a class="dropdown-item" href="kind/news-detail.html">Q&A</a></li>
+                        <li><a class="dropdown-item" href="/community/qnalist">Q&A</a></li>
                     </ul>
                 </li>
 

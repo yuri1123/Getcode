@@ -9,7 +9,7 @@ public class StudyController {
     //스터디 찾기 페이지 이동
     @GetMapping("study/browse")
     public String browsestudy(){
-        return "mystudy";
+        return "study/browse";
     }
 
     //스터디 만들기 페이지 이동

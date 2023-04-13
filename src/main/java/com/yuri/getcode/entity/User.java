@@ -8,7 +8,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class User {
+public class User extends BaseEntity{
     private Long id;
     private String userid;
     private String password;
@@ -22,7 +22,7 @@ public class User {
     private String birthday;
     private String sex;
     private String role;
-    private String regDate;
+
     }
 
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 파일이름을 지칭하는 네임스페이스 -->
+<mapper namespace="com.yuri.getcode.questionMapper">
+
+        <!-- 질문등록-->
+        <insert id="create" parameterType="com.yuri.getcode.dto.QuestionDto">
+          insert into question (subject, content, viewcnt, regDate, modifyDate, createdBy, modifiedBy)
+                values (#{subject}, #{content},0,now(),now(),#{createdBy},#{createdBy})
+        </insert>
+
+        <!-- 질문수정-->
+        <update id="update" parameterType="com.yuri.getcode.dto.QuestionDto">
+            update question set
+            subject = #{subject}, content = #{content}, modifyDate = now(), modifiedBy=#{modifiedBy})
+            where id=#{id}
+        </update>
+
+        <!-- 질문선택조회-->
+        <select id="findbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.QuestionDto">
+            select * from question where id=#{id}
+        </select>
+
+         <!-- 질문전체조회-->
+        <select id="selectall" resultType="com.yuri.getcode.dto.QuestionDto">
+            select * from question
+        </select>
+
+        <!-- 질문 삭제-->
+        <select id="delete" parameterType="java.lang.Long">
+            delete from question where id=#{id}
+        </select>
+</mapper>

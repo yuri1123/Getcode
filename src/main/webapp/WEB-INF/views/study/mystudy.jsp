@@ -13,12 +13,11 @@
         <div class="row justify-content-center align-items-center">
 
             <div class="col-lg-5 col-12 ms-auto">
-                <h2 class="mb-0">Make <br> your Study</h2>
+                <h2 class="mb-0">This is your Study Room</h2>
             </div>
 
             <div class="col-lg-5 col-12">
-                <a href="#section_4" class="custom-btn btn smoothscroll">button2</a>
-                <a href="{contextPath}/study/create" class="custom-btn btn smoothscroll">make study</a>
+<%--                <a href="${contextPath}/study/create" class="custom-btn btn smoothscroll">make study</a>--%>
             </div>
 
         </div>
@@ -26,12 +25,12 @@
 </section>
 
 
-<section class="section-padding" id="section_3">
+<section class="section-padding" >
     <div class="container">
         <div class="row">
 
             <div class="col-lg-12 col-12 text-center mb-4">
-                <h2>Get Study</h2>
+                <h2>Your Study Here</h2>
             </div>
 
             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
@@ -63,7 +62,7 @@
                             </div>
                         </div>
 
-                        <a href="kind/donate.html" class="custom-btn btn">Join</a>
+                        <a href="kind/donate.html" class="custom-btn btn">Enter room</a>
                     </div>
                 </div>
             </div>
@@ -98,7 +97,7 @@
                             </div>
                         </div>
 
-                        <a href="kind/donate.html" class="custom-btn btn">Join</a>
+                        <a href="kind/donate.html" class="custom-btn btn">Enter room</a>
                     </div>
                 </div>
             </div>
@@ -133,7 +132,7 @@
                             </div>
                         </div>
 
-                        <a href="kind/donate.html" class="custom-btn btn">Join</a>
+                        <a href="kind/donate.html" class="custom-btn btn">Enter room</a>
                     </div>
                 </div>
             </div>
