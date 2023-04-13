@@ -43,9 +43,9 @@
                                 <textarea type="text" name="content" id="content" rows="10" class="form-control"
                                           placeholder="질문 내용" required></textarea>
                               </div>
-                                <div class="hidden" name="createdBy" id="createdBy" value="${User.userid}">
+                                <input type="hidden" name="createdBy" id="createdBy" value="${User.userid}">
 
-                            </div>
+                            </input>
 <%--                            <button type="submit" class="form-control">reset</button>--%>
                             <button type="submit" class="form-control">create</button>
                           </form>

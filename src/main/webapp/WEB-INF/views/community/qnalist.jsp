@@ -44,38 +44,19 @@
                                     <th>subject</th>
                                     <th>writer</th>
                                     <th>date</th>
-                                    <th>viewcnt</th>
+                                    <th>view</th>
                                 </tr>
                                 </thead>
                                 <tbody class="text-center">
+                                <c:forEach items="${questionDtoList}" var="list">
                                 <tr>
-                                    <td>1</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>5</td>
+                                    <td>${list.id}</td>
+                                    <td><a href="${contextPath}/community/qnadetail">${list.subject}</a></td>
+                                    <td>${list.createdBy}</td>
+                                    <td>${list.regDate}</td>
+                                    <td>${list.viewcnt}</td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>10</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>15</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>하이하이</td>
-                                    <td>20</td>
-                                </tr>
+                                </c:forEach>
                                 </tbody>
                             </table>
 
