@@ -1,891 +1,587 @@
 <!DOCTYPE html>
-<html lang="ko">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<c:set var="contextPath" value="${pageContext.request.contextPath }" />
 
+<!-- beautify ignore:start -->
+<html
+        lang="ko"
+        class="light-style layout-menu-fixed"
+        dir="ltr"
+        data-theme="theme-default"
+        data-assets-path="/resources/adminassets/assets/"
+        data-template="vertical-menu-template-free">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="Dashboard">
-  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
-  <title>Get Code WITH ME!</title>
-
-  <!-- Favicons -->
-  <link href="/resources/adminassets/img/favicon.png" rel="icon">
-  <link href="/resources/adminassets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Bootstrap core CSS -->
-  <link href="/resources/adminassets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!--external css-->
-  <link href="/resources/adminassets/lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="/resources/adminassets/css/zabuto_calendar.css">
-  <link rel="stylesheet" type="text/css" href="/resources/adminassets/lib/gritter/css/jquery.gritter.css" />
-  <!-- Custom styles for this template -->
-  <link href="/resources/adminassets/css/style.css" rel="stylesheet">
-  <link href="/resources/adminassets/css/style-responsive.css" rel="stylesheet">
-  <script src="/resources/adminassets/lib/chart-master/Chart.js"></script>
-
-  <!-- =======================================================
-    Template Name: Dashio
-    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
-    Author: TemplateMag.com
-    License: https://templatemag.com/license/
-  ======================================================= -->
+<%@include file="../include/admin_head.jsp"%>
 </head>
 
 <body>
-<section id="container">
-  <!-- **********************************************************************************************************************************************************
-      TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
-  <!--header start-->
-  <header class="header black-bg">
-    <div class="sidebar-toggle-box">
-      <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-    </div>
-    <!--logo start-->
-    <a href="/admin" class="logo"><b>GET<span>CODE</span></b></a>
-    <!--logo end-->
-    <div class="nav notify-row" id="top_menu">
-      <!--  notification start -->
-      <ul class="nav top-menu">
-        <!-- settings start -->
-        <li class="dropdown">
-          <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
-            <i class="fa fa-tasks"></i>
-            <span class="badge bg-theme">4</span>
-          </a>
-          <ul class="dropdown-menu extended tasks-bar">
-            <div class="notify-arrow notify-arrow-green"></div>
-            <li>
-              <p class="green">You have 4 pending tasks</p>
-            </li>
-            <li>
-              <a href="/admin">
-                <div class="task-info">
-                  <div class="desc">Dashio Admin Panel</div>
-                  <div class="percent">40%</div>
-                </div>
-                <div class="progress progress-striped">
-                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                    <span class="sr-only">40% Complete (success)</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <div class="task-info">
-                  <div class="desc">Database Update</div>
-                  <div class="percent">60%</div>
-                </div>
-                <div class="progress progress-striped">
-                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                    <span class="sr-only">60% Complete (warning)</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <div class="task-info">
-                  <div class="desc">Product Development</div>
-                  <div class="percent">80%</div>
-                </div>
-                <div class="progress progress-striped">
-                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                    <span class="sr-only">80% Complete</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <div class="task-info">
-                  <div class="desc">Payments Sent</div>
-                  <div class="percent">70%</div>
-                </div>
-                <div class="progress progress-striped">
-                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                    <span class="sr-only">70% Complete (Important)</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="external">
-              <a href="#">See All Tasks</a>
-            </li>
-          </ul>
-        </li>
-        <!-- settings end -->
-        <!-- inbox dropdown start-->
-        <li id="header_inbox_bar" class="dropdown">
-          <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
-            <i class="fa fa-envelope-o"></i>
-            <span class="badge bg-theme">5</span>
-          </a>
-          <ul class="dropdown-menu extended inbox">
-            <div class="notify-arrow notify-arrow-green"></div>
-            <li>
-              <p class="green">You have 5 new messages</p>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="photo"><img alt="avatar" src="/resources/adminassets/img/ui-zac.jpg"></span>
-                <span class="subject">
-                  <span class="from">Zac Snider</span>
-                  <span class="time">Just now</span>
-                  </span>
-                <span class="message">
-                  Hi mate, how is everything?
-                  </span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="photo"><img alt="avatar" src="/resources/adminassets/img/ui-divya.jpg"></span>
-                <span class="subject">
-                  <span class="from">Divya Manian</span>
-                  <span class="time">40 mins.</span>
-                  </span>
-                <span class="message">
-                  Hi, I need your help with this.
-                  </span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="photo"><img alt="avatar" src="/resources/adminassets/img/ui-danro.jpg"></span>
-                <span class="subject">
-                  <span class="from">Dan Rogers</span>
-                  <span class="time">2 hrs.</span>
-                  </span>
-                <span class="message">
-                  Love your new Dashboard.
-                  </span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="photo"><img alt="avatar" src="/resources/adminassets/img/ui-sherman.jpg"></span>
-                <span class="subject">
-                  <span class="from">Dj Sherman</span>
-                  <span class="time">4 hrs.</span>
-                  </span>
-                <span class="message">
-                  Please, answer asap.
-                  </span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">See all messages</a>
-            </li>
-          </ul>
-        </li>
-        <!-- inbox dropdown end -->
-        <!-- notification dropdown start-->
-        <li id="header_notification_bar" class="dropdown">
-          <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
-            <i class="fa fa-bell-o"></i>
-            <span class="badge bg-warning">7</span>
-          </a>
-          <ul class="dropdown-menu extended notification">
-            <div class="notify-arrow notify-arrow-yellow"></div>
-            <li>
-              <p class="yellow">You have 7 new notifications</p>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                Server Overloaded.
-                <span class="small italic">4 mins.</span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="label label-warning"><i class="fa fa-bell"></i></span>
-                Memory #2 Not Responding.
-                <span class="small italic">30 mins.</span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                Disk Space Reached 85%.
-                <span class="small italic">2 hrs.</span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">
-                <span class="label label-success"><i class="fa fa-plus"></i></span>
-                New User Registered.
-                <span class="small italic">3 hrs.</span>
-              </a>
-            </li>
-            <li>
-              <a href="/admin">See all notifications</a>
-            </li>
-          </ul>
-        </li>
-        <!-- notification dropdown end -->
-      </ul>
-      <!--  notification end -->
-    </div>
-    <div class="top-menu">
-      <ul class="nav pull-right top-menu">
-        <li><a class="logout" href="/">Go home</a></li>
-      </ul>
-    </div>
-  </header>
-  <!--header end-->
-  <!-- **********************************************************************************************************************************************************
-      MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
-  <!--sidebar start-->
-  <aside>
-    <div id="sidebar" class="nav-collapse ">
-      <!-- sidebar menu start-->
-      <ul class="sidebar-menu" id="nav-accordion">
-        <p class="centered"><a href="profile.html"><img src="/resources/yuri/yuripic.png" class="img-circle" width="80"></a></p>
-        <h5 class="centered">CHOI YULS</h5>
-        <li class="mt">
-          <a class="active" href="/admin">
-            <i class="fa fa-dashboard"></i>
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class="fa fa-desktop"></i>
-            <span>UI Elements</span>
-          </a>
-          <ul class="sub">
-            <li><a href="general.html">General</a></li>
-            <li><a href="buttons.html">Buttons</a></li>
-            <li><a href="panels.html">Panels</a></li>
-            <li><a href="font_awesome.html">Font Awesome</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class="fa fa-cogs"></i>
-            <span>Components</span>
-          </a>
-          <ul class="sub">
-            <li><a href="grids.html">Grids</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="todo_list.html">Todo List</a></li>
-            <li><a href="dropzone.html">Dropzone File Upload</a></li>
-            <li><a href="inline_editor.html">Inline Editor</a></li>
-            <li><a href="file_upload.html">Multiple File Upload</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class="fa fa-book"></i>
-            <span>Extra Pages</span>
-          </a>
-          <ul class="sub">
-            <li><a href="blank.html">Blank Page</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="lock_screen.html">Lock Screen</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="invoice.html">Invoice</a></li>
-            <li><a href="pricing_table.html">Pricing Table</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="404.html">404 Error</a></li>
-            <li><a href="500.html">500 Error</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class="fa fa-tasks"></i>
-            <span>Forms</span>
-          </a>
-          <ul class="sub">
-            <li><a href="form_component.html">Form Components</a></li>
-            <li><a href="advanced_form_components.html">Advanced Components</a></li>
-            <li><a href="form_validation.html">Form Validation</a></li>
-            <li><a href="contactform.html">Contact Form</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class="fa fa-th"></i>
-            <span>Data Tables</span>
-          </a>
-          <ul class="sub">
-            <li><a href="basic_table.html">Basic Table</a></li>
-            <li><a href="responsive_table.html">Responsive Table</a></li>
-            <li><a href="advanced_table.html">Advanced Table</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="inbox.html">
-            <i class="fa fa-envelope"></i>
-            <span>Mail </span>
-            <span class="label label-theme pull-right mail-info">2</span>
-          </a>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class=" fa fa-bar-chart-o"></i>
-            <span>Charts</span>
-          </a>
-          <ul class="sub">
-            <li><a href="morris.html">Morris</a></li>
-            <li><a href="chartjs.html">Chartjs</a></li>
-            <li><a href="flot_chart.html">Flot Charts</a></li>
-            <li><a href="xchart.html">xChart</a></li>
-          </ul>
-        </li>
-        <li class="sub-menu">
-          <a href="javascript:;">
-            <i class="fa fa-comments-o"></i>
-            <span>Chat Room</span>
-          </a>
-          <ul class="sub">
-            <li><a href="lobby.html">Lobby</a></li>
-            <li><a href="chat_room.html"> Chat Room</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="google_maps.html">
-            <i class="fa fa-map-marker"></i>
-            <span>Google Maps </span>
-          </a>
-        </li>
-      </ul>
-      <!-- sidebar menu end-->
-    </div>
-  </aside>
-  <!--sidebar end-->
-  <!-- **********************************************************************************************************************************************************
-      MAIN CONTENT
-      *********************************************************************************************************************************************************** -->
-  <!--main content start-->
-  <section id="main-content">
-    <section class="wrapper">
-      <div class="row">
-        <div class="col-lg-9 main-chart">
-          <!--CUSTOM CHART START -->
-          <div class="border-head">
-            <h3>USER VISITS</h3>
-          </div>
-          <div class="custom-bar-chart">
-            <ul class="y-axis">
-              <li><span>10.000</span></li>
-              <li><span>8.000</span></li>
-              <li><span>6.000</span></li>
-              <li><span>4.000</span></li>
-              <li><span>2.000</span></li>
-              <li><span>0</span></li>
-            </ul>
-            <div class="bar">
-              <div class="title">JAN</div>
-              <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
-            </div>
-            <div class="bar ">
-              <div class="title">FEB</div>
-              <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
-            </div>
-            <div class="bar ">
-              <div class="title">MAR</div>
-              <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-            </div>
-            <div class="bar ">
-              <div class="title">APR</div>
-              <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-            </div>
-            <div class="bar">
-              <div class="title">MAY</div>
-              <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-            </div>
-            <div class="bar ">
-              <div class="title">JUN</div>
-              <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-            </div>
-            <div class="bar">
-              <div class="title">JUL</div>
-              <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-            </div>
-          </div>
-          <!--custom chart end-->
-          <div class="row mt">
-            <!-- SERVER STATUS PANELS -->
-            <div class="col-md-4 col-sm-4 mb">
-              <div class="grey-panel pn donut-chart">
-                <div class="grey-header">
-                  <h5>SERVER LOAD</h5>
-                </div>
-                <canvas id="serverstatus01" height="120" width="120"></canvas>
-                <script>
-                  var doughnutData = [{
-                    value: 70,
-                    color: "#FF6B6B"
-                  },
-                    {
-                      value: 30,
-                      color: "#fdfdfd"
-                    }
-                  ];
-                  var myDoughnut = new Chart(document.getElementById("serverstatus01").getContext("2d")).Doughnut(doughnutData);
-                </script>
-                <div class="row">
-                  <div class="col-sm-6 col-xs-6 goleft">
-                    <p>Usage<br/>Increase:</p>
-                  </div>
-                  <div class="col-sm-6 col-xs-6">
-                    <h2>21%</h2>
-                  </div>
-                </div>
-              </div>
-              <!-- /grey-panel -->
-            </div>
-            <!-- /col-md-4-->
-            <div class="col-md-4 col-sm-4 mb">
-              <div class="darkblue-panel pn">
-                <div class="darkblue-header">
-                  <h5>DROPBOX STATICS</h5>
-                </div>
-                <canvas id="serverstatus02" height="120" width="120"></canvas>
-                <script>
-                  var doughnutData = [{
-                    value: 60,
-                    color: "#1c9ca7"
-                  },
-                    {
-                      value: 40,
-                      color: "#f68275"
-                    }
-                  ];
-                  var myDoughnut = new Chart(document.getElementById("serverstatus02").getContext("2d")).Doughnut(doughnutData);
-                </script>
-                <p>April 17, 2014</p>
-                <footer>
-                  <div class="pull-left">
-                    <h5><i class="fa fa-hdd-o"></i> 17 GB</h5>
-                  </div>
-                  <div class="pull-right">
-                    <h5>60% Used</h5>
-                  </div>
-                </footer>
-              </div>
-              <!--  /darkblue panel -->
-            </div>
-            <!-- /col-md-4 -->
-            <div class="col-md-4 col-sm-4 mb">
-              <!-- REVENUE PANEL -->
-              <div class="green-panel pn">
-                <div class="green-header">
-                  <h5>REVENUE</h5>
-                </div>
-                <div class="chart mt">
-                  <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,464,655]"></div>
-                </div>
-                <p class="mt"><b>$ 17,980</b><br/>Month Income</p>
-              </div>
-            </div>
-            <!-- /col-md-4 -->
-          </div>
-          <!-- /row -->
+<!-- Layout wrapper -->
+<div class="layout-wrapper layout-content-navbar">
+  <div class="layout-container">
+
+    <%@include file="../include/admin_navbar.jsp"%>
+      <!-- Content wrapper -->
+      <div class="content-wrapper">
+        <!-- Content -->
+
+        <div class="container-xxl flex-grow-1 container-p-y">
           <div class="row">
-            <!-- WEATHER PANEL -->
-            <div class="col-md-4 mb">
-              <div class="weather pn">
-                <i class="fa fa-cloud fa-4x"></i>
-                <h2>11º C</h2>
-                <h4>BUDAPEST</h4>
+            <div class="col-lg-8 mb-4 order-0">
+              <div class="card">
+                <div class="d-flex align-items-end row">
+                  <div class="col-sm-7">
+                    <div class="card-body">
+                      <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                      <p class="mb-4">
+                        You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
+                        your profile.
+                      </p>
+
+                      <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
+                    </div>
+                  </div>
+                  <div class="col-sm-5 text-center text-sm-left">
+                    <div class="card-body pb-0 px-0 px-md-4">
+                      <img
+                              src="/resources/adminassets/assets/img/illustrations/man-with-laptop-light.png"
+                              height="140"
+                              alt="View Badge User"
+                              data-app-dark-img="illustrations/man-with-laptop-dark.png"
+                              data-app-light-img="illustrations/man-with-laptop-light.png"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- /col-md-4-->
-            <!-- DIRECT MESSAGE PANEL -->
-            <div class="col-md-8 mb">
-              <div class="message-p pn">
-                <div class="message-header">
-                  <h5>DIRECT MESSAGE</h5>
-                </div>
-                <div class="row">
-                  <div class="col-md-3 centered hidden-sm hidden-xs">
-                    <img src="/resources/adminassets/img/ui-danro.jpg" class="img-circle" width="65">
-                  </div>
-                  <div class="col-md-9">
-                    <p>
-                      <name>Dan Rogers</name>
-                      sent you a message.
-                    </p>
-                    <p class="small">3 hours ago</p>
-                    <p class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                    <form class="form-inline" role="form">
-                      <div class="form-group">
-                        <input type="text" class="form-control" id="exampleInputText" placeholder="Reply Dan">
+            <div class="col-lg-4 col-md-4 order-1">
+              <div class="row">
+                <div class="col-lg-6 col-md-12 col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img
+                                  src="/resources/adminassets/assets/img/icons/unicons/chart-success.png"
+                                  alt="chart success"
+                                  class="rounded"
+                          />
+                        </div>
+                        <div class="dropdown">
+                          <button
+                                  class="btn p-0"
+                                  type="button"
+                                  id="cardOpt3"
+                                  data-bs-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                          >
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
+                            <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                          </div>
+                        </div>
                       </div>
-                      <button type="submit" class="btn btn-default">Send</button>
-                    </form>
+                      <span class="fw-semibold d-block mb-1">Profit</span>
+                      <h3 class="card-title mb-2">$12,628</h3>
+                      <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img
+                                  src="/resources/adminassets/assets/img/icons/unicons/wallet-info.png"
+                                  alt="Credit Card"
+                                  class="rounded"
+                          />
+                        </div>
+                        <div class="dropdown">
+                          <button
+                                  class="btn p-0"
+                                  type="button"
+                                  id="cardOpt6"
+                                  data-bs-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                          >
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
+                            <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <span>Sales</span>
+                      <h3 class="card-title text-nowrap mb-1">$4,679</h3>
+                      <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
+                    </div>
                   </div>
                 </div>
               </div>
-              <!-- /Message Panel-->
             </div>
-            <!-- /col-md-8  -->
+            <!-- Total Revenue -->
+            <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+              <div class="card">
+                <div class="row row-bordered g-0">
+                  <div class="col-md-8">
+                    <h5 class="card-header m-0 me-2 pb-3">Total Revenue</h5>
+                    <div id="totalRevenueChart" class="px-2"></div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card-body">
+                      <div class="text-center">
+                        <div class="dropdown">
+                          <button
+                                  class="btn btn-sm btn-outline-primary dropdown-toggle"
+                                  type="button"
+                                  id="growthReportId"
+                                  data-bs-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                          >
+                            2022
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="growthReportId">
+                            <a class="dropdown-item" href="javascript:void(0);">2021</a>
+                            <a class="dropdown-item" href="javascript:void(0);">2020</a>
+                            <a class="dropdown-item" href="javascript:void(0);">2019</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="growthChart"></div>
+                    <div class="text-center fw-semibold pt-3 mb-2">62% Company Growth</div>
+
+                    <div class="d-flex px-xxl-4 px-lg-2 p-4 gap-xxl-3 gap-lg-1 gap-3 justify-content-between">
+                      <div class="d-flex">
+                        <div class="me-2">
+                          <span class="badge bg-label-primary p-2"><i class="bx bx-dollar text-primary"></i></span>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <small>2022</small>
+                          <h6 class="mb-0">$32.5k</h6>
+                        </div>
+                      </div>
+                      <div class="d-flex">
+                        <div class="me-2">
+                          <span class="badge bg-label-info p-2"><i class="bx bx-wallet text-info"></i></span>
+                        </div>
+                        <div class="d-flex flex-column">
+                          <small>2021</small>
+                          <h6 class="mb-0">$41.2k</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/ Total Revenue -->
+            <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
+              <div class="row">
+                <div class="col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img src="/resources/adminassets/assets/img/icons/unicons/paypal.png" alt="Credit Card" class="rounded" />
+                        </div>
+                        <div class="dropdown">
+                          <button
+                                  class="btn p-0"
+                                  type="button"
+                                  id="cardOpt4"
+                                  data-bs-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                          >
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
+                            <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="d-block mb-1">Payments</span>
+                      <h3 class="card-title text-nowrap mb-2">$2,456</h3>
+                      <small class="text-danger fw-semibold"><i class="bx bx-down-arrow-alt"></i> -14.82%</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-title d-flex align-items-start justify-content-between">
+                        <div class="avatar flex-shrink-0">
+                          <img src="/resources/adminassets/assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
+                        </div>
+                        <div class="dropdown">
+                          <button
+                                  class="btn p-0"
+                                  type="button"
+                                  id="cardOpt1"
+                                  data-bs-toggle="dropdown"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                          >
+                            <i class="bx bx-dots-vertical-rounded"></i>
+                          </button>
+                          <div class="dropdown-menu" aria-labelledby="cardOpt1">
+                            <a class="dropdown-item" href="javascript:void(0);">View More</a>
+                            <a class="dropdown-item" href="javascript:void(0);">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                      <span class="fw-semibold d-block mb-1">Transactions</span>
+                      <h3 class="card-title mb-2">$14,857</h3>
+                      <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.14%</small>
+                    </div>
+                  </div>
+                </div>
+                <!-- </div>
+<div class="row"> -->
+                <div class="col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
+                        <div class="d-flex flex-sm-column flex-row align-items-start justify-content-between">
+                          <div class="card-title">
+                            <h5 class="text-nowrap mb-2">Profile Report</h5>
+                            <span class="badge bg-label-warning rounded-pill">Year 2021</span>
+                          </div>
+                          <div class="mt-sm-auto">
+                            <small class="text-success text-nowrap fw-semibold"
+                            ><i class="bx bx-chevron-up"></i> 68.2%</small
+                            >
+                            <h3 class="mb-0">$84,686k</h3>
+                          </div>
+                        </div>
+                        <div id="profileReportChart"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="row">
-            <!-- TWITTER PANEL -->
-            <div class="col-md-4 mb">
-              <div class="twitter-panel pn">
-                <i class="fa fa-twitter fa-4x"></i>
-                <p>Dashio is here! Take a look and enjoy this new Bootstrap Dashboard theme.</p>
-                <p class="user">@Alvrz_is</p>
-              </div>
-            </div>
-            <!-- /col-md-4 -->
-            <div class="col-md-4 mb">
-              <!-- WHITE PANEL - TOP USER -->
-              <div class="white-panel pn">
-                <div class="white-header">
-                  <h5>TOP USER</h5>
-                </div>
-                <p><img src="/resources/adminassets/img/ui-zac.jpg" class="img-circle" width="50"></p>
-                <p><b>Zac Snider</b></p>
-                <div class="row">
-                  <div class="col-md-6">
-                    <p class="small mt">MEMBER SINCE</p>
-                    <p>2012</p>
+            <!-- Order Statistics -->
+            <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between pb-0">
+                  <div class="card-title mb-0">
+                    <h5 class="m-0 me-2">Order Statistics</h5>
+                    <small class="text-muted">42.82k Total Sales</small>
                   </div>
-                  <div class="col-md-6">
-                    <p class="small mt">TOTAL SPEND</p>
-                    <p>$ 47,60</p>
+                  <div class="dropdown">
+                    <button
+                            class="btn p-0"
+                            type="button"
+                            id="orederStatistics"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                    >
+                      <i class="bx bx-dots-vertical-rounded"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
+                      <a class="dropdown-item" href="javascript:void(0);">Select All</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Share</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="d-flex flex-column align-items-center gap-1">
+                      <h2 class="mb-2">8,258</h2>
+                      <span>Total Orders</span>
+                    </div>
+                    <div id="orderStatisticsChart"></div>
+                  </div>
+                  <ul class="p-0 m-0">
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                            <span class="avatar-initial rounded bg-label-primary"
+                            ><i class="bx bx-mobile-alt"></i
+                            ></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Electronic</h6>
+                          <small class="text-muted">Mobile, Earbuds, TV</small>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">82.5k</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Fashion</h6>
+                          <small class="text-muted">T-shirt, Jeans, Shoes</small>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">23.8k</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Decor</h6>
+                          <small class="text-muted">Fine Art, Dining</small>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">849k</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex">
+                      <div class="avatar flex-shrink-0 me-3">
+                            <span class="avatar-initial rounded bg-label-secondary"
+                            ><i class="bx bx-football"></i
+                            ></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0">Sports</h6>
+                          <small class="text-muted">Football, Cricket Kit</small>
+                        </div>
+                        <div class="user-progress">
+                          <small class="fw-semibold">99</small>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!--/ Order Statistics -->
+
+            <!-- Expense Overview -->
+            <div class="col-md-6 col-lg-4 order-1 mb-4">
+              <div class="card h-100">
+                <div class="card-header">
+                  <ul class="nav nav-pills" role="tablist">
+                    <li class="nav-item">
+                      <button
+                              type="button"
+                              class="nav-link active"
+                              role="tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#navs-tabs-line-card-income"
+                              aria-controls="navs-tabs-line-card-income"
+                              aria-selected="true"
+                      >
+                        Income
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button type="button" class="nav-link" role="tab">Expenses</button>
+                    </li>
+                    <li class="nav-item">
+                      <button type="button" class="nav-link" role="tab">Profit</button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body px-0">
+                  <div class="tab-content p-0">
+                    <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
+                      <div class="d-flex p-4 pt-3">
+                        <div class="avatar flex-shrink-0 me-3">
+                          <img src="/resources/adminassets/assets/img/icons/unicons/wallet.png" alt="User" />
+                        </div>
+                        <div>
+                          <small class="text-muted d-block">Total Balance</small>
+                          <div class="d-flex align-items-center">
+                            <h6 class="mb-0 me-1">$459.10</h6>
+                            <small class="text-success fw-semibold">
+                              <i class="bx bx-chevron-up"></i>
+                              42.9%
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="incomeChart"></div>
+                      <div class="d-flex justify-content-center pt-4 gap-2">
+                        <div class="flex-shrink-0">
+                          <div id="expensesOfWeek"></div>
+                        </div>
+                        <div>
+                          <p class="mb-n1 mt-1">Expenses This Week</p>
+                          <small class="text-muted">$39 less than last week</small>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- /col-md-4 -->
-            <div class="col-md-4 mb">
-              <!-- INSTAGRAM PANEL -->
-              <div class="instagram-panel pn">
-                <i class="fa fa-instagram fa-4x"></i>
-                <p>@THISISYOU<br/> 5 min. ago
-                </p>
-                <p><i class="fa fa-comment"></i> 18 | <i class="fa fa-heart"></i> 49</p>
+            <!--/ Expense Overview -->
+
+            <!-- Transactions -->
+            <div class="col-md-6 col-lg-4 order-2 mb-4">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0 me-2">Transactions</h5>
+                  <div class="dropdown">
+                    <button
+                            class="btn p-0"
+                            type="button"
+                            id="transactionID"
+                            data-bs-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                    >
+                      <i class="bx bx-dots-vertical-rounded"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
+                      <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <ul class="p-0 m-0">
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="/resources/adminassets/assets/img/icons/unicons/paypal.png" alt="User" class="rounded" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block mb-1">Paypal</small>
+                          <h6 class="mb-0">Send money</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="mb-0">+82.6</h6>
+                          <span class="text-muted">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="/resources/adminassets/assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block mb-1">Wallet</small>
+                          <h6 class="mb-0">Mac'D</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="mb-0">+270.69</h6>
+                          <span class="text-muted">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="/resources/adminassets/assets/img/icons/unicons/chart.png" alt="User" class="rounded" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block mb-1">Transfer</small>
+                          <h6 class="mb-0">Refund</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="mb-0">+637.91</h6>
+                          <span class="text-muted">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="/resources/adminassets/assets/img/icons/unicons/cc-success.png" alt="User" class="rounded" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block mb-1">Credit Card</small>
+                          <h6 class="mb-0">Ordered Food</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="mb-0">-838.71</h6>
+                          <span class="text-muted">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex mb-4 pb-1">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="/resources/adminassets/assets/img/icons/unicons/wallet.png" alt="User" class="rounded" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block mb-1">Wallet</small>
+                          <h6 class="mb-0">Starbucks</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="mb-0">+203.33</h6>
+                          <span class="text-muted">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="/resources/adminassets/assets/img/icons/unicons/cc-warning.png" alt="User" class="rounded" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block mb-1">Mastercard</small>
+                          <h6 class="mb-0">Ordered Food</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="mb-0">-92.45</h6>
+                          <span class="text-muted">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <!-- /col-md-4 -->
+            <!--/ Transactions -->
           </div>
-          <!-- /row -->
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-4 mb">
-              <div class="product-panel-2 pn">
-                <div class="badge badge-hot">HOT</div>
-                <img src="/resources/adminassets/img/product.jpg" width="200" alt="">
-                <h5 class="mt">Flat Pack Heritage</h5>
-                <h6>TOTAL SALES: 1388</h6>
-                <button class="btn btn-small btn-theme04">FULL REPORT</button>
-              </div>
-            </div>
-            <!-- /col-md-4 -->
-            <!--  PROFILE 02 PANEL -->
-            <div class="col-lg-4 col-md-4 col-sm-4 mb">
-              <div class="content-panel pn">
-                <div id="profile-02">
-                  <div class="user">
-                    <img src="/resources/adminassets/img/friends/fr-06.jpg" class="img-circle" width="80">
-                    <h4>DJ SHERMAN</h4>
-                  </div>
-                </div>
-                <div class="pr2-social centered">
-                  <a href="#"><i class="fa fa-twitter"></i></a>
-                  <a href="#"><i class="fa fa-facebook"></i></a>
-                  <a href="#"><i class="fa fa-dribbble"></i></a>
-                </div>
-              </div>
-              <!-- /panel -->
-            </div>
-            <!--/ col-md-4 -->
-            <div class="col-md-4 col-sm-4 mb">
-              <div class="green-panel pn">
-                <div class="green-header">
-                  <h5>DISK SPACE</h5>
-                </div>
-                <canvas id="serverstatus03" height="120" width="120"></canvas>
-                <script>
-                  var doughnutData = [{
-                    value: 60,
-                    color: "#2b2b2b"
-                  },
-                    {
-                      value: 40,
-                      color: "#fffffd"
-                    }
-                  ];
-                  var myDoughnut = new Chart(document.getElementById("serverstatus03").getContext("2d")).Doughnut(doughnutData);
-                </script>
-                <h3>60% USED</h3>
-              </div>
-            </div>
-            <!-- /col-md-4 -->
-          </div>
-          <!-- /row -->
         </div>
-        <!-- /col-lg-9 END SECTION MIDDLE -->
-        <!-- **********************************************************************************************************************************************************
-            RIGHT SIDEBAR CONTENT
-            *********************************************************************************************************************************************************** -->
-        <div class="col-lg-3 ds">
-          <!--COMPLETED ACTIONS DONUTS CHART-->
-          <div class="donut-main">
-            <h4>COMPLETED ACTIONS & PROGRESS</h4>
-            <canvas id="newchart" height="130" width="130"></canvas>
-            <script>
-              var doughnutData = [{
-                value: 70,
-                color: "#4ECDC4"
-              },
-                {
-                  value: 30,
-                  color: "#fdfdfd"
-                }
-              ];
-              var myDoughnut = new Chart(document.getElementById("newchart").getContext("2d")).Doughnut(doughnutData);
-            </script>
-          </div>
-          <!--NEW EARNING STATS -->
-          <div class="panel terques-chart">
-            <div class="panel-body">
-              <div class="chart">
-                <div class="centered">
-                  <span>TODAY EARNINGS</span>
-                  <strong>$ 890,00 | 15%</strong>
-                </div>
-                <br>
-                <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-line-color="#fff" data-spot-color="#fff" data-fill-color="" data-highlight-line-color="#fff" data-spot-radius="4" data-data="[200,135,667,333,526,996,564,123,890,564,455]"></div>
-              </div>
-            </div>
-          </div>
-          <!--new earning end-->
-          <!-- RECENT ACTIVITIES SECTION -->
-          <h4 class="centered mt">RECENT ACTIVITY</h4>
-          <!-- First Activity -->
-          <div class="desc">
-            <div class="thumb">
-              <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-            </div>
-            <div class="details">
-              <p>
-                <muted>Just Now</muted>
-                <br/>
-                <a href="#">Paul Rudd</a> purchased an item.<br/>
-              </p>
-            </div>
-          </div>
-          <!-- Second Activity -->
-          <div class="desc">
-            <div class="thumb">
-              <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-            </div>
-            <div class="details">
-              <p>
-                <muted>2 Minutes Ago</muted>
-                <br/>
-                <a href="#">James Brown</a> subscribed to your newsletter.<br/>
-              </p>
-            </div>
-          </div>
-          <!-- Third Activity -->
-          <div class="desc">
-            <div class="thumb">
-              <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-            </div>
-            <div class="details">
-              <p>
-                <muted>3 Hours Ago</muted>
-                <br/>
-                <a href="#">Diana Kennedy</a> purchased a year subscription.<br/>
-              </p>
-            </div>
-          </div>
-          <!-- Fourth Activity -->
-          <div class="desc">
-            <div class="thumb">
-              <span class="badge bg-theme"><i class="fa fa-clock-o"></i></span>
-            </div>
-            <div class="details">
-              <p>
-                <muted>7 Hours Ago</muted>
-                <br/>
-                <a href="#">Brando Page</a> purchased a year subscription.<br/>
-              </p>
-            </div>
-          </div>
-          <!-- USERS ONLINE SECTION -->
-          <h4 class="centered mt">TEAM MEMBERS ONLINE</h4>
-          <!-- First Member -->
-          <div class="desc">
-            <div class="thumb">
-              <img class="img-circle" src="/resources/adminassets/img/ui-divya.jpg" width="35px" height="35px" align="">
-            </div>
-            <div class="details">
-              <p>
-                <a href="#">DIVYA MANIAN</a><br/>
-                <muted>Available</muted>
-              </p>
-            </div>
-          </div>
-          <!-- Second Member -->
-          <div class="desc">
-            <div class="thumb">
-              <img class="img-circle" src="/resources/adminassets/img/ui-sherman.jpg" width="35px" height="35px" align="">
-            </div>
-            <div class="details">
-              <p>
-                <a href="#">DJ SHERMAN</a><br/>
-                <muted>I am Busy</muted>
-              </p>
-            </div>
-          </div>
-          <!-- Third Member -->
-          <div class="desc">
-            <div class="thumb">
-              <img class="img-circle" src="/resources/adminassets/img/ui-danro.jpg" width="35px" height="35px" align="">
-            </div>
-            <div class="details">
-              <p>
-                <a href="#">DAN ROGERS</a><br/>
-                <muted>Available</muted>
-              </p>
-            </div>
-          </div>
-          <!-- Fourth Member -->
-          <div class="desc">
-            <div class="thumb">
-              <img class="img-circle" src="/resources/adminassets/img/ui-zac.jpg" width="35px" height="35px" align="">
-            </div>
-            <div class="details">
-              <p>
-                <a href="#">Zac Sniders</a><br/>
-                <muted>Available</muted>
-              </p>
-            </div>
-          </div>
-          <!-- CALENDAR-->
-          <div id="calendar" class="mb">
-            <div class="panel green-panel no-margin">
-              <div class="panel-body">
-                <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
-                  <div class="arrow"></div>
-                  <h3 class="popover-title" style="disadding: none;"></h3>
-                  <div id="date-popover-content" class="popover-content"></div>
-                </div>
-                <div id="my-calendar"></div>
-              </div>
-            </div>
-          </div>
-          <!-- / calendar -->
-        </div>
-        <!-- /col-lg-3 -->
+        <!-- / Content -->
+
+    <%@include file="../include/admin_footer.jsp"%>
+
+        <div class="content-backdrop fade"></div>
       </div>
-      <!-- /row -->
-    </section>
-  </section>
-  <!--main content end-->
-  <!--footer start-->
-  <footer class="site-footer">
-    <div class="text-center">
-      <p>
-        &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
-      </p>
-      <div class="credits">
-        <!--
-          You are NOT allowed to delete the credit link to TemplateMag with free version.
-          You can delete the credit link only if you bought the pro version.
-          Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
-          Licensing information: https://templatemag.com/license/
-        -->
-        Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
-      </div>
-      <a href="/admin" class="go-top">
-        <i class="fa fa-angle-up"></i>
-      </a>
+      <!-- Content wrapper -->
     </div>
-  </footer>
-  <!--footer end-->
-</section>
-<!-- js placed at the end of the document so the pages load faster -->
-<script src="/resources/adminassets/lib/jquery/jquery.min.js"></script>
+    <!-- / Layout page -->
+  </div>
 
-<script src="/resources/adminassets/lib/bootstrap/js/bootstrap.min.js"></script>
-<script class="include" type="text/javascript" src="/resources/adminassets/lib/jquery.dcjqaccordion.2.7.js"></script>
-<script src="/resources/adminassets/lib/jquery.scrollTo.min.js"></script>
-<script src="/resources/adminassets/lib/jquery.nicescroll.js" type="text/javascript"></script>
-<script src="/resources/adminassets/lib/jquery.sparkline.js"></script>
-<!--common script for all pages-->
-<script src="/resources/adminassets/lib/common-scripts.js"></script>
-<script type="text/javascript" src="/resources/adminassets/lib/gritter/js/jquery.gritter.js"></script>
-<script type="text/javascript" src="/resources/adminassets/lib/gritter-conf.js"></script>
-<!--script for this page-->
-<script src="/resources/adminassets/lib/sparkline-chart.js"></script>
-<script src="/resources/adminassets/lib/zabuto_calendar.js"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    var unique_id = $.gritter.add({
-      // (string | mandatory) the heading of the notification
-      title: 'Welcome to Dashio!',
-      // (string | mandatory) the text inside the notification
-      text: 'Hover me to enable the Close Button. You can hide the left sidebar clicking on the button next to the logo.',
-      // (string | optional) the image to display on the left
-      image: '/resources/adminassets/img/ui-sam.jpg',
-      // (bool | optional) if you want it to fade out on its own or just sit there
-      sticky: false,
-      // (int | optional) the time you want it to be alive for before fading out
-      time: 8000,
-      // (string | optional) the class name you want to apply to that specific message
-      class_name: 'my-sticky-class'
-    });
+  <!-- Overlay -->
+  <div class="layout-overlay layout-menu-toggle"></div>
+</div>
+<!-- / Layout wrapper -->
 
-    return false;
-  });
-</script>
-<script type="application/javascript">
-  $(document).ready(function() {
-    $("#date-popover").popover({
-      html: true,
-      trigger: "manual"
-    });
-    $("#date-popover").hide();
-    $("#date-popover").click(function(e) {
-      $(this).hide();
-    });
+<div class="buy-now">
+  <a
+          href="#"
+          target="_blank"
+          class="btn btn-danger btn-buy-now"
+  >Go UP!</a>
+</div>
+<%@include file="../include/admin_js.jsp"%>
 
-    $("#my-calendar").zabuto_calendar({
-      action: function() {
-        return myDateFunction(this.id, false);
-      },
-      action_nav: function() {
-        return myNavFunction(this.id);
-      },
-      ajax: {
-        url: "/resources/adminassets/show_data.php?action=1",
-        modal: true
-      },
-      legend: [{
-        type: "text",
-        label: "Special event",
-        badge: "00"
-      },
-        {
-          type: "block",
-          label: "Regular event",
-        }
-      ]
-    });
-  });
-
-  function myNavFunction(id) {
-    $("#date-popover").hide();
-    var nav = $("#" + id).data("navigation");
-    var to = $("#" + id).data("to");
-    console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-  }
-</script>
 </body>
-
 </html>
