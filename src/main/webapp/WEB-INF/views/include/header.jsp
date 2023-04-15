@@ -2,12 +2,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page session="true" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath }" />
-
 <header class="site-header">
     <div class="container">
         <div class="row">
-
-            <div class="col-lg-8 col-12 d-flex flex-wrap">
+            <div class="col-lg-7 col-12 d-flex flex-wrap">
                 <p class="d-flex me-4 mb-0">
                     <i class="bi-geo-alt me-2"></i>
                     수원시 영통구 동탄지성로488번길 22
@@ -22,29 +20,30 @@
                 </p>
             </div>
 
-            <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-
-                <!-- 로그인 O session에 값이 들어있을때 -->
-                <c:if test="${User.userid != null}">
-                    <p>[★${User.nickname}님 안녕하세요★]</p>
-                </c:if>
-
+            <div class="col-lg-5 col-12 ms-auto d-lg-block d-none">
                 <ul class="social-icon">
                     <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-facebook"></a>
+                    <!-- 로그인 O session에 값이 들어있을때 -->
+                    <c:if test="${User.userid != null}">
+                        <p class="pr-1 ps-1 fw-bold">[${User.nickname}님 안녕하세요😊😊😍]</p>
+                    </c:if>
                     </li>
 
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-instagram"></a>
-                    </li>
+<%--                    <li class="social-icon-item">--%>
+<%--                        <a href="#" class="social-icon-link bi-facebook"></a>--%>
+<%--                    </li>--%>
 
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-youtube"></a>
-                    </li>
+<%--                    <li class="social-icon-item">--%>
+<%--                        <a href="#" class="social-icon-link bi-instagram"></a>--%>
+<%--                    </li>--%>
 
-                    <li class="social-icon-item">
-                        <a href="#" class="social-icon-link bi-whatsapp"></a>
-                    </li>
+<%--                    <li class="social-icon-item">--%>
+<%--                        <a href="#" class="social-icon-link bi-youtube"></a>--%>
+<%--                    </li>--%>
+
+<%--                    <li class="social-icon-item">--%>
+<%--                        <a href="#" class="social-icon-link bi-whatsapp"></a>--%>
+<%--                    </li>--%>
                 </ul>
             </div>
 

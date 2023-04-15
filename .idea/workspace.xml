@@ -9,13 +9,218 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8fac1807-773e-4e66-b256-8312b645c062" name="Changes" comment="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="8fac1807-773e-4e66-b256-8312b645c062" name="Changes" comment="- 관리자 asset 추가&#10;- 메인페이지 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/css/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/favicon/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/brands/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/brands/github.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/brands/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/brands/mailchimp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/brands/slack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/brands/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/cc-primary.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/cc-success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/cc-warning.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/chart-success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/wallet-info.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/icons/unicons/wallet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/illustrations/man-with-laptop-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/illustrations/page-misc-error-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/layouts/layout-container-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/img/layouts/layout-fluid-light.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/js/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/js/form-basic-inputs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/js/pages-account-settings-account.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/js/ui-modals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/js/ui-toasts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/css/core.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/css/pages/page-account-settings.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/css/pages/page-auth.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/css/pages/page-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/css/pages/page-misc.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/css/theme-default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/fonts/boxicons/boxicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/js/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/libs/highlight/highlight.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/libs/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/libs/masonry/masonry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/auth-register-basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/extended-ui-perfect-scrollbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/extended-ui-text-divider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/form-layouts-horizontal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/forms-input-groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/layouts-container.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/layouts-without-navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/pages-account-settings-connections.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/pages-account-settings-notifications.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/pages-misc-error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/pages-misc-under-maintenance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/tables-basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-badges.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-buttons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-dropdowns.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-list-groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-modals.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-pagination-breadcrumbs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-spinners.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-tabs-pills.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-toasts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-tooltips-popovers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/html/ui-typography.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/js/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/js/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/libs/highlight/highlight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/libs/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/libs/perfect-scrollbar/perfect-scrollbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/libs/perfect-scrollbar/perfect-scrollbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/_utilities-ltr.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/forms/_validation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/mixins/_navs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/mixins/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/mixins/_table-variants.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_bootstrap-extended/mixins/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_components/_text-divider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_custom-variables/_pages.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/_theme/_theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/pages/page-account-settings.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/pages/page-auth.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/scss/theme-default.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/tasks/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/community.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/frontend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/makestudy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/more.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/smartphone.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/communityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/communityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createquestion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createquestion.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnalist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnalist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/mystudy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/mystudy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/contactform/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/css/style-responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/css/to-do.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/css/zabuto_calendar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/blog-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/friends/fr-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/instagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/login-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/lorde.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/ny.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/product.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/profile-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/profile-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/radio-gray.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/ui-danro.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/ui-divya.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/ui-sam.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/ui-sherman.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/ui-zac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/weather.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/img/zoom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/css/demo_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/css/demo_table.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/css/demo_table_jui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/css/jquery.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/css/jquery.dataTables_themeroller.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/Sorting icons.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/back_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/back_enabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/back_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/details_open.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/forward_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/forward_enabled_hover.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/sort_asc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/sort_both.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/sort_desc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/images/sort_desc_disabled.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/js/jquery.dataTables.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/advanced-datatable/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-daterangepicker/daterangepicker-bs3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-daterangepicker/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-fileupload/bootstrap-fileupload.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-inputmask/bootstrap-inputmask.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-timepicker/compiled/timepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-timepicker/js/bootstrap-timepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-wysihtml5/bootstrap-wysihtml5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap-wysihtml5/wysihtml5-0.3.0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/chart-master/Chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/dropzone/css/dropzone.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/dropzone/images/spritemap@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/easy-pie-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/fancybox/jquery.fancybox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/css/jquery.fileupload-ui-noscript.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/css/jquery.fileupload-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/img/progressbar.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/cors/jquery.xdr-transport.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/jquery.fileupload-process.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/jquery.fileupload-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/jquery.fileupload-validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/jquery.fileupload-video.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/file-uploader/js/vendor/jquery.ui.widget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/flot/jquery.flot.crosshair.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/flot/jquery.flot.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/flot/jquery.flot.pie.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/flot/jquery.flot.stack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/flotchart-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/font-awesome/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/fullcalendar/fullcalendar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/google-maps/data/points.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/google-maps/maplace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter/css/jquery.gritter.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter/css/jquery.gritter0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter/images/gritter-light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter/images/gritter-long.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter/images/gritter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/gritter/images/ie-spacer.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/jquery-easy-pie-chart/jquery.easy-pie-chart.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/jquery.backstretch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/jquery.dcjqaccordion.2.7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/jquery.nicescroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/jquery.sparkline.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/jquery.ui.touch-punch.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/morris-conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/morris/morris.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/php-mail-form/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/sparkline-chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/tasks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/xchart/xcharts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/xchart/xcharts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/lib/zabuto_calendar.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,33 +264,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/resources/yuri",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.41860464",
-    "settings.editor.selected.configurable": "settings.sync",
-    "spring.configuration.checksum": "5b1e5ccbaf17273c6602b7194774ff67",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Study/Getcode/src/main/webapp/resources/yuri&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41860464&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5b1e5ccbaf17273c6602b7194774ff67&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Study\Getcode\src\main\webapp\resources\yuri" />
-      <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\admin" />
       <recent name="D:\Study\Getcode\src\main\webapp\resources\adminassets" />
+      <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\admin" />
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\WEB-INF\views\community" />
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\resources\mappers" />
     </key>
@@ -215,6 +420,10 @@
       <workItem from="1681285038738" duration="5103000" />
       <workItem from="1681363118459" duration="13266000" />
       <workItem from="1681390177473" duration="9301000" />
+      <workItem from="1681401576305" duration="716000" />
+      <workItem from="1681565422772" duration="6166000" />
+      <workItem from="1681574156577" duration="843000" />
+      <workItem from="1681575196163" duration="2613000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -300,7 +509,49 @@
       <option name="project" value="LOCAL" />
       <updated>1681401285729</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정">
+      <created>1681401914543</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681401914543</updated>
+    </task>
+    <task id="LOCAL-00014" summary="- 관리자 asset 추가&#10;- 메인페이지 수정">
+      <created>1681574185333</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681574185333</updated>
+    </task>
+    <task id="LOCAL-00015" summary="- 관리자 asset 추가&#10;- 메인페이지 수정">
+      <created>1681574210377</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681574210377</updated>
+    </task>
+    <task id="LOCAL-00016" summary="- 관리자 asset 추가&#10;- 메인페이지 수정">
+      <created>1681574309153</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681574309153</updated>
+    </task>
+    <task id="LOCAL-00017" summary="- 관리자 asset 추가&#10;- 메인페이지 수정">
+      <created>1681575236349</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681575236349</updated>
+    </task>
+    <task id="LOCAL-00018" summary="- 관리자 asset 추가&#10;- 메인페이지 수정">
+      <created>1681576055603</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681576055603</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,7 +581,8 @@
     <MESSAGE value="mystudy로 바꿈" />
     <MESSAGE value="- Qna 게시판 제작" />
     <MESSAGE value="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 관리자 추가&#10;- Q&amp;A 접근권한 추가&#10;- 디테일 수정" />
+    <MESSAGE value="- 관리자 asset 추가&#10;- 메인페이지 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 관리자 asset 추가&#10;- 메인페이지 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
