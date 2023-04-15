@@ -41,36 +41,44 @@
 
                             <p class="mb-4">이제 당신도 함께 스터디를 시작해보세요! </p>
                             <div class="row">
-                            <div class="col-12">
-                              <input type="text" name="studyname" id="studyname" class="form-control"
-                                     placeholder="스터디명" required>
-                            </div>
 
-                              <div class="col-lg-6 col-md-6 col-12">
-                                <input type="date" name="studystart" id="studystart" class="form-control"
-                                       placeholder="스터디 시작일" required>
-                              </div>
+                                <div class="form-outline form-white mb-6 col-md-12">
+                                    <label class="text-right form-label" for="studyname">스터디 이름</label>
+                                    <input type="text" id="studyname" name="studyname" class="form-control form-control-lg" />
+                                </div>
 
-                              <div class="col-lg-6 col-md-6 col-12">
-                                <input type="date" name="last-name" id="studyend" class="form-control"
-                                       placeholder="스터디 종료일" required>
-                              </div>
-                              <div class="col-lg-6 col-md-6 col-12">
-                                <input type="text" name="subject-name" id="subject" class="form-control"
-                                       placeholder="스터디 주제" required>
-                              </div>
-                              <div class="col-lg-6 col-md-6 col-12">
-                                <input type="number" name="recruit" id="recruit" class="form-control"
-                                       placeholder="모집인원" required>
-                              </div>
-                              <div class="col-lg-6 col-md-6 col-12">
-                                <input type="text" name="onoff" id="onoff" class="form-control"
-                                       placeholder="온라인/오프라인" required>
-                              </div>
-                              <div class="col-lg-6 col-md-6 col-12">
-                                <input type="text" name="etc" id="etc" class="form-control"
-                                       placeholder="비고사항" required>
-                              </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="studystart">스터디 시작일</label>
+                                    <input type="text" id="studystart" name="studystart" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="studyperiod">스터디 기간</label>
+                                    <input type="text" id="studyperiod" name="studyperiod" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="recruitend">모집 종료일</label>
+                                    <input type="text" id="recruitend" name="recruitend" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="personnel">모집 인원</label>
+                                    <input type="text" id="personnel" name="personnel" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="skillstack">기술스택</label>
+                                    <input type="text" id="skillstack" name="skillstack" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="position">모집포지션</label>
+                                    <input type="text" id="position" name="position" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="onoff">연락방법</label>
+                                    <input type="text" id="onoff" name="onoff" class="form-control form-control-lg" />
+                                </div>
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="onoff">진행방법</label>
+                                    <input type="text" id="onoff" name="onoff" class="form-control form-control-lg" />
+                                </div>
                                 <div class="col-lg-12 col-md-12 col-12" style="background-color: white;">
                                     <textarea name="etc" id="summernote" class="form-control"
                                                placeholder="스터디 내용" required></textarea>
