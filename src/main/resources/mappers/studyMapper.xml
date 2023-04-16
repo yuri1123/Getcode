@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 파일이름을 지칭하는 네임스페이스 -->
+<mapper namespace="com.yuri.getcode.studyMapper">
+
+        <!-- 스터디생성-->
+        <insert id="create" parameterType="com.yuri.getcode.dto.StudyDto">
+          insert into study (studyname, studystart, period, recruitend, personnel,skillstack,position,connection,onoff,content,state,viewcnt,regDate,createdBy)
+                values (#{studyname}, #{studystart},#{period},#{recruitend},#{personnel},#{skillstack},#{position},#{connection},#{onoff},#{content},'apply',0,now(),#{createdBy})
+        </insert>
+
+        <!-- 스터디수정-->
+        <update id="update" parameterType="com.yuri.getcode.dto.StudyDto">
+            update study set
+            studyname = #{studyname}, studystart = #{studystart},period = #{period},recruitend = #{recruitend},personnel = #{personnel},skillstack = #{skillstack},
+            position = #{position},connection = #{connection},onoff = #{onoff},content = #{content},
+            modifyDate = #{modifyDate},modifiedBy = #{modifiedBy})
+            where id=#{id}
+        </update>
+
+<!--    스터디 등록 상태 수정-->
+    <update id="updatestate" parameterType="com.yuri.getcode.dto.StudyDto">
+        update study set
+        state = #{state},
+        where id=#{id}
+    </update>
+
+        <!-- 스터디 선택 조회-->
+        <select id="findbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.StudyDto">
+            select * from study where id=#{id}
+        </select>
+
+         <!-- 스터디 전체조회-->
+        <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">
+            select * from study
+        </select>
+
+    <!-- 승인된 스터디 전체조회-->
+    <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study where status='permit';
+    </select>
+
+    <!-- 나의 스터디 조회-->
+<!--    <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">-->
+<!--        select * from study-->
+<!--    </select>-->
+
+
+    <!-- 스터디 삭제-->
+        <select id="delete" parameterType="java.lang.Long">
+            delete from study where id=#{id}
+        </select>
+
+<!--        조회수증가-->
+        <update id="updateview" parameterType="java.lang.Long">
+            update study set viewcnt=viewcnt+1 where id=#{id}
+        </update>
+</mapper>

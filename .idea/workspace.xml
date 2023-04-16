@@ -10,7 +10,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fac1807-773e-4e66-b256-8312b645c062" name="Changes" comment="- 스터디만들기 서머노트 추가">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/StudyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/Study.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/createstudy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/createstudy.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,7 +71,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/resources/assets",
+    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/WEB-INF/views/study",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,11 +87,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\study" />
+      <recent name="D:\Study\Getcode\src\main\resources\mappers" />
       <recent name="D:\Study\Getcode\src\main\webapp\resources\assets" />
       <recent name="D:\Study\Getcode\src\main\webapp\resources\adminassets\libs\jquery" />
       <recent name="D:\Study\Getcode\src\main\webapp\resources\vendor\jquery" />
-      <recent name="D:\Study\Getcode\src\main\webapp\resources\yuri" />
-      <recent name="D:\Study\Getcode\src\main\webapp\resources\adminassets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\WEB-INF\views\kind" />
@@ -217,7 +225,8 @@
       <workItem from="1681575196163" duration="2613000" />
       <workItem from="1681577856035" duration="294000" />
       <workItem from="1681578170589" duration="1038000" />
-      <workItem from="1681579345783" duration="3637000" />
+      <workItem from="1681579345783" duration="3650000" />
+      <workItem from="1681647642857" duration="13612000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -408,7 +417,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681581731276</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="- 스터디만들기 서머노트 추가">
+      <created>1681582996965</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1681582996965</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

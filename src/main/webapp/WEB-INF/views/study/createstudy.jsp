@@ -12,16 +12,6 @@
 <head>
     <%@include file="../include/head.jsp" %>
 
-    <style>
-        .colortitle {
-            color: lightpink;
-        }
-
-        .colorsub {
-            color: white;
-        }
-    </style>
-
 </head>
 <body>
 <%@ include file="../include/header.jsp" %>
@@ -29,61 +19,78 @@
 <section class="gradient-custom">
     <div style="height: 80px;"></div>
     <div class="container">
-        <div class="row d-flex justify-content-center align-items-center ">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-8">
-<%--                <div class="card bg-dark text-white " style="border-radius: 1rem;">--%>
-<%--                    <div class="card-body ps-5 pe-5 text-center vh-70">--%>
+                <div class="mb-md-5 mt-md-4 pb-5 ">
 
-                        <div class="mb-md-5 mt-md-4 pb-5 ">
-
-                          <form class="custom-form contact-form" action="#" method="post" role="form">
-                            <h2>Create Study!</h2>
-
-                            <p class="mb-4">이제 당신도 함께 스터디를 시작해보세요! </p>
+                    <form class="custom-form contact-form" action="/study/create" method="post" role="form">
+                        <h2 class="justify-content-center text-center">Create Study</h2>
+                        <p class="mb-4 justify-content-center text-center mb-4">당신의 스터디를 지금 만들어보세요!</p>
                             <div class="row">
 
                                 <div class="form-outline form-white mb-6 col-md-12">
-                                    <label class="text-right form-label" for="studyname">스터디 이름</label>
+                                    <label class="text-right form-label" for="studyname"> * 스터디 이름</label>
                                     <input type="text" id="studyname" name="studyname" class="form-control form-control-lg" />
                                 </div>
 
                                 <div class="form-outline form-white mb-6 col-md-6">
                                     <label class="text-right form-label" for="studystart">스터디 시작일</label>
-                                    <input type="text" id="studystart" name="studystart" class="form-control form-control-lg" />
+                                    <input type="date" id="studystart" name="studystart" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="studyperiod">스터디 기간</label>
-                                    <input type="text" id="studyperiod" name="studyperiod" class="form-control form-control-lg" />
+                                    <label class="text-right form-label" for="period">스터디 기간</label>
+                                    <input type="text" id="period" name="period" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="recruitend">모집 종료일</label>
-                                    <input type="text" id="recruitend" name="recruitend" class="form-control form-control-lg" />
+                                    <label class="text-right form-label" for="recruitend"> * 모집 종료일</label>
+                                    <input type="date" id="recruitend" name="recruitend" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="personnel">모집 인원</label>
-                                    <input type="text" id="personnel" name="personnel" class="form-control form-control-lg" />
+                                    <label class="text-right form-label" for="personnel"> * 모집 인원</label>
+                                    <input type="number" id="personnel" name="personnel" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="skillstack">기술스택</label>
-                                    <input type="text" id="skillstack" name="skillstack" class="form-control form-control-lg" />
+                                    <label class="text-right form-label" for="skillstack"> * 기술스택</label>
+                                    <select type="text" id="skillstack" name="skillstack" class="form-control form-control-lg" >
+                                        <option value="Java">Java</option>
+                                        <option value="Spring">Spring</option>
+                                        <option value="SpringBoot">SpringBoot</option>
+                                        <option value="etc">기타</option>
+                                    </select>
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="position">모집포지션</label>
-                                    <input type="text" id="position" name="position" class="form-control form-control-lg" />
-                                </div>
-                                <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="onoff">연락방법</label>
-                                    <input type="text" id="onoff" name="onoff" class="form-control form-control-lg" />
-                                </div>
-                                <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="onoff">진행방법</label>
-                                    <input type="text" id="onoff" name="onoff" class="form-control form-control-lg" />
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-12" style="background-color: white;">
-                                    <textarea name="etc" id="summernote" class="form-control"
-                                               placeholder="스터디 내용" required></textarea>
+                                    <label class="text-right form-label" for="position"> * 모집포지션</label>
+                                    <select id="position" name="position" class="form-control form-control-lg" >
+                                    <option value="backend">백앤드</option>
+                                    <option value="frontend">프론트앤드</option>
+                                    <option value="mobile">모바일</option>
+                                    <option value="etc">기타</option>
+                                    </select>
                                 </div>
 
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="connection"> * 연락방법</label>
+                                    <select id="connection" name="connection" class="form-control form-control-lg" >
+                                        <option value="kakao">카톡오픈채팅</option>
+                                        <option value="phone">연락처</option>
+                                        <option value="community">커뮤니티</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-outline form-white mb-6 col-md-6">
+                                    <label class="text-right form-label" for="onoff"> * 진행방법</label>
+                                    <select id="onoff" name="onoff" class="form-control form-control-lg" >
+                                        <option value="online">온라인</option>
+                                        <option value="offline">오프라인</option>
+                                    </select>
+
+                                </div>
+
+                                <div class="form-outline form-white mb-6 col-md-12">
+                                    <label class="text-right form-label" for="summernote"> * 스터디/프로젝트 소개</label>
+                                    <textarea id="summernote" name="content" class="form-control form-control-lg" >
+                                    </textarea>
+                                </div>
                                     <script>
                                         $('#summernote').summernote({
                                             // 에디터 높이
@@ -120,12 +127,8 @@
                                         });
                                     </script>
 
-
-
-
                             </div>
-
-<%--                            <button type="submit" class="form-control">reset</button>--%>
+                        <input type="hidden" value="${User.userid}" name="createdBy" id="createdBy">
                             <button type="submit" class="form-control">create</button>
                           </form>
 

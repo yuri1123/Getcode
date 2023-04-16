@@ -4,14 +4,28 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath }" />
 <html>
 <head>
-    <%@include file="../include/head.jsp"%>>
+    <%@include file="../include/head.jsp"%>
+
+    <style>
+        .two-columns {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex-basis: 50%;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+    </style>
+
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
 
 <section class="cta-section section-padding section-bg">
     <div class="container">
-        <div class="row justify-content-center align-items-center">
+        <div class="row">
 
             <div class="col-lg-5 col-12 ms-auto">
                 <h2 class="mb-0">Make your Study</h2>
@@ -33,193 +47,24 @@
             <div class="col-lg-12 col-12 text-center mb-4">
                 <h2>Search Study</h2>
             </div>
-
-                <div class="col-lg-4 col-12">
-                    <div class="news-block">
-                        <div class="news-block-top">
-                            <a href="kind/news-detail.html">
-                                <img src="/resources/assets/images/news/medium-shot-volunteers-with-clothing-donations.jpg"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-
-                            <div class="news-category-block">
-                                <a href="#" class="category-block-link">
-                                    Lifestyle,
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Clothing Donation
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="news-block-info">
-                            <div class="d-flex mt-2">
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 12, 2036
-                                    </p>
-                                </div>
-
-                                <div class="news-block-author mx-5">
-                                    <p>
-                                        <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
-                                    </p>
-                                </div>
-
-                                <div class="news-block-comment">
-                                    <p>
-                                        <i class="bi-chat-left custom-icon me-1"></i>
-                                        32 Comments
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="news-block-title mb-2">
-                                <h4><a href="kind/news-detail.html" class="news-block-title-link">Clothing donation to
-                                    urban area</a></h4>
-                            </div>
-
-                            <div class="news-block-body">
-                                <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                    Professional charity theme based on Bootstrap</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news-block mt-3">
-                        <div class="news-block-top">
-                            <a href="kind/news-detail.html">
-                                <img src="/resources/assets/images/news/medium-shot-people-collecting-foodstuff.jpg"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-
-                            <div class="news-category-block">
-                                <a href="#" class="category-block-link">
-                                    Food,
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Donation,
-                                </a>
-
-                                <a href="#" class="category-block-link">
-                                    Caring
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="news-block-info">
-                            <div class="d-flex mt-2">
-                                <div class="news-block-date">
-                                    <p>
-                                        <i class="bi-calendar4 custom-icon me-1"></i>
-                                        October 20, 2036
-                                    </p>
-                                </div>
-
-                                <div class="news-block-author mx-5">
-                                    <p>
-                                        <i class="bi-person custom-icon me-1"></i>
-                                        By Admin
-                                    </p>
-                                </div>
-
-                                <div class="news-block-comment">
-                                    <p>
-                                        <i class="bi-chat-left custom-icon me-1"></i>
-                                        35 Comments
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="news-block-title mb-2">
-                                <h4><a href="kind/news-detail.html" class="news-block-title-link">Food donation area</a>
-                                </h4>
-                            </div>
-
-                            <div class="news-block-body">
-                                <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                    elementum, tempor risus vel, condimentum orci</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            <div class="col-lg-4 col-12">
-                <div class="news-block">
-                    <div class="news-block-top">
-                        <a href="kind/news-detail.html">
-                            <img src="/resources/assets/images/news/medium-shot-volunteers-with-clothing-donations.jpg"
-                                 class="news-image img-fluid" alt="">
-                        </a>
-
-                        <div class="news-category-block">
-                            <a href="#" class="category-block-link">
-                                Lifestyle,
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Clothing Donation
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="news-block-info">
-                        <div class="d-flex mt-2">
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 12, 2036
-                                </p>
-                            </div>
-
-                            <div class="news-block-author mx-5">
-                                <p>
-                                    <i class="bi-person custom-icon me-1"></i>
-                                    By Admin
-                                </p>
-                            </div>
-
-                            <div class="news-block-comment">
-                                <p>
-                                    <i class="bi-chat-left custom-icon me-1"></i>
-                                    32 Comments
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="news-block-title mb-2">
-                            <h4><a href="kind/news-detail.html" class="news-block-title-link">Clothing donation to
-                                urban area</a></h4>
-                        </div>
-
-                        <div class="news-block-body">
-                            <p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito
-                                Professional charity theme based on Bootstrap</p>
-                        </div>
-                    </div>
-                </div>
-                        <div class="news-block mt-3">
+            <div class="col-lg-8 col-12 mb-4">
+                <div class="two-columns">
+                    <c:forEach items="${studyDto}" var="list">
+                        <div class="column">
+                        <div class="news-block">
                             <div class="news-block-top">
                                 <a href="kind/news-detail.html">
-                                    <img src="/resources/assets/images/news/medium-shot-people-collecting-foodstuff.jpg"
+                                    <img src="/resources/assets/images/news/medium-shot-volunteers-with-clothing-donations.jpg"
                                          class="news-image img-fluid" alt="">
                                 </a>
 
                                 <div class="news-category-block">
                                     <a href="#" class="category-block-link">
-                                        Food,
+                                            ${list.skillstack}
                                     </a>
 
                                     <a href="#" class="category-block-link">
-                                        Donation,
-                                    </a>
-
-                                    <a href="#" class="category-block-link">
-                                        Caring
+                                            ${list.position}
                                     </a>
                                 </div>
                             </div>
@@ -229,38 +74,41 @@
                                     <div class="news-block-date">
                                         <p>
                                             <i class="bi-calendar4 custom-icon me-1"></i>
-                                            October 20, 2036
+                                                ${list.recruitend}
                                         </p>
                                     </div>
 
                                     <div class="news-block-author mx-5">
                                         <p>
                                             <i class="bi-person custom-icon me-1"></i>
-                                            By Admin
+                                                ${list.personnel}
                                         </p>
                                     </div>
 
                                     <div class="news-block-comment">
                                         <p>
                                             <i class="bi-chat-left custom-icon me-1"></i>
-                                            35 Comments
+                                                ${list.viewcnt} view
                                         </p>
                                     </div>
                                 </div>
 
                                 <div class="news-block-title mb-2">
-                                    <h4><a href="kind/news-detail.html" class="news-block-title-link">Food donation area</a>
-                                    </h4>
+                                    <h4><a href="kind/news-detail.html" class="news-block-title-link">
+                                            ${list.studyname}
+                                    </a></h4>
                                 </div>
 
                                 <div class="news-block-body">
-                                    <p>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis metus
-                                        elementum, tempor risus vel, condimentum orci</p>
+                                    <p>${list.content}</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    </c:forEach>
                 </div>
             </div>
-                <div class="col-lg-3 col-12 mx-auto">
+                <div class="col-lg-4 col-12 mb-4">
                     <form class="custom-form search-form" action="#" method="post" role="form">
                         <input class="form-control" type="search" placeholder="Search" aria-label="Search">
 
