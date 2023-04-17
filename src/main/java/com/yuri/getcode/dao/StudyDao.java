@@ -1,12 +1,13 @@
 package com.yuri.getcode.dao;
 
-import com.yuri.getcode.dto.QuestionDto;
 import com.yuri.getcode.dto.StudyDto;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
+
 @Repository
 public class StudyDao {
 
@@ -21,8 +22,8 @@ public class StudyDao {
     public int update(StudyDto studyDto) {
         return sqlSession.update(namespace + ".update",studyDto);
     }
-    public int updatestate(StudyDto studyDto) {
-        return sqlSession.update(namespace + ".updatestate",studyDto);
+    public int updatestate(Map<String, Object> params) {
+        return sqlSession.update(namespace + ".updatestate",params);
     }
 
     public StudyDto findbyid(Long id) {
@@ -32,7 +33,15 @@ public class StudyDao {
     public List<StudyDto> selectall() {
         return sqlSession.selectList(namespace + ".selectall");
     }
-
+    public List<StudyDto> selectpermit() {
+        return sqlSession.selectList(namespace + ".selectpermit");
+    }
+    public List<StudyDto> selectposition() {
+        return sqlSession.selectList(namespace + ".selectposition");
+    }
+    public List<StudyDto> selectskillstack() {
+        return sqlSession.selectList(namespace + ".selectskillstack");
+    }
     public int delete(Long id) {
         return sqlSession.delete(namespace + ".delete",id);
     }

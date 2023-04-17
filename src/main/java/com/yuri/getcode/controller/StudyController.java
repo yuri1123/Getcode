@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,14 +19,19 @@ public class StudyController {
 
     @Autowired
     private StudyService studyService;
+    private List<StudyDto> positionList;
 
     //스터디 찾기 페이지 이동
     @GetMapping("study/browse")
     public String browsestudy(Model model){
 
-        List<StudyDto> studyDto = studyService.selectall();
+        List<StudyDto> studyDto = studyService.selectpermit();
         model.addAttribute("studyDto", studyDto);
 
+        List<StudyDto> positionList = studyService.selectposition();
+        model.addAttribute("positionList", positionList);
+        List<StudyDto> skillstackList = studyService.selectskillstack();
+        model.addAttribute("skillstackList", skillstackList);
         return "study/browse";
     }
 
@@ -43,7 +49,6 @@ public class StudyController {
         return "/study/createstudy";
     }
 
-
     //스터디만들기
     @PostMapping("/study/create")
     public String createstudyDo(StudyDto studyDto,Model model ){
@@ -55,8 +60,17 @@ public class StudyController {
         return "redirect:/study/browse";
     }
 
+    //스터디 상세 페이지 이동
+    @GetMapping("study/studydetail/{id}")
+    public String stduydetail(Model model, @PathVariable("id") Long id){
+        studyService.updateview(id);
+        StudyDto studyDto = studyService.findbyid(id);
+        model.addAttribute("studyDto",studyDto);
+        return "study/studydetail";
+    }
 
-    //스터디 찾기 페이지 이동
+
+    //내 스터디 현황 페이지 이동
     @GetMapping("study/mystudy")
     public String mystudy(){
         return "/study/mystudy";

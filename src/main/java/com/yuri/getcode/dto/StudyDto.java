@@ -26,5 +26,5 @@ public class StudyDto {
     private String modifyDate;
     private String createdBy;
     private String modifiedBy;
-
+    private int count; //포지션 그룹별로 했을 경우 허용된 스터디의 수
 }

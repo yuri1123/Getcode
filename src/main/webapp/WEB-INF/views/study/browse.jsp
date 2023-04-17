@@ -51,191 +51,110 @@
                 <div class="two-columns">
                     <c:forEach items="${studyDto}" var="list">
                         <div class="column">
-                        <div class="news-block">
-                            <div class="news-block-top">
-                                <a href="kind/news-detail.html">
-                                    <img src="/resources/assets/images/news/medium-shot-volunteers-with-clothing-donations.jpg"
-                                         class="news-image img-fluid" alt="">
-                                </a>
+                            <div class="card mt-3 mb-3" style="border-color: lightgrey"; border:1px;>
+                                <div class="custom-block">
+                                    <div class="custom-block-body">
+                                        <div class="mb-2">
+                                        <a href="#" class="category-block-link badge">
+                                                ${list.skillstack}
+                                        </a>
 
-                                <div class="news-category-block">
-                                    <a href="#" class="category-block-link">
-                                            ${list.skillstack}
-                                    </a>
+                                        <a href="#" class="category-block-link badge">
+                                                ${list.position}
+                                        </a>
+                                        </div>
+                                        <h5 class="mb-3" style="font-size: 19px; font-weight: bold" > ${list.studyname}</h5>
 
-                                    <a href="#" class="category-block-link">
-                                            ${list.position}
-                                    </a>
+                                        <div class="d-flex mt-2">
+                                            <div class="news-block-date">
+                                                <p style="font-size: 13px;">
+                                                    <i class="bi-calendar4 custom-icon me-1"></i>
+                                                        ${list.recruitend}
+                                                </p>
+                                            </div>
+
+                                            <div class="news-block-author mx-5">
+                                                <p style="font-size: 13px;">
+                                                    <i class="bi-person custom-icon me-1"></i>
+                                                        ${list.personnel}
+                                                </p>
+                                            </div>
+
+                                            <div class="news-block-comment">
+                                                <p style="font-size: 13px;">
+                                                    <i class="bi-chat-left custom-icon me-1"></i>
+                                                        ${list.viewcnt} view
+                                                </p>
+                                            </div>
+                                        </div>
+                                            <div class="mt-2 mb-2">
+                                                <p style="font-size: 16px;">
+                                                     스터디 시작일  ${list.studystart} <br>
+                                                     스터디 예상 기간 ${list.period} <br>
+                                                     진행방법 ${list.onoff} <br>
+                                            </div>
+<%--                                        <p class="mb-2">${list.content}</p>--%>
+
+                                        <div class="progress mt-4">
+                                            <div class="progress-bar w-100" role="progressbar" aria-valuenow="10"
+                                                 aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center my-2">
+                                            <p class="mb-0">
+                                                <strong>now  </strong>
+                                                3 people
+                                            </p>
+
+                                            <p class="ms-auto mb-0">
+                                                <strong></strong>
+                                                    / ${list.personnel} people
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <a href="/study/studydetail/${list.id}" class="custom-btn btn m-1">Study Detail</a>
+<%--                                    onclick="return confirm('스터디에 참여하시겠습니까?');--%>
                                 </div>
                             </div>
 
-                            <div class="news-block-info">
-                                <div class="d-flex mt-2">
-                                    <div class="news-block-date">
-                                        <p>
-                                            <i class="bi-calendar4 custom-icon me-1"></i>
-                                                ${list.recruitend}
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-author mx-5">
-                                        <p>
-                                            <i class="bi-person custom-icon me-1"></i>
-                                                ${list.personnel}
-                                        </p>
-                                    </div>
-
-                                    <div class="news-block-comment">
-                                        <p>
-                                            <i class="bi-chat-left custom-icon me-1"></i>
-                                                ${list.viewcnt} view
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="news-block-title mb-2">
-                                    <h4><a href="kind/news-detail.html" class="news-block-title-link">
-                                            ${list.studyname}
-                                    </a></h4>
-                                </div>
-
-                                <div class="news-block-body">
-                                    <p>${list.content}</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     </c:forEach>
                 </div>
             </div>
                 <div class="col-lg-4 col-12 mb-4">
-                    <form class="custom-form search-form" action="#" method="post" role="form">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    <form class="custom-form subscribe-form" action="#" method="post" role="form">
+                        <h5 class="mb-4">search study</h5>
 
-                        <button type="submit" class="form-control">
-                            <i class="bi-search"></i>
-                        </button>
+                        <input type="text" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
+                               class="form-control" placeholder="keywords" required>
+
+                        <div class="col-lg-12 col-12">
+                            <button type="submit" class="form-control">search</button>
+                        </div>
                     </form>
-
-                    <h5 class="mt-5 mb-3">Recent news</h5>
-
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="kind/news-detail.html">
-                                <img src="/resources/assets/images/news/africa-humanitarian-aid-doctor.jpg"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="kind/news-detail.html" class="news-block-title-link">Food donation area</a>
-                                </h6>
-                            </div>
-
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 16, 2036
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="news-block news-block-two-col d-flex mt-4">
-                        <div class="news-block-two-col-image-wrap">
-                            <a href="kind/news-detail.html">
-                                <img src="/resources/assets/images/news/close-up-happy-people-working-together.jpg"
-                                     class="news-image img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="news-block-two-col-info">
-                            <div class="news-block-title mb-2">
-                                <h6><a href="kind/news-detail.html" class="news-block-title-link">Volunteering Clean</a>
-                                </h6>
-                            </div>
-
-                            <div class="news-block-date">
-                                <p>
-                                    <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 24, 2036
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="category-block d-flex flex-column">
                         <h5 class="mb-3">Categories</h5>
-
+<%--                        positionList 그룹별 조회한 값 전체 출력--%>
+                <c:forEach items="${positionList}" var="positionList">
                         <a href="#" class="category-block-link">
-                            Drinking water
-                            <span class="badge">20</span>
+                            ${positionList.position}
+                            <span class="badge">${positionList.count}</span>
                         </a>
-
-                        <a href="#" class="category-block-link">
-                            Food Donation
-                            <span class="badge">30</span>
-                        </a>
-
-                        <a href="#" class="category-block-link">
-                            Children Education
-                            <span class="badge">10</span>
-                        </a>
-
-                        <a href="#" class="category-block-link">
-                            Poverty Development
-                            <span class="badge">15</span>
-                        </a>
-
-                        <a href="#" class="category-block-link">
-                            Clothing Donation
-                            <span class="badge">20</span>
-                        </a>
+                </c:forEach>
                     </div>
 
                     <div class="tags-block">
                         <h5 class="mb-3">Tags</h5>
-
+                <c:forEach items="${skillstackList}" var="skillstackList">
                         <a href="#" class="tags-block-link">
-                            Donation
+                            ${skillstackList.skillstack}
                         </a>
-
-                        <a href="#" class="tags-block-link">
-                            Clothing
-                        </a>
-
-                        <a href="#" class="tags-block-link">
-                            Food
-                        </a>
-
-                        <a href="#" class="tags-block-link">
-                            Children
-                        </a>
-
-                        <a href="#" class="tags-block-link">
-                            Education
-                        </a>
-
-                        <a href="#" class="tags-block-link">
-                            Poverty
-                        </a>
-
-                        <a href="#" class="tags-block-link">
-                            Clean Water
-                        </a>
+                </c:forEach>
                     </div>
 
-                    <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                        <h5 class="mb-4">Newsletter Form</h5>
 
-                        <input type="email" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                               class="form-control" placeholder="Email Address" required>
-
-                        <div class="col-lg-12 col-12">
-                            <button type="submit" class="form-control">Subscribe</button>
-                        </div>
-                    </form>
                 </div>
 
             </div>

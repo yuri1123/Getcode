@@ -28,119 +28,95 @@
 
 <section class="section-padding" >
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-12">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-12">
                 <div class="news-block">
-                    <div class="news-block-top">
-                        <img src="/resources/assets/images/news/medium-shot-volunteers-with-clothing-donations.jpg"
-                             class="news-image img-fluid" alt="">
-
-                        <div class="news-category-block">
-                            <a href="#" class="category-block-link">
-                                Lifestyle,
-                            </a>
-
-                            <a href="#" class="category-block-link">
-                                Clothing Donation
-                            </a>
-                        </div>
-                    </div>
 
                     <div class="news-block-info">
-                        <div class="d-flex mt-2">
+
+                        <div class="news-block-title">
+                            <h4>${studyDto.studyname}</h4>
+                        </div>
+                        <div class="d-flex col-8 mt-2 mb-1">
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
-                                    October 12, 2036
+                                    ${studyDto.recruitend}
                                 </p>
                             </div>
 
                             <div class="news-block-author mx-5">
                                 <p>
                                     <i class="bi-person custom-icon me-1"></i>
-                                    By Admin
+                                    ${studyDto.personnel}
                                 </p>
                             </div>
 
                             <div class="news-block-comment">
                                 <p>
                                     <i class="bi-chat-left custom-icon me-1"></i>
-                                    48 Comments
+                                    ${studyDto.viewcnt} view
                                 </p>
                             </div>
                         </div>
-
-                        <div class="news-block-title mb-2">
-                            <h4>Clothing donation to urban area</h4>
+<%--                        <div class="mb-3">--%>
+                        <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
+                            <hr class="mb-3">
+                            <div class="col-2 offset-10 justify-content-right text-right">
+                                <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
+                            </div>
                         </div>
 
                         <div class="news-block-body">
-                            <p><strong>Lorem Ipsum</strong> dolor sit amet, consectetur adipsicing kengan omeg
-                                kohm tokito Professional charity theme based on Bootstrap</p>
-
-                            <p><strong>Sed leo</strong> nisl, This is a Bootstrap 5.2.2 CSS template for charity
-                                organization websites. You can feel free to use it. Please tell your friends
-                                about TemplateMo website. Thank you.</p>
-
-                            <blockquote>Sed leo nisl, posuere at molestie ac, suscipit auctor mauris. Etiam quis
-                                metus elementum, tempor risus vel, condimentum orci.</blockquote>
+                            <p><strong>스터디 시작일</strong>
+                                ${studyDto.studystart}</p>
+                            <p><strong>스터디 기간</strong>
+                                ${studyDto.period}</p>
+                            <p><strong>기술스택</strong>
+                                ${studyDto.skillstack}</p>
+                            <p><strong>모집 포지션</strong>
+                                ${studyDto.position}</p>
+                            <p><strong>연락방법</strong>
+                                ${studyDto.connection}</p>
+                            <p><strong>진행방법</strong>
+                                ${studyDto.onoff}</p>
+                            <blockquote>${studyDto.content}</blockquote>
                         </div>
-
-                        <div class="row mt-5 mb-4">
-                            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                                <img src="/resources/assets/images/news/africa-humanitarian-aid-doctor.jpg"
-                                     class="news-detail-image img-fluid" alt="">
-                            </div>
-
-                            <div class="col-lg-6 col-12">
-                                <img src="/resources/assets/images/news/close-up-happy-people-working-together.jpg"
-                                     class="news-detail-image img-fluid" alt="">
-                            </div>
-                        </div>
-
-                        <p>You are not allowed to redistribute this template ZIP file on any other template
-                            collection website. Please <a href="https://templatemo.com/contact"
-                                                          target="_blank">contact TemplateMo</a> for more information.</p>
 
                         <div class="social-share border-top mt-5 py-4 d-flex flex-wrap align-items-center">
                             <div class="tags-block me-auto">
                                 <a href="#" class="tags-block-link">
-                                    Donation
+                                    ${studyDto.skillstack}
                                 </a>
 
                                 <a href="#" class="tags-block-link">
-                                    Clothing
+                                    ${studyDto.position}
                                 </a>
 
-                                <a href="#" class="tags-block-link">
-                                    Food
-                                </a>
                             </div>
 
-                            <div class="d-flex">
-                                <a href="#" class="social-icon-link bi-facebook"></a>
+<%--                            <div class="d-flex">--%>
+<%--                                <a href="#" class="social-icon-link bi-facebook"></a>--%>
 
-                                <a href="#" class="social-icon-link bi-twitter"></a>
+<%--                                <a href="#" class="social-icon-link bi-twitter"></a>--%>
 
-                                <a href="#" class="social-icon-link bi-printer"></a>
+<%--                                <a href="#" class="social-icon-link bi-printer"></a>--%>
 
-                                <a href="#" class="social-icon-link bi-envelope"></a>
-                            </div>
+<%--                                <a href="#" class="social-icon-link bi-envelope"></a>--%>
+<%--                            </div>--%>
                         </div>
 
                         <div class="author-comment d-flex mt-3 mb-4">
-                            <img src="/resources/assets/images/avatar/studio-portrait-emotional-happy-funny.jpg"
+                            <img src="/resources/yuri/yuripic.png"
                                  class="img-fluid avatar-image" alt="">
 
                             <div class="author-comment-info ms-3">
-                                <h6 class="mb-1">Jack</h6>
+                                <h6 class="mb-1">율류리</h6>
 
-                                <p class="mb-0">Kind Heart Charity is the most supportive organization. This is
-                                    Bootstrap 5 HTML CSS template for everyone. Thank you.</p>
+                                <p class="mb-0">참여하고 싶은데 좀 늦참해도 되나요?</p>
 
                                 <div class="d-flex mt-2">
                                     <a href="#" class="author-comment-link me-3">Like</a>
-
                                     <a href="#" class="author-comment-link">Reply</a>
                                 </div>
                             </div>
@@ -151,10 +127,9 @@
                                  class="img-fluid avatar-image" alt="">
 
                             <div class="author-comment-info ms-3">
-                                <h6 class="mb-1">Daisy</h6>
+                                <h6 class="mb-1">admin</h6>
 
-                                <p class="mb-0">Sed leo nisl, posuere at molestie ac, suscipit auctor mauris.
-                                    Etiam quis metus elementum, tempor risus vel, condimentum orci</p>
+                                <p class="mb-0">넹 가능합니다. 언제부터 참여가 가능하세요?</p>
 
                                 <div class="d-flex mt-2">
                                     <a href="#" class="author-comment-link me-3">Like</a>
@@ -169,10 +144,9 @@
                                  class="img-fluid avatar-image" alt="">
 
                             <div class="author-comment-info ms-3">
-                                <h6 class="mb-1">Wilson</h6>
+                                <h6 class="mb-1">윌슨</h6>
 
-                                <p class="mb-0">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
-                                    kohm tokito Professional charity theme based on Bootstrap</p>
+                                <p class="mb-0">ㅎㅎ 너무 좋아보이는 스터디네요🎈😍😊</p>
 
                                 <div class="d-flex mt-2">
                                     <a href="#" class="author-comment-link me-3">Like</a>

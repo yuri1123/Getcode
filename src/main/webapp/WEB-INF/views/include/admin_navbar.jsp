@@ -103,7 +103,7 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="pages-account-settings-account.html" class="menu-link">
+                    <a href="/admin/studylist" class="menu-link">
                         <div data-i18n="Account">스터디 전체보기</div>
                     </a>
                 </li>
@@ -143,24 +143,22 @@
         <!-- Misc -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">USER</span></li>
         <li class="menu-item">
-            <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="menu-link"
-            >
-                <i class="menu-icon tf-icons bx bx-support"></i>
-                <div data-i18n="Support">사용자 권한 관리</div>
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-dock-top"></i>
+                <div data-i18n="Account Settings">유저 관리</div>
             </a>
-        </li>
-        <li class="menu-item">
-            <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="menu-link"
-            >
-                <i class="menu-icon tf-icons bx bx-file"></i>
-                <div data-i18n="Documentation">사용자 전체 현황</div>
-            </a>
+            <ul class="menu-sub">
+                <li class="menu-item">
+                    <a href="/admin/userlist" class="menu-link">
+                        <div data-i18n="Account">유저 전체 보기</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="/admin/changerole" class="menu-link">
+                        <div data-i18n="Notifications">스터디 신청 현황</div>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </aside>
