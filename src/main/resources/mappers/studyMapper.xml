@@ -21,10 +21,8 @@
         </update>
 
 <!--    스터디 등록 상태 수정-->
-    <update id="updatestate" parameterType="com.yuri.getcode.dto.StudyDto">
-        update study set
-        state = #{state},
-        where id=#{id}
+    <update id="updatestate" parameterType="java.util.Map">
+        update study set state = #{state} where id=#{id}
     </update>
 
         <!-- 스터디 선택 조회-->
@@ -38,8 +36,17 @@
         </select>
 
     <!-- 승인된 스터디 전체조회-->
-    <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">
-        select * from study where status='permit';
+    <select id="selectpermit" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study where state='permit';
+    </select>
+
+<!--    카테고리(position) 리스트 조회-->
+    <select id="selectposition" resultType="com.yuri.getcode.dto.StudyDto">
+        select position,count(*) as count from study where state='permit' group by position;
+    </select>
+<!--    기술스택(skillstack) 리스트 조회-->
+    <select id="selectskillstack" resultType="com.yuri.getcode.dto.StudyDto">
+        select distinct skillstack from study
     </select>
 
     <!-- 나의 스터디 조회-->
