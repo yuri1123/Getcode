@@ -74,6 +74,7 @@ public class StudyController {
     public String studyupdate(@PathVariable("id") Long id, Model model){
         StudyDto studyDto = studyService.findbyid(id);
         model.addAttribute("studyDto", studyDto);
+        System.out.println(studyDto);
         return "study/studyupdate";
     }
 
