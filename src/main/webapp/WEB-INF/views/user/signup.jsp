@@ -31,11 +31,10 @@
 
         <div class="mb-md-5 mt-md-4 pb-5 justify-content-center text-center">
 
-          <form class="custom-form contact-form justify-content-center text-center" action="#" method="post" role="form">
+          <form class="custom-form contact-form justify-content-center text-center" action="/user/signup" method="post" role="form">
             <h2>SIGN UP</h2>
             <p class="mb-4">Register your account in GetCode!</p>
 
-                <div action="/user/signup" role="form" method="post">
               <div class="row">
 
               <div class="form-outline form-white mb-4 col-md-10 offset-md-1">
@@ -94,10 +93,14 @@
                 </div>
                 <input type="hidden" value="${User.userid}" name="createdBy" id="createdBy">
               </div>
-              <button class="nav-link custom-btn custom-border-btn btn" type="reset">RESET</button>
-              <button class="nav-link custom-btn custom-border-btn btn" type="submit">SIGN UP</button>
-              </div>
+                  <div class="form-outline form-white mb-4 col-md-12 justify-content-center text-center">
+                    <center>
+                      <button style="width: 200px; height: 50px" class=" custom-btn custom-border-btn btn text-center" type="submit">Sign Up</button>
+                      <button style="width: 200px;" class=" custom-btn custom-border-btn btn text-center" type="reset">Reset</button>
+                    </center>
+                  </div>
           </form>
+              </div>
               </div>
 
             </div>

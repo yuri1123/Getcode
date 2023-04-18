@@ -30,7 +30,10 @@ public class UserDao {
         return sqlSession.update(namespace+".updaterole",params);
     }
 
-    public List<UserDto> selectinfo(Long id){
-        return sqlSession.selectList(namespace+".selectinfo",id);
+    public UserDto selectinfo(Long id){
+        return sqlSession.selectOne(namespace+".selectinfo",id);
     }
+    public int updateinfo(UserDto userDto){return sqlSession.update(namespace+".updateinfo",userDto);}
+
+
 }

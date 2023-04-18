@@ -1,11 +1,14 @@
 package com.yuri.getcode.controller;
 
+import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.service.StudyService;
 import com.yuri.getcode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -19,6 +22,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private StudyService studyService;
     //로그인페이지 이동
     @GetMapping("user/login")
     String loginform(){
@@ -70,18 +75,42 @@ public class UserController {
     @GetMapping("user/mypage/{id}")
     public String mypage(@PathVariable("id") Long id, Model model){
 
-        List<UserDto> userDto = userService.selectinfo(id);
+        UserDto userDto = userService.selectinfo(id);
         System.out.println(userDto);
         model.addAttribute("userDto",userDto);
         return "user/mypage";
     }
 
-    //마이페이지 이동
+    //회원정보 페이지 이동
     @GetMapping("user/myinfo/{id}")
     public String myinfo(@PathVariable("id") Long id, Model model){
-        List<UserDto> userDto = userService.selectinfo(id);
+        UserDto userDto = userService.selectinfo(id);
         model.addAttribute("userDto",userDto);
         return "user/myinfo";
+    }
+
+    //회원정보 수정
+//    user/myinfo/modify/${userDto.id}
+    @PostMapping("user/myinfo/modify/{id}")
+    public String updateinfo(@PathVariable("id") Long id, Model model,@ModelAttribute UserDto userDto){
+        int result = userService.updateinfo(userDto);
+        if(result >0){
+            model.addAttribute("msg","회원정보를 수정하였습니다.");
+        }
+
+        // 수정된 사용자 정보 다시 불러오기
+        UserDto updatedUserDto = userService.selectinfo(id);
+        model.addAttribute("userDto", updatedUserDto);
+
+        return "user/myinfo";
+    }
+
+    //내가 만든 스터디로 이동
+    @GetMapping("user/mymadestudy/{userid}")
+    public String mymadestudy(Model model,@PathVariable("userid") String userid){
+        List<StudyDto> studyDtos = studyService.findbyme(userid);
+        model.addAttribute("studyDtos",studyDtos);
+        return "user/mymadestudy";
     }
 
 }

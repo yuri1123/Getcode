@@ -69,5 +69,25 @@ public class StudyController {
         return "study/studydetail";
     }
 
+    //스터디 수정페이지 이동
+    @GetMapping("/study/studyupdate/{id}")
+    public String studyupdate(@PathVariable("id") Long id, Model model){
+        StudyDto studyDto = studyService.findbyid(id);
+        model.addAttribute("studyDto", studyDto);
+        return "study/studyupdate";
+    }
 
+    //스터디 수정하기
+    @PostMapping("/study/update/{id}")
+    public String updateid(StudyDto studyDto,Model model,@PathVariable("id") Long id){
+        int result = studyService.update(studyDto);
+        if(result >0){
+            model.addAttribute("msg","스터디를 생성하였습니다.");
+        }
+        // 수정된 데이터 다시 불러오기
+        StudyDto updatedStudyDto = studyService.findbyid(id);
+        model.addAttribute("studyDto", updatedStudyDto);
+
+        return "redirect:/user/mymadestudy";
+    }
 }

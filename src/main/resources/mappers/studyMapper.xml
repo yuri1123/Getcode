@@ -54,6 +54,10 @@
 <!--        select * from study-->
 <!--    </select>-->
 
+    <!-- 내가 쓴 스터디 조회-->
+        <select id="selectbyme" parameterType="java.lang.String" resultType="com.yuri.getcode.dto.StudyDto">
+            select * from study where createdBy=#{createdBy}
+        </select>
 
     <!-- 스터디 삭제-->
         <select id="delete" parameterType="java.lang.Long">

@@ -31,6 +31,8 @@ public class StudyService{
         return studyDao.findbyid(id);
     }
 
+    //스터디 생성자로 조회하기
+    public List<StudyDto> findbyme(String createdBy){return studyDao.selectbyme(createdBy);}
     public List<StudyDto> selectall() {
         return studyDao.selectall();
     }

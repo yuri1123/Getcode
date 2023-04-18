@@ -30,7 +30,11 @@ public class UserService {
         return userDao.updaterole(params);
     }
     //회원정보 조회하기
-    public List<UserDto> selectinfo(Long id){
+    public UserDto selectinfo(Long id){
         return userDao.selectinfo(id);
+    }
+
+    public int updateinfo(UserDto userDto){
+        return userDao.updateinfo(userDto);
     }
 }

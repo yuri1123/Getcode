@@ -29,6 +29,8 @@ public class StudyDao {
     public StudyDto findbyid(Long id) {
         return sqlSession.selectOne(namespace + ".findbyid",id);
     }
+    //스터디 생성자로 조회하기
+    public List<StudyDto> selectbyme(String createdBy){return sqlSession.selectList(namespace+".selectbyme",createdBy);}
 
     public List<StudyDto> selectall() {
         return sqlSession.selectList(namespace + ".selectall");
