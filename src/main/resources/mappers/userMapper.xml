@@ -24,4 +24,10 @@
                 update user set role=#{role} where id = #{id}
         </update>
 
+
+<!--        회원정보 조회하기-->
+        <select id="selectinfo" resultType="com.yuri.getcode.dto.UserDto">
+                select * from user where id=#{id}
+        </select>
+
 </mapper>

@@ -12,10 +12,12 @@
             flex-wrap: wrap;
         }
 
-        .column {
-            flex-basis: 50%;
-            box-sizing: border-box;
-            padding: 0 10px;
+        @media (min-width: 990px) {
+            .column {
+                flex-basis: 50%;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
         }
     </style>
 
@@ -47,7 +49,7 @@
             <div class="col-lg-12 col-12 text-center mb-4">
                 <h2>Search Study</h2>
             </div>
-            <div class="col-lg-8 col-12 mb-4">
+            <div class="col-7 mb-4 justify-content-center offset-1">
                 <div class="two-columns">
                     <c:forEach items="${studyDto}" var="list">
                         <div class="column">
@@ -87,6 +89,7 @@
                                                 </p>
                                             </div>
                                         </div>
+                                        <hr>
                                             <div class="mt-2 mb-2">
                                                 <p style="font-size: 16px;">
                                                      스터디 시작일  ${list.studystart} <br>
@@ -94,9 +97,9 @@
                                                      진행방법 ${list.onoff} <br>
                                             </div>
 <%--                                        <p class="mb-2">${list.content}</p>--%>
-
+                                        <hr>
                                         <div class="progress mt-4">
-                                            <div class="progress-bar w-100" role="progressbar" aria-valuenow="10"
+                                            <div class="progress-bar w-50" role="progressbar" aria-valuenow="50"
                                                  aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
 
@@ -117,17 +120,16 @@
 <%--                                    onclick="return confirm('스터디에 참여하시겠습니까?');--%>
                                 </div>
                             </div>
-
                     </div>
                     </c:forEach>
                 </div>
             </div>
-                <div class="col-lg-4 col-12 mb-4">
+                <div class="col-4 mb-4">
                     <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                        <h5 class="mb-4">search study</h5>
+<%--                        <h5 class="mb-4">search study</h5>--%>
 
                         <input type="text" name="subscribe-email" id="subscribe-email" pattern="[^ @]*@[^ @]*"
-                               class="form-control" placeholder="keywords" required>
+                               class="form-control" required>
 
                         <div class="col-lg-12 col-12">
                             <button type="submit" class="form-control">search</button>
@@ -163,7 +165,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>>
+<%@include file="../include/js.jsp"%>
 
 
 </body>

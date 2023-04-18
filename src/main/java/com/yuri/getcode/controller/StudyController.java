@@ -70,9 +70,4 @@ public class StudyController {
     }
 
 
-    //내 스터디 현황 페이지 이동
-    @GetMapping("study/mystudy")
-    public String mystudy(){
-        return "/study/mystudy";
-    }
 }

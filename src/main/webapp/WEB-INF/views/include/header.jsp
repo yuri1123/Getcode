@@ -29,21 +29,6 @@
                     </c:if>
                     </li>
 
-<%--                    <li class="social-icon-item">--%>
-<%--                        <a href="#" class="social-icon-link bi-facebook"></a>--%>
-<%--                    </li>--%>
-
-<%--                    <li class="social-icon-item">--%>
-<%--                        <a href="#" class="social-icon-link bi-instagram"></a>--%>
-<%--                    </li>--%>
-
-<%--                    <li class="social-icon-item">--%>
-<%--                        <a href="#" class="social-icon-link bi-youtube"></a>--%>
-<%--                    </li>--%>
-
-<%--                    <li class="social-icon-item">--%>
-<%--                        <a href="#" class="social-icon-link bi-whatsapp"></a>--%>
-<%--                    </li>--%>
                 </ul>
             </div>
 
@@ -78,16 +63,9 @@
                        href="${contextPath}/admin" >Admin</a></li>
                 </c:if>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="${contextPath}/study/mystudy">My Study</a>
-                </li>
 
                 <li class="nav-item">
                     <a class="nav-link click-scroll" href="${contextPath}/study/browse">Search</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="">My Page</a>
                 </li>
 
                 <li class="nav-item dropdown">
@@ -98,9 +76,15 @@
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
                         <li><a class="dropdown-item" href="kind/news.html">Notice</a></li>
                         <li><a class="dropdown-item" href="/community/qnalist">Q&A</a></li>
+                        <li><a class="dropdown-item" href="/community/qnalist">Review</a></li>
                     </ul>
                 </li>
 
+                <li class="nav-item">
+                    <c:if test="${User != null}">
+                    <a class="nav-link click-scroll" href="${contextPath}/user/mypage/${User.id}">My Page</a>
+                    </c:if>
+                </li>
                 <li class="nav-item ms-3">
                     <!-- 로그인 X session에 값이 없을때 -->
                     <c:if test="${User.userid == null}">
@@ -117,56 +101,3 @@
     </div>
 </nav>
 
-
-<%--<!-- ***** Header Area Start ***** -->--%>
-<%--<header class="header-area header-sticky">--%>
-<%--    <div class="container">--%>
-<%--        <div class="row">--%>
-<%--            <div class="col-12">--%>
-<%--                <nav class="main-nav">--%>
-<%--                    <!-- ***** Logo Start ***** -->--%>
-<%--                    <a href="/" class="logo">--%>
-<%--                        <img src="/resources/yuri/getcode2.png" alt="">--%>
-<%--                    </a>--%>
-<%--                    <!-- ***** Logo End ***** -->--%>
-
-<%--                    <!-- ***** Menu Start ***** -->--%>
-<%--                    <ul class="nav">--%>
-
-<%--                        <!-- 로그인 O session에 값이 들어있을때 -->--%>
-<%--                        <c:if test="${User.userid != null}">--%>
-<%--                            <p style="color:white;">[★${User.nickname}님 안녕하세요★]</p>--%>
-<%--                        </c:if>--%>
-
-<%--                        <!-- 회원이 ADMIN인 경우-->--%>
-<%--                        <c:if test="${not empty sessionScope.User and sessionScope.User.role == 'ADMIN'}">--%>
-<%--                            <li><a href="/admin" style="color:white;">관리자</a></li>--%>
-<%--                        </c:if>--%>
-
-<%--                        &lt;%&ndash;                <a href="streams.html" class="text-white">관리자페이지</a></li>&ndash;%&gt;--%>
-<%--                        <li><a href="browse.html" class="text-white">내 스터디</a></li>--%>
-<%--                        <li><a href="/study/browse" style="color:white;">스터디 찾기</a></li>--%>
-<%--                        <li><a href="streams.html" class="text-white">커뮤니티</a></li>--%>
-
-<%--                        <!-- 로그인 X session에 값이 없을때 -->--%>
-<%--                        <c:if test="${User.userid == null}">--%>
-<%--                            <li><a href="/user/login" class="text-white">로그인</a></li>--%>
-<%--                        </c:if>--%>
-
-<%--                        <c:if test="${User.userid != null}">--%>
-<%--                            <li><a href="/user/logout" class="text-white">로그아웃</a></li>--%>
-<%--                        </c:if>--%>
-
-<%--                        <li><a href="profile.html" class="text-white">마이페이지<img--%>
-<%--                                src="/resources/assets/images/profile-header.jpg" alt=""></a></li>--%>
-<%--                    </ul>--%>
-<%--                    <a class='menu-trigger'>--%>
-<%--                        <span>Menu</span>--%>
-<%--                    </a>--%>
-<%--                    <!-- ***** Menu End ***** -->--%>
-<%--                </nav>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</header>--%>
-<%--<!-- ***** Header Area End ***** -->--%>

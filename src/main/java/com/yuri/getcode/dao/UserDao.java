@@ -29,4 +29,8 @@ public class UserDao {
     public int updaterole(Map<String,Object> params){
         return sqlSession.update(namespace+".updaterole",params);
     }
+
+    public List<UserDto> selectinfo(Long id){
+        return sqlSession.selectList(namespace+".selectinfo",id);
+    }
 }
