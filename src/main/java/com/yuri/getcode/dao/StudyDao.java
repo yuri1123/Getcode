@@ -1,6 +1,7 @@
 package com.yuri.getcode.dao;
 
 import com.yuri.getcode.dto.StudyDto;
+import com.yuri.getcode.dto.UserDto;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -35,6 +36,9 @@ public class StudyDao {
     public List<StudyDto> selectall() {
         return sqlSession.selectList(namespace + ".selectall");
     }
+    public List<StudyDto> selectfour() {
+        return sqlSession.selectList(namespace + ".selectfour");
+    }
     public List<StudyDto> selectpermit() {
         return sqlSession.selectList(namespace + ".selectpermit");
     }
@@ -51,6 +55,7 @@ public class StudyDao {
     public int updateview(Long id) {
         return sqlSession.update(namespace + ".updateview",id);
     }
+    public List<StudyDto> selecttopview(){return sqlSession.selectList(namespace+".selecttopview");}
 
 
 }

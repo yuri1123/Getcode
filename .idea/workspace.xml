@@ -9,10 +9,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6116dbc3-1a1a-4fde-85cf-6ac997234c50" name="Changes" comment="- my info 페이지 수정 기능 추가&#10;- my made study 리스트 출력/ 수정페이지 생성">
+    <list default="true" id="516d666b-09c8-4838-84b2-59063d73caa7" name="Changes" comment="- 페이지 뷰 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/adminassets/assets/vendor/libs/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/developer.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/adminhome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/adminhome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/admin_footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/admin_footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/admin_navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/admin_navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studyupdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studyupdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myinfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mymadestudy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mymadestudy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +88,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/WEB-INF/views/study",
+    "last_opened_file_path": "C:/yuris/GETCODE2/src/main/webapp/resources/yuri",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,11 +104,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\yuris\GETCODE2\src\main\webapp\resources\yuri" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\study" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\user" />
       <recent name="C:\yuris\GETCODE2\src\main\webapp\WEB-INF\views\user" />
       <recent name="C:\yuris\GETCODE2\src\main\webapp\WEB-INF\views\admin" />
-      <recent name="D:\Study\Getcode\src\main\resources\mappers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\yuris\GETCODE2\src\main\webapp\WEB-INF\views\user" />

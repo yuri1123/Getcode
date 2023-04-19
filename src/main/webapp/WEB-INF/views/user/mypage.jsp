@@ -19,7 +19,31 @@
                 padding: 0 10px;
             }
         }
+        .mysidebar.active{
+            background-color: #20c997;
+            color: white;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
 
+        .mysidebar{
+            color: #676666;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .mysidebar:hover{
+            background-color: #ecfae4;
+            color: #676666;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
     </style>
 
 </head>
@@ -49,10 +73,10 @@
             <!-- javascript behavior vertical pills -->
             <div class="col-2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="navbar-nav nav-link active" href="${contextPath}/user/mypage/${userDto.id}">My Study</a>
-                    <a class="navbar-nav nav-link" href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study</a>
-                    <a class="navbar-nav nav-link" href="${contextPath}/user/myboard/${userDto.id}">My Board`</a>
-                    <a class="navbar-nav nav-link" href="${contextPath}/user/myinfo/${userDto.id}">My Info</a>
+                    <a class="mysidebar active" href="${contextPath}/user/mypage/${userDto.id}">My Study<br></a>
+                    <a class="mysidebar" href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study<br></a>
+                    <a class="mysidebar" href="${contextPath}/user/myboard/${userDto.id}">My Board<br></a>
+                    <a class="mysidebar " href="${contextPath}/user/myinfo/${userDto.id}">My Info<br></a>
                 </div>
             </div>
             <div class="col-10">

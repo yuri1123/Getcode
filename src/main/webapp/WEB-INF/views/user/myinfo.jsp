@@ -19,6 +19,31 @@
                 padding: 0 10px;
             }
         }
+        .mysidebar.active{
+            background-color: #20c997;
+            color: white;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .mysidebar{
+            color: #676666;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .mysidebar:hover{
+            background-color: #ecfae4;
+            color: #676666;
+            border-radius: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
 
     </style>
 
@@ -49,10 +74,10 @@
             <!-- javascript behavior vertical pills -->
             <div class="col-2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="navbar-nav nav-link" href="${contextPath}/user/mypage/${userDto.id}">My Study</a>
-                    <a class="navbar-nav nav-link" href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study</a>
-                    <a class="navbar-nav nav-link" href="${contextPath}/user/myboard/${userDto.id}">My Board`</a>
-                    <a class="navbar-nav nav-link active" href="${contextPath}/user/myinfo/${userDto.id}">My Info</a>
+                    <a class="mysidebar" href="${contextPath}/user/mypage/${userDto.id}">My Study<br></a>
+                    <a class="mysidebar" href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study<br></a>
+                    <a class="mysidebar" href="${contextPath}/user/myboard/${userDto.id}">My Board<br></a>
+                    <a class="mysidebar active" href="${contextPath}/user/myinfo/${userDto.id}">My Info<br></a>
                 </div>
             </div>
             <div class="col-10">
@@ -91,7 +116,7 @@
                     <input type="text" id="phonenumber" value="${userDto.phonenumber}" name="phonenumber" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5 offset-md-1">
-                    <label class="text-right form-label" for="postcode">postcode</label>
+                    <label class="text-right form-label" for="postcode">POSTCODE</label>
                     <input type="text" id="postcode" value="${userDto.postcode}" name="postcode" class="form-control form-control-lg" />
                 </div>
 
@@ -109,7 +134,7 @@
                     <input type="date" id="birthday" value="${userDto.birthday}" name="birthday" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5">
-                    <label class="text-right form-label" for="sex">SEX</label>
+                    <label class="text-right form-label" for="sex">GENDER</label>
                     <input type="text" id="sex" name="sex" value="${userDto.sex}" class="form-control form-control-lg" />
                 </div>
                 <input type="hidden" value="${User.userid}" name="modifiedBy" id="modifiedBy">

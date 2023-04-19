@@ -88,7 +88,7 @@
                   <input type="date" id="birthday" name="birthday" class="form-control form-control-lg" />
                 </div>
                 <div class="form-outline form-white mb-4 col-md-5">
-                  <label class="text-right form-label" for="sex">SEX</label>
+                  <label class="text-right form-label" for="sex">Gender</label>
                   <input type="text" id="sex" name="sex" class="form-control form-control-lg" />
                 </div>
                 <input type="hidden" value="${User.userid}" name="createdBy" id="createdBy">

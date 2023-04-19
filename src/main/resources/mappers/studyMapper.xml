@@ -32,8 +32,13 @@
 
          <!-- 스터디 전체조회-->
         <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">
-            select * from study
+            select * from study order by regDate desc
         </select>
+
+    <!-- 최근 신청한 4건 조회-->
+    <select id="selectfour" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study order by regDate desc limit 4
+    </select>
 
     <!-- 승인된 스터디 전체조회-->
     <select id="selectpermit" resultType="com.yuri.getcode.dto.StudyDto">
@@ -68,4 +73,9 @@
         <update id="updateview" parameterType="java.lang.Long">
             update study set viewcnt=viewcnt+1 where id=#{id}
         </update>
+
+<!--    조회수 높은 스터디 조회-->
+    <select id="selecttopview" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study order by viewcnt desc limit 6;
+    </select>
 </mapper>

@@ -52,16 +52,16 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link click-scroll" href="${contextPath}/">Home</a>
-                </li>
                 <li class="nav-item">
                     <!-- 회원이 ADMIN인 경우-->
                     <c:if test="${not empty sessionScope.User and sessionScope.User.role == 'ADMIN'}">
                 <li><a class="nav-link click-scroll"
                        href="${contextPath}/admin" >Admin</a></li>
                 </c:if>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link click-scroll" href="${contextPath}/">Home</a>
                 </li>
 
                 <li class="nav-item">

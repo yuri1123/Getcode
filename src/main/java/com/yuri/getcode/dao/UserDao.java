@@ -29,11 +29,13 @@ public class UserDao {
     public int updaterole(Map<String,Object> params){
         return sqlSession.update(namespace+".updaterole",params);
     }
-
+    public int updateinfo(UserDto userDto){return sqlSession.update(namespace+".updateinfo",userDto);}
     public UserDto selectinfo(Long id){
         return sqlSession.selectOne(namespace+".selectinfo",id);
     }
-    public int updateinfo(UserDto userDto){return sqlSession.update(namespace+".updateinfo",userDto);}
+    public UserDto selectbyuserid(String userid){
+        return sqlSession.selectOne(namespace+".selectbyuserid",userid);
+    }
 
 
 }

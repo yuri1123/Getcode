@@ -2,6 +2,7 @@ package com.yuri.getcode.service;
 
 import com.yuri.getcode.dao.UserDao;
 import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -37,4 +38,10 @@ public class UserService {
     public int updateinfo(UserDto userDto){
         return userDao.updateinfo(userDto);
     }
+
+    public UserDto selectbyuserid(String userid){
+        return userDao.selectbyuserid(userid);
+    }
+
+
 }

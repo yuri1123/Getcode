@@ -27,7 +27,12 @@ public class AdminController {
 
     //관리자 메인페이지 이동
     @GetMapping("admin")
-    String adminhome(){
+    String adminhome(Model model){
+        List<StudyDto> studyDtoList=studyService.selecttopview();
+        model.addAttribute("studyDto",studyDtoList);
+        List<StudyDto> studyapplyDto = studyService.selectfour();
+        model.addAttribute("studyapplyDto",studyapplyDto);
+
         return "admin/adminhome";
     }
 

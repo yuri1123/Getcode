@@ -134,7 +134,7 @@
 <%--                            <p style="font-size: 15px; margin-top: 25px; margin-bottom: 25px; text-align: center"> * 스터디를 생성하면 관리자의 검토 후에 게재됩니다. 검토는 최대 12시간 이내에 가능합니다.</p>--%>
 <%--                        </div>--%>
 
-                        <button type="submit" class="form-control">modify</button>
+                        <button type="submit" class="form-control">Modify</button>
                     </form>
 
 

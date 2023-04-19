@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page session = "true" %>
-<c:set var="contextPath" value="${pageContext.request.contextPath }" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page session="true" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }"/>
 
 
 <!-- Menu -->
@@ -74,15 +74,14 @@
     </div>
 
 
-
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
         <div class="menu-item  justify-content-center text-center align-items-center">
 
-        <p class="text-center justify-content-center"><a href="profile.html">
-            <img src="/resources/yuri/yuripic.png" class="img-circle" width="80"></a></p>
-        <h5 class="text-center justify-content-center">CHOI YULS</h5>
+            <p class="text-center justify-content-center"><a href="profile.html">
+                <img src="/resources/yuri/yuripic.png" class="img-circle" width="80"></a></p>
+            <h5 class="text-center justify-content-center">CHOI YULS</h5>
         </div>
 
         <!-- Dashboard -->
@@ -178,40 +177,21 @@
             </a>
         </div>
 
-        <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+        <div class="navbar-nav-right d-flex align-items-center align-middle" id="navbar-collapse">
             <!-- Search -->
-            <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                    <i class="bx bx-search fs-4 lh-0"></i>
-                    <input
-                            type="text"
-                            class="form-control border-0 shadow-none"
-                            placeholder="Search..."
-                            aria-label="Search..."
-                    />
+            <div class="navbar-nav align-items-center align-middle">
+                <div class="nav-item d-flex align-items-center align-middle">
+                    <p class="pt-3">안녕하세요 관리자페이지입니다. 오늘 하루도 행복한 하루 되세요! 😉😍😁👩</p>
                 </div>
             </div>
             <!-- /Search -->
-
             <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Place this tag where you want the button to render. -->
-                <li class="nav-item lh-1 me-3">
-                    <a
-                            class="github-button"
-                            href="https://github.com/themeselection/sneat-html-admin-template-free"
-                            data-icon="octicon-star"
-                            data-size="large"
-                            data-show-count="true"
-                            aria-label="Star themeselection/sneat-html-admin-template-free on GitHub"
-                    >Star</a
-                    >
-                </li>
 
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                     <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                         <div class="avatar avatar-online">
-                            <img src="/resources/yuri/yuripic.png" alt class="w-px-40 h-auto rounded-circle" />
+                            <img src="/resources/yuri/yuripic.png" alt class="w-px-40 h-auto rounded-circle"/>
                         </div>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -219,12 +199,9 @@
                             <a class="dropdown-item" href="#">
                                 <div class="d-flex">
                                     <div class="flex-shrink-0 me-3">
-                                        <div class="avatar avatar-online">
-                                            <img src="/resources/adminassets/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                                        </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <span class="fw-semibold d-block">John Doe</span>
+                                        <span class="fw-semibold d-block">CHOI YURI</span>
                                         <small class="text-muted">Admin</small>
                                     </div>
                                 </div>
@@ -234,33 +211,9 @@
                             <div class="dropdown-divider"></div>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="bx bx-user me-2"></i>
-                                <span class="align-middle">My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                                <i class="bx bx-cog me-2"></i>
-                                <span class="align-middle">Settings</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                            </a>
-                        </li>
-                        <li>
-                            <div class="dropdown-divider"></div>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="auth-login-basic.html">
+                            <a class="dropdown-item" href="${contextPath}/">
                                 <i class="bx bx-power-off me-2"></i>
-                                <span class="align-middle">Log Out</span>
+                                <span class="align-middle">Go Home</span>
                             </a>
                         </li>
                     </ul>
@@ -269,5 +222,4 @@
             </ul>
         </div>
     </nav>
-
-    <!-- / Navbar -->
+<!-- / Navbar -->

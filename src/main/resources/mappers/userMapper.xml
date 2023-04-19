@@ -29,9 +29,14 @@
                 update user set username=#{username}, nickname=#{nickname},email=#{email},phonenumber=#{phonenumber}, postcode=#{postcode},address1=#{address1}, address2=#{address2},birthday=#{birthday},sex=#{sex},modifyDate=now(), modifiedBy=#{modifiedBy} where id=#{id}
         </update>
 
-<!--        회원정보 조회하기-->
-        <select id="selectinfo" resultType="com.yuri.getcode.dto.UserDto">
+<!--        회원정보 조회하기(고유번호로)-->
+        <select id="selectinfo" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.UserDto">
                 select * from user where id=#{id}
+        </select>
+
+        <!--        회원정보 조회하기(회원아이디로)-->
+        <select id="selectbyuserid" parameterType="java.lang.String" resultType="com.yuri.getcode.dto.UserDto">
+                select * from user where userid=#{userid}
         </select>
 
 </mapper>

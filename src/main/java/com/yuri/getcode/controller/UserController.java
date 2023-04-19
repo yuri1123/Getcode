@@ -2,6 +2,7 @@ package com.yuri.getcode.controller;
 
 import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.entity.User;
 import com.yuri.getcode.service.StudyService;
 import com.yuri.getcode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -74,9 +75,7 @@ public class UserController {
     //마이페이지 이동
     @GetMapping("user/mypage/{id}")
     public String mypage(@PathVariable("id") Long id, Model model){
-
         UserDto userDto = userService.selectinfo(id);
-        System.out.println(userDto);
         model.addAttribute("userDto",userDto);
         return "user/mypage";
     }
@@ -108,6 +107,8 @@ public class UserController {
     //내가 만든 스터디로 이동
     @GetMapping("user/mymadestudy/{userid}")
     public String mymadestudy(Model model,@PathVariable("userid") String userid){
+        UserDto userDto = userService.selectbyuserid(userid);
+        model.addAttribute("userDto",userDto);
         List<StudyDto> studyDtos = studyService.findbyme(userid);
         model.addAttribute("studyDtos",studyDtos);
         return "user/mymadestudy";
