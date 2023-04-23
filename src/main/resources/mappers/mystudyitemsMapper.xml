@@ -6,7 +6,7 @@
 <mapper namespace="com.yuri.getcode.studyMapper">
 
         <!-- 나의스터디에 스터디담기-->
-        <insert id="createmystudyitem" parameterType="com.yuri.getcode.dto.StudyDto">
+        <insert id="createmystudyitem" parameterType="com.yuri.getcode.dto.MyStudyItemsDto">
             insert into mystudyitems set mystudyitems_id=#{mystudyitems_id}, study_id=#{study_id},mystudy_id=#{mystudy_id},
             regDate=now(),modifyDate=now(),createdBy=#{createdBy},modifiedBy=#{createdBy}
 

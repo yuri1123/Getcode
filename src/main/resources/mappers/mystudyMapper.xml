@@ -6,7 +6,7 @@
 <mapper namespace="com.yuri.getcode.studyMapper">
 
         <!-- 나의스터디생성-->
-        <insert id="createmystudy" parameterType="com.yuri.getcode.dto.StudyDto">
+        <insert id="createmystudy" parameterType="com.yuri.getcode.dto.MyStudyDto">
             insert into mystudy set mystudy_id=#{mystudy_id}, user_id=#{user_id}, regDate=now(), modifyDate=now(),
             createdBy=#{createdBy}, modifiedBy=#{createdBy}
         </insert>

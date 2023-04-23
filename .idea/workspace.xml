@@ -9,14 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 관리자 대시보드&#10;- 마이페이지 사이드바 수정">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/MyStudy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/MyStudyItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyMapper.xml" afterDir="false" />
+    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 스터디 담기 생각해봄">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyItemsDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/mystudyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,10 +101,10 @@
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\resources\assets" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yuri.getcode.dto" />
       <recent name="com.yuri.getcode.entity" />
       <recent name="com.yuri.getcode.service" />
       <recent name="com.yuri.getcode.dao" />
-      <recent name="com.yuri.getcode.dto" />
       <recent name="com.yuri.getcode.domain" />
     </key>
   </component>
@@ -459,7 +457,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681880260737</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="- 스터디 담기 생각해봄">
+      <created>1682263332297</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1682263332297</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +500,8 @@
     <MESSAGE value="- 유저 전체보기, 권한 변경을 위한 매퍼, dao, service 작성&#10;- 관리자 유저 페이지 추가(전체 권한변경), nav 수정" />
     <MESSAGE value="- my info 페이지 수정 기능 추가&#10;- my made study 리스트 출력/ 수정페이지 생성" />
     <MESSAGE value="- 관리자 대시보드&#10;- 마이페이지 사이드바 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 관리자 대시보드&#10;- 마이페이지 사이드바 수정" />
+    <MESSAGE value="- 스터디 담기 생각해봄" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 스터디 담기 생각해봄" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
