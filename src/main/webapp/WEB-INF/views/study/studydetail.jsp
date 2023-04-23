@@ -62,7 +62,10 @@
 <%--                        <div class="mb-3">--%>
                         <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
                             <hr class="mb-3">
-                            <div class="col-2 offset-10 justify-content-right text-right">
+                            <div class="col-2 offset-7 me-1 justify-content-right text-right">
+                                <button type="button" class="form-control btn-primary"><a href="/study/browse">참여하기</a></button>
+                            </div>
+                            <div class="col-2 justify-content-right text-right">
                                 <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
                             </div>
                         </div>

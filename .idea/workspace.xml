@@ -9,7 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="516d666b-09c8-4838-84b2-59063d73caa7" name="Changes" comment="- 관리자 대시보드&#10;- 마이페이지 사이드바 수정" />
+    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 관리자 대시보드&#10;- 마이페이지 사이드바 수정">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/MyStudy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/MyStudyItems.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +74,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/yuris/GETCODE2/src/main/webapp/resources/yuri",
+    "last_opened_file_path": "D:/Study/Getcode/src/main/resources/mappers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\Getcode\src\main\resources\mappers" />
       <recent name="C:\yuris\GETCODE2\src\main\webapp\resources\yuri" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\study" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\user" />
       <recent name="C:\yuris\GETCODE2\src\main\webapp\WEB-INF\views\user" />
-      <recent name="C:\yuris\GETCODE2\src\main\webapp\WEB-INF\views\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\yuris\GETCODE2\src\main\webapp\WEB-INF\views\user" />
@@ -95,11 +103,11 @@
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\resources\assets" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yuri.getcode.entity" />
       <recent name="com.yuri.getcode.service" />
       <recent name="com.yuri.getcode.dao" />
       <recent name="com.yuri.getcode.dto" />
       <recent name="com.yuri.getcode.domain" />
-      <recent name="com.yuri.getcode.controller" />
     </key>
   </component>
   <component name="RunManager">

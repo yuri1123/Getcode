@@ -12,60 +12,60 @@
 
 <main>
 
-    <section class="hero-section hero-section-full-height">
-        <div class="container-fluid">
-            <div class="row">
+<%--    <section class="hero-section hero-section-full-height">--%>
+<%--        <div class="container-fluid">--%>
+<%--            <div class="row">--%>
 
-                <div class="col-lg-12 col-12 p-0">
-                    <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/resources/yuri/makestudy.jpg"
-                                     class="carousel-image img-fluid" alt="...">
+<%--                <div class="col-lg-12 col-12 p-0">--%>
+<%--                    <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">--%>
+<%--                        <div class="carousel-inner">--%>
+<%--                            <div class="carousel-item active">--%>
+<%--                                <img src="/resources/yuri/makestudy.jpg"--%>
+<%--                                     class="carousel-image img-fluid" alt="...">--%>
 
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1 style="font-size: 38px;">Make Study</h1>
-                                    <p style="font-size: 16px;">멋진 스터디를 만들어<br> 팀원들과 함께 실력을 향상시켜보아요</p>
-                                </div>
-                            </div>
+<%--                                <div class="carousel-caption d-flex flex-column justify-content-end">--%>
+<%--                                    <h1 style="font-size: 38px;">Make Study</h1>--%>
+<%--                                    <p style="font-size: 16px;">멋진 스터디를 만들어<br> 팀원들과 함께 실력을 향상시켜보아요</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
 
-                            <div class="carousel-item">
-                                <img src="/resources/yuri/community.jpg"
-                                     class="carousel-image img-fluid" alt="...">
+<%--                            <div class="carousel-item">--%>
+<%--                                <img src="/resources/yuri/community.jpg"--%>
+<%--                                     class="carousel-image img-fluid" alt="...">--%>
 
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1 style="font-size: 38px;">Community</h1>
-                                    <p style="font-size: 16px;">스터디 커뮤니티 공간을 <br> 스터디원간의 소통에 활용해 보세요</p>
-                                </div>
-                            </div>
+<%--                                <div class="carousel-caption d-flex flex-column justify-content-end">--%>
+<%--                                    <h1 style="font-size: 38px;">Community</h1>--%>
+<%--                                    <p style="font-size: 16px;">스터디 커뮤니티 공간을 <br> 스터디원간의 소통에 활용해 보세요</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
 
-                            <div class="carousel-item">
-                                <img src="/resources/yuri/setgoal.jpg" class="carousel-image img-fluid" alt="...">
+<%--                            <div class="carousel-item">--%>
+<%--                                <img src="/resources/yuri/setgoal.jpg" class="carousel-image img-fluid" alt="...">--%>
 
-                                <div class="carousel-caption d-flex flex-column justify-content-end">
-                                    <h1 style="font-size: 38px;">Manage</h1>
-                                    <p style="font-size: 16px;">프로젝트 스터디에서 <br>프로젝트 관리 메뉴를 활용해보세요!</p>
-                                </div>
-                            </div>
-                        </div>
+<%--                                <div class="carousel-caption d-flex flex-column justify-content-end">--%>
+<%--                                    <h1 style="font-size: 38px;">Manage</h1>--%>
+<%--                                    <p style="font-size: 16px;">프로젝트 스터디에서 <br>프로젝트 관리 메뉴를 활용해보세요!</p>--%>
+<%--                                </div>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"
-                                data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
+<%--                        <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide"--%>
+<%--                                data-bs-slide="prev">--%>
+<%--                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>--%>
+<%--                            <span class="visually-hidden">Previous</span>--%>
+<%--                        </button>--%>
 
-                        <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"
-                                data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
+<%--                        <button class="carousel-control-next" type="button" data-bs-target="#hero-slide"--%>
+<%--                                data-bs-slide="next">--%>
+<%--                            <span class="carousel-control-next-icon" aria-hidden="true"></span>--%>
+<%--                            <span class="visually-hidden">Next</span>--%>
+<%--                        </button>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
-            </div>
-        </div>
-    </section>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </section>--%>
 
 
     <section style="margin-top:100px;">

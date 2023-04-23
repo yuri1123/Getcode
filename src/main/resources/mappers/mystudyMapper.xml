@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 파일이름을 지칭하는 네임스페이스 -->
+<mapper namespace="com.yuri.getcode.studyMapper">
+
+        <!-- 나의스터디생성-->
+        <insert id="createmystudy" parameterType="com.yuri.getcode.dto.StudyDto">
+            insert into mystudy set mystudy_id=#{mystudy_id}, user_id=#{user_id}, regDate=now(), modifyDate=now(),
+            createdBy=#{createdBy}, modifiedBy=#{createdBy}
+        </insert>
+
+
+         <!-- 나의스터디 삭제-->
+        <select id="deletemystudy" parameterType="java.lang.Long">
+            delete from mystudy where mystudy_id=#{mystudy_id}
+        </select>
+
+
+</mapper>

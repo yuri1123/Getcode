@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- 파일이름을 지칭하는 네임스페이스 -->
+<mapper namespace="com.yuri.getcode.studyMapper">
+
+        <!-- 나의스터디에 스터디담기-->
+        <insert id="createmystudyitem" parameterType="com.yuri.getcode.dto.StudyDto">
+            insert into mystudyitems set mystudyitems_id=#{mystudyitems_id}, study_id=#{study_id},mystudy_id=#{mystudy_id},
+            regDate=now(),modifyDate=now(),createdBy=#{createdBy},modifiedBy=#{createdBy}
+
+        </insert>
+
+    </mapper>
