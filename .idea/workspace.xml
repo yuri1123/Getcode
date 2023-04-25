@@ -10,11 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 스터디 담기 생각해봄">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyItemsDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/MystudyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/MystudyitemsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyItemsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyItemsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/MyStudyItemsDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/MyStudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/MyStudy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/mystudyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/signup.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +95,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.41860464",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "project.propCompiler",
     "spring.configuration.checksum": "5b1e5ccbaf17273c6602b7194774ff67",
     "vue.rearranger.settings.migration": "true"
   }
@@ -101,10 +115,10 @@
       <recent name="C:\yuris\springbootworspaces\GetCode\src\main\webapp\resources\assets" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.yuri.getcode.dto" />
-      <recent name="com.yuri.getcode.entity" />
       <recent name="com.yuri.getcode.service" />
       <recent name="com.yuri.getcode.dao" />
+      <recent name="com.yuri.getcode.dto" />
+      <recent name="com.yuri.getcode.entity" />
       <recent name="com.yuri.getcode.domain" />
     </key>
   </component>
@@ -203,7 +217,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8fac1807-773e-4e66-b256-8312b645c062" name="Changes" comment="" />
+      <changelist id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 스터디 담기 생각해봄" />
       <created>1680680123967</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,6 +246,8 @@
       <workItem from="1681696310919" duration="23176000" />
       <workItem from="1681722433703" duration="66000" />
       <workItem from="1681779389765" duration="14453000" />
+      <workItem from="1682300825927" duration="9582000" />
+      <workItem from="1682386119676" duration="5310000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -464,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682263332297</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="- 스터디 담기 생각해봄">
+      <created>1682264676884</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1682264676884</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

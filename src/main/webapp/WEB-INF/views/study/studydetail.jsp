@@ -62,9 +62,17 @@
 <%--                        <div class="mb-3">--%>
                         <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
                             <hr class="mb-3">
+                            <form role="form" method="post" action="/study/studyitems/${User.id}">
+                                <div>
+                                    <input type="hidden" value="${User.id}" name="userid">
+                                    <input type="hidden" value="${User.userid}" name="createdBy">
+                                    <input type="hidden" value="${User.userid}" name="modifiedBy">
+                                    <input type="hidden" value="${studyDto.id}" name="studyid">
+                                </div>
                             <div class="col-2 offset-7 me-1 justify-content-right text-right">
-                                <button type="button" class="form-control btn-primary"><a href="/study/browse">참여하기</a></button>
+                                <button type="submit" class="form-control btn-primary" onclick="if(confirm('이 스터디에 참여하시겠습니까?'));"><a href="/study/browse">참여하기</a></button>
                             </div>
+                            </form>
                             <div class="col-2 justify-content-right text-right">
                                 <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
                             </div>

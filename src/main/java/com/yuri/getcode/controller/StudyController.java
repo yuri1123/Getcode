@@ -1,7 +1,13 @@
 package com.yuri.getcode.controller;
 
+import com.yuri.getcode.dto.MyStudyDto;
+import com.yuri.getcode.dto.MyStudyItemsDto;
 import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.entity.MyStudy;
+import com.yuri.getcode.entity.User;
+import com.yuri.getcode.service.MyStudyItemsService;
+import com.yuri.getcode.service.MyStudyService;
 import com.yuri.getcode.service.StudyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +25,10 @@ public class StudyController {
 
     @Autowired
     private StudyService studyService;
-    private List<StudyDto> positionList;
+    @Autowired
+    private MyStudyService myStudyService;
+    @Autowired
+    private MyStudyItemsService myStudyItemsService;
 
     //스터디 찾기 페이지 이동
     @GetMapping("study/browse")
@@ -90,5 +99,25 @@ public class StudyController {
         model.addAttribute("studyDto", updatedStudyDto);
 
         return "redirect:/user/mymadestudy";
+    }
+
+    //나의 스터디에 담기
+    @PostMapping("study/studyitems/{id}")
+    public String createmystudyitems(@PathVariable("id") Long id,MyStudyItemsDto myStudyItemsDto,MyStudyDto myStudyDto,
+                                     Model model,HttpServletRequest request){
+
+        MyStudy myStudy = myStudyService.findbyuserid(id);
+        System.out.print(myStudy);
+        //처음으로 담을 경우 해당 회원의 마이스터디 엔티티를 생성한다.
+        if(myStudy == null){
+       int result1= myStudyService.createmystudy(myStudyDto);
+            System.out.print(result1);
+        }
+
+        int result = myStudyItemsService.createmystudyitems(myStudyItemsDto);
+        if(result >0 ){
+            model.addAttribute("msg","스터디에 참여하였습니다");
+        }
+        return "redirect:/study/browse";
     }
 }

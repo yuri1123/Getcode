@@ -1,5 +1,6 @@
 package com.yuri.getcode.dao;
 
+import com.yuri.getcode.dto.MyStudyDto;
 import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
 import org.apache.ibatis.session.SqlSession;
@@ -57,5 +58,5 @@ public class StudyDao {
     }
     public List<StudyDto> selecttopview(){return sqlSession.selectList(namespace+".selecttopview");}
 
-
+    public int createmystudy(UserDto userDto){return sqlSession.insert(namespace+".createmystudy");}
 }

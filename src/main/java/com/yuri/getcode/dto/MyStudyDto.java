@@ -9,9 +9,8 @@ import lombok.ToString;
 @Getter@Setter@ToString
 public class MyStudyDto {
 
-    private Long id;
-    private User user;
-
+    private Long mystudyid;
+    private Long userid;
     private String regDate;
     private String modifyDate;
     private String createdBy;

@@ -91,7 +91,6 @@
                   <label class="text-right form-label" for="sex">Gender</label>
                   <input type="text" id="sex" name="sex" class="form-control form-control-lg" />
                 </div>
-                <input type="hidden" value="${User.userid}" name="createdBy" id="createdBy">
               </div>
                   <div class="form-outline form-white mb-4 col-md-12 justify-content-center text-center">
                     <center>

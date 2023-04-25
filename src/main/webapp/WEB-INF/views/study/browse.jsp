@@ -49,6 +49,8 @@
              top: -4px;
              border: 1px solid #cccccc;
              background-color: white;
+             cursor:pointer;
+
          }
 
         &:before {
@@ -64,6 +66,7 @@
              transform: scale(2);
              transform-origin: 50% 50%;
              transition: transform 0.15s ease-out;
+
          }
 
         &:hover:before {

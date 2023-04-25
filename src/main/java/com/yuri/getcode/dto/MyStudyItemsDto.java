@@ -10,9 +10,9 @@ import lombok.ToString;
 @Getter@Setter@ToString
 public class MyStudyItemsDto {
 
-    private Long id;
-    private MyStudy myStudy;
-    private Study study;
+    private Long mystudyitemsid;
+    private Long mystudyid;
+    private Long studyid;
     private String regDate;
     private String modifyDate;
     private String createdBy;

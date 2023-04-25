@@ -1,8 +1,10 @@
 package com.yuri.getcode.controller;
 
+import com.yuri.getcode.dto.MyStudyDto;
 import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
 import com.yuri.getcode.entity.User;
+import com.yuri.getcode.service.MyStudyService;
 import com.yuri.getcode.service.StudyService;
 import com.yuri.getcode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,8 @@ public class UserController {
     private UserService userService;
     @Autowired
     private StudyService studyService;
+    @Autowired
+    private MyStudyService myStudyService;
     //로그인페이지 이동
     @GetMapping("user/login")
     String loginform(){
