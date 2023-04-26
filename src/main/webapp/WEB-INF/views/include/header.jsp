@@ -74,9 +74,9 @@
                        aria-expanded="false">Community</a>
 
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="kind/news.html">Notice</a></li>
-                        <li><a class="dropdown-item" href="/community/qnalist">Q&A</a></li>
-                        <li><a class="dropdown-item" href="/community/qnalist">Review</a></li>
+                        <li><a class="dropdown-item" href="/community/noticelist">Notice</a></li>
+                        <li class="mb-2"><a class="dropdown-item" href="/community/qnalist">Q&A</a></li>
+                        <li><a class="dropdown-item" href="/community/reviewlist">Review</a></li>
                     </ul>
                 </li>
 

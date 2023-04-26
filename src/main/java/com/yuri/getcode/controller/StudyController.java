@@ -113,7 +113,6 @@ public class StudyController {
         //로그인하지 않았다면 로그인하세요 에러메시지 호출
         HttpSession session = request.getSession();
         UserDto userDto = (UserDto) session.getAttribute("User");
-        System.out.println(userDto);
         if (userDto == null) {
             model.addAttribute("errormessage", "로그인이 필요합니다. 로그인 페이지로 이동합니다.");
             return "redirect:/user/login";

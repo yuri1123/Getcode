@@ -15,15 +15,15 @@ public class BoardDao {
     private static final String namespace = "com.yuri.getcode.questionMapper";
 
     public int create(BoardDto boardDto) {
-        return sqlSession.insert(namespace + ".create",boardDto);
+        return sqlSession.insert(namespace + ".create", boardDto);
     }
 
     public int update(BoardDto boardDto) {
-        return sqlSession.update(namespace + ".update",boardDto);
+        return sqlSession.update(namespace + ".update", boardDto);
     }
 
     public BoardDto findbyid(Long id) {
-        return sqlSession.selectOne(namespace + ".findbyid",id);
+        return sqlSession.selectOne(namespace + ".findbyid", id);
     }
 
     public List<BoardDto> selectall() {
@@ -31,10 +31,42 @@ public class BoardDao {
     }
 
     public int delete(Long id) {
-        return sqlSession.delete(namespace + ".delete",id);
+        return sqlSession.delete(namespace + ".delete", id);
     }
 
     public int updateview(Long id) {
-        return sqlSession.update(namespace + ".updateview",id);
+        return sqlSession.update(namespace + ".updateview", id);
     }
+
+    //    notice 전체 조회
+    public List<BoardDto> selectnotice() {
+        return sqlSession.selectList(namespace + ".selectnotice");
+    }
+
+//    notice 상세 조회
+public BoardDto findnoticebyid(Long id) {
+    return sqlSession.selectOne(namespace + ".findnoticebyid", id);
+}
+    //    qna 전체 조회
+    public List<BoardDto> selectqna() {
+        return sqlSession.selectList(namespace + ".selectqna");
+    }
+    //    qna 상세 조회
+    public BoardDto findqnabyid(Long id) {
+        return sqlSession.selectOne(namespace + ".findqnabyid", id);
+    }
+    //    review 전체 조회
+    public List<BoardDto> selectreview() {
+        return sqlSession.selectList(namespace + ".selectreview");
+    }
+
+    //    review 상세 조회
+    public BoardDto findreviewbyid(Long id) {
+        return sqlSession.selectOne(namespace + ".findreviewbyid", id);
+    }
+    //내가쓴 게시글 전체 조회
+    public List<BoardDto> findbycreatedby(String createdBy) {
+        return sqlSession.selectList(namespace + ".findbycreatedby");
+    }
+
 }

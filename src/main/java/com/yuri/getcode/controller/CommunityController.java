@@ -21,42 +21,91 @@ public class CommunityController {
     private BoardService boardService;
 
 
-//   QnA 게시판 이동 후 리스트 출력
+    //   Notice 게시판 이동 후 리스트 출력
+    @GetMapping("community/noticelist")
+    String noticelist(BoardDto boardDto, Model model, HttpServletRequest request) {
+        List<BoardDto> noticelist = boardService.selectnotice();
+        System.out.println(noticelist);
+        model.addAttribute("noticelist", noticelist);
+        return "/community/noticelist";
+    }
+
+    //Notice 상세보기 페이지 이동
+    @GetMapping("community/noticedetail/{id}")
+    String noticedetail(@PathVariable("id") Long id, BoardDto boardDto,Model model) {
+        boardService.updateview(id);
+        BoardDto notice = boardService.findnoticebyid(id);
+        model.addAttribute("notice",notice);
+        return "/community/noticedetail";
+    }
+
+
+    //   QnA 게시판 이동 후 리스트 출력
     @GetMapping("community/qnalist")
-    String qnalist(BoardDto questionDto, Model model, HttpServletRequest request){
+    String qnalist(BoardDto boardDto, Model model, HttpServletRequest request) {
         HttpSession session = request.getSession();
         UserDto userDto = (UserDto) session.getAttribute("User");
-        System.out.println(userDto);
 
-        if(userDto == null) {
-            model.addAttribute("errormessage","로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+        if (userDto == null) {
+            model.addAttribute("errormessage", "로그인이 필요합니다. 로그인 페이지로 이동합니다.");
             return "redirect:/user/login";
         } else {
-            List<BoardDto> questionDtoList = boardService.selectall();
+            List<BoardDto> questionDtoList = boardService.selectqna();
             model.addAttribute("questionDtoList", questionDtoList);
         }
         return "/community/qnalist";
     }
 
 
-//    질문등록 페이지 이동
+    //    Q&A등록 페이지 이동
     @GetMapping("community/createquestion")
-    String createquestion(){
+    String createquestion() {
         return "/community/createquestion";
     }
 
-    //    질문등록하기
+    //    Q&A등록하기
     @PostMapping("community/createquestion")
-    String createquestionDo(BoardDto questionDto){
-        boardService.create(questionDto);
+    String createquestionDo(BoardDto boardDto) {
+        System.out.println(boardDto);
+        System.out.println("야호야호야호!!!");
+        boardDto.setType("QNA");
+        int result = boardService.create(boardDto);
+        System.out.println(result);
         return "redirect:/community/qnalist";
     }
 
-    //질문 상세보기 페이지 이동
+    //QNA 상세보기 페이지 이동
     @GetMapping("community/qnadetail/{id}")
-    String qnadetail(@PathVariable("id") Long id){
+    String qnadetail(@PathVariable("id") Long id, BoardDto boardDto,Model model) {
         boardService.updateview(id);
+        BoardDto qna = boardService.findqnabyid(id);
+        model.addAttribute("qna",qna);
         return "/community/qnadetail";
+    }
+
+
+    //   Review 게시판 이동 후 리스트 출력
+    @GetMapping("community/reviewlist")
+    String reviewlist(BoardDto boardDto, Model model, HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        UserDto userDto = (UserDto) session.getAttribute("User");
+
+        if (userDto == null) {
+            model.addAttribute("errormessage", "로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+            return "redirect:/user/login";
+        } else {
+            List<BoardDto> reviewlist = boardService.selectreview();
+            model.addAttribute("reviewlist", reviewlist);
+        }
+        return "/community/reviewlist";
+    }
+    //Review 상세보기 페이지 이동
+    @GetMapping("community/reviewdetail/{id}")
+    String reviewdetail(@PathVariable("id") Long id,BoardDto boardDto,Model model) {
+        boardService.updateview(id);
+        BoardDto review = boardService.findreviewbyid(id);
+        model.addAttribute("review",review);
+        return "/community/reviewdetail";
     }
 
 }

@@ -4,11 +4,11 @@
 
 <head>
 
-<%@ include file="include/head.jsp"%>
+<%@ include file="../include/head.jsp"%>
 </head>
 
 <body>
-<%@ include file="include/header.jsp"%>
+<%@ include file="../include/header.jsp"%>
 <!-- ***** Preloader Start ***** -->
 <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
@@ -349,8 +349,8 @@
     </div>
 </div>
 
-<%@include file="include/footer.jsp"%>
-<%@include file="include/js.jsp"%>
+<%@include file="../include/footer.jsp"%>
+<%@include file="../include/js.jsp"%>
 
 </body>
 

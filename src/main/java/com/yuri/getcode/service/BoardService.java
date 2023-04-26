@@ -14,8 +14,8 @@ public class BoardService {
     private BoardDao boardDao;
 
 
-    public int create(BoardDto questionDto) {
-        return boardDao.create(questionDto);
+    public int create(BoardDto boardDto) {
+        return boardDao.create(boardDto);
     }
 
     public int update(BoardDto questionDto) {
@@ -36,5 +36,28 @@ public class BoardService {
 
     public int updateview(Long id) {
         return boardDao.updateview(id);
+    }
+
+    public List<BoardDto> selectnotice() {
+        return boardDao.selectnotice();
+    }
+    public List<BoardDto> selectqna() {
+        return boardDao.selectqna();
+    }
+    public List<BoardDto> selectreview() {
+        return boardDao.selectreview();
+    }
+
+    public List<BoardDto> findbycreatedby(String createdBy) {
+        return boardDao.findbycreatedby(createdBy);
+    }
+    public BoardDto findnoticebyid(Long id) {
+        return boardDao.findnoticebyid(id);
+    }
+    public BoardDto findreviewbyid(Long id) {
+        return boardDao.findreviewbyid(id);
+    }
+    public BoardDto findqnabyid(Long id) {
+        return boardDao.findqnabyid(id);
     }
 }

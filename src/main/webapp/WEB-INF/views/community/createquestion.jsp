@@ -44,9 +44,11 @@
                                           placeholder="질문 내용" required></textarea>
                               </div>
                                 <input type="hidden" name="createdBy" id="createdBy" value="${User.userid}">
-
+                                <input type="hidden" name="modifiedBy" id="modifiedBy" value="${User.userid}">
                             </input>
 <%--                            <button type="submit" class="form-control">reset</button>--%>
+<%--                                <input type="hidden" value='QNA' name="type">--%>
+<%--                                <input type="hidden" name="studyid">--%>
                             <button type="submit" class="form-control">create</button>
                           </form>
 
