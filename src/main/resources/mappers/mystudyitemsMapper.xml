@@ -7,8 +7,11 @@
 
         <!-- 나의스터디에 스터디담기-->
         <insert id="createmystudyitem" parameterType="com.yuri.getcode.dto.MyStudyItemsDto">
-            insert into mystudyitems set studyid=#{studyid},regDate=now(),modifyDate=now(),createdBy=#{createdBy},modifiedBy=#{createdBy}
-
+            insert into mystudyitems set studyid=#{studyid}, mystudyid=#{mystudyid}, regDate=now(),modifyDate=now(),createdBy=#{createdBy},modifiedBy=#{createdBy}
         </insert>
 
+        <!-- 마이스터디번호, 스터디번호로 해당 열 찾기 -->
+        <select id="findbymystudynum" parameterType="java.util.Map" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
+                select * from mystudyitems where studyid=#{studyid} and mystudyid=#{mystudyid};
+        </select>
     </mapper>

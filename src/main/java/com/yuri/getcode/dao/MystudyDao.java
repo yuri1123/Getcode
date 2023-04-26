@@ -23,7 +23,7 @@ public class MystudyDao {
         return sqlSession.insert(namespace + ".createmystudy",myStudyDto);
     }
 
-    public MyStudy findbyuserid(Long userid){
+    public MyStudyDto findbyuserid(Long userid){
         return sqlSession.selectOne(namespace+".findbyuserid",userid);
     }
 

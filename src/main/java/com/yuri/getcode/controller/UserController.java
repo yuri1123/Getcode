@@ -66,7 +66,7 @@ public class UserController {
         if(r>0) {
             model.addAttribute("msg", "회원가입을 완료하였습니다");
         }
-        return "/user/login";
+        return "redirect:/user/login";
     }
     //로그아웃
     @GetMapping("user/logout")

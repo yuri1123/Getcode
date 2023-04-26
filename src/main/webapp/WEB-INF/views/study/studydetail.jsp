@@ -29,15 +29,15 @@
 <section class="section-padding" >
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 col-12">
+            <div class="col-lg-6 col-12">
                 <div class="news-block">
 
                     <div class="news-block-info">
 
-                        <div class="news-block-title">
+                        <div class="news-block-title justify-content-center text-center">
                             <h4>${studyDto.studyname}</h4>
                         </div>
-                        <div class="d-flex col-8 mt-2 mb-1">
+                        <div class="d-flex col-12 mt-2 mb-1 justify-content-center">
                             <div class="news-block-date">
                                 <p>
                                     <i class="bi-calendar4 custom-icon me-1"></i>
@@ -60,37 +60,66 @@
                             </div>
                         </div>
 <%--                        <div class="mb-3">--%>
+                            <form role="form" method="post" action="/study/studyitems">
                         <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
                             <hr class="mb-3">
-                            <form role="form" method="post" action="/study/studyitems/${User.id}">
                                 <div>
                                     <input type="hidden" value="${User.id}" name="userid">
                                     <input type="hidden" value="${User.userid}" name="createdBy">
                                     <input type="hidden" value="${User.userid}" name="modifiedBy">
                                     <input type="hidden" value="${studyDto.id}" name="studyid">
+                                    <input type="hidden" value="${mystudyid}" name="mystudyid">
                                 </div>
-                            <div class="col-2 offset-7 me-1 justify-content-right text-right">
+                            <div class="col-3 offset-3 me-1 justify-content-right text-right">
                                 <button type="submit" class="form-control btn-primary" onclick="if(confirm('이 스터디에 참여하시겠습니까?'));"><a href="/study/browse">참여하기</a></button>
                             </div>
-                            </form>
-                            <div class="col-2 justify-content-right text-right">
+                            <div class="col-3 justify-content-right text-right">
                                 <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
                             </div>
                         </div>
+                            </form>
 
                         <div class="news-block-body">
-                            <p><strong>스터디 시작일</strong>
-                                ${studyDto.studystart}</p>
-                            <p><strong>스터디 기간</strong>
-                                ${studyDto.period}</p>
-                            <p><strong>기술스택</strong>
-                                ${studyDto.skillstack}</p>
-                            <p><strong>모집 포지션</strong>
-                                ${studyDto.position}</p>
-                            <p><strong>연락방법</strong>
-                                ${studyDto.connection}</p>
-                            <p><strong>진행방법</strong>
-                                ${studyDto.onoff}</p>
+                            <div class="card text-center">
+                                <table class="table table-bordered table-hover justify-content-center text-center">
+                                <colgroup>
+                                    <col width="40%"/>
+                                    <col width="60%"/>
+                                </colgroup>
+                                    <thead class="table-light">
+                                    <tr>
+                                        <th>구분</th>
+                                        <th>내용</th>
+                                    </tr>
+                                    </thead>
+                                <tbody class="justify-content-center align-middle text-center">
+                                <tr>
+                                    <th>스터디 시작일</th>
+                                    <td> ${studyDto.studystart}</td>
+                                </tr>
+                                <tr>
+                                    <th>스터디 기간</th>
+                                    <td>${studyDto.period}</td>
+                                </tr>
+                                <tr>
+                                    <th>기술스택</th>
+                                    <td> ${studyDto.skillstack}</td>
+                                </tr>
+                                <tr>
+                                    <th>모집 포지션</th>
+                                    <td>${studyDto.position}</td>
+                                </tr>
+                                <tr>
+                                    <th>연락방법</th>
+                                    <td>${studyDto.connection}</td>
+                                </tr>
+                                <tr>
+                                    <th>진행방법</th>
+                                    <td>${studyDto.onoff}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
                             <blockquote>${studyDto.content}</blockquote>
                         </div>
 

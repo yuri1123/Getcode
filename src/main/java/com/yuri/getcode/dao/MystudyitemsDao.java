@@ -5,6 +5,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.Map;
+
 @Repository
 public class MystudyitemsDao {
 
@@ -16,5 +18,8 @@ public class MystudyitemsDao {
         return sqlSession.insert(namespace + ".createmystudyitem",myStudyItemsDto);
     }
 
+    public MyStudyItemsDto findbymystudynum(Map<String,Object> params){
+        return sqlSession.selectOne(namespace+".findbymystudynum",params);
+    }
 
 }
