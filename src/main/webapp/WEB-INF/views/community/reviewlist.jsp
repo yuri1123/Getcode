@@ -4,7 +4,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath }" />
 <html>
 <head>
-   <%@include file="../include/head.jsp"%>>
+   <%@include file="../include/head.jsp"%>
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
@@ -52,7 +52,7 @@
                                 <c:forEach items="${reviewlist}" var="list">
                                 <tr>
                                     <td>${list.id}</td>
-                                    <td><a href="${contextPath}/community/qnadetail/${list.id}">${list.subject}</a></td>
+                                    <td><a href="${contextPath}/community/reviewdetail/${list.id}">${list.subject}</a></td>
                                     <td>${list.createdBy}</td>
                                     <td>${list.regDate}</td>
                                     <td>${list.viewcnt}</td>

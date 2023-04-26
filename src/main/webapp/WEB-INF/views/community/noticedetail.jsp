@@ -3,7 +3,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath }" />
 <html>
 <head>
-    <%@include file="../include/head.jsp"%>>
+    <%@include file="../include/head.jsp"%>
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
