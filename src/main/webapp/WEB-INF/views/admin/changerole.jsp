@@ -41,7 +41,7 @@
         <th>저장</th>
       </tr>
       </thead>
-      <tbody class="table-border-bottom-0">
+      <tbody class="table-border-bottom-0 ">
       <c:forEach items="${userDto}" var="userDto">
       <tr>
         <td>${userDto.id}</td>
@@ -50,7 +50,7 @@
           <c:if test="${userDto.role == 'USER'}"><span class="badge bg-label-secondary me-1">${userDto.role}</span></c:if>
           <c:if test="${userDto.role == 'ADMIN'}"><span class="badge bg-label-warning me-1">${userDto.role}</span></c:if>
         </td>
-        <td><center><select class="form-control text-center justify-content-center" style="width: 150px; " id="role">
+        <td><center><select class="form-control text-center justify-content-center" style="font-size:13px;width: 150px; height: 30px " id="role">
           <c:if test="${userDto.role == 'USER'}">
             <option value="USER" selected>유저</option>
             <option value="ADMIN">관리자</option>
@@ -60,7 +60,7 @@
             <option value="ADMIN" selected>관리자</option>
           </c:if>
         </select></center></td>
-        <td><button type="button" class="btn btn-primary">저장</button>
+        <td><button type="button" class="btn btn-primary" style="height: 30px; font-size: 15px">저장</button>
         </td>
       </tr>
       </c:forEach>
