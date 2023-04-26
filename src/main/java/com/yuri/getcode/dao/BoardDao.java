@@ -1,6 +1,6 @@
 package com.yuri.getcode.dao;
 
-import com.yuri.getcode.dto.QuestionDto;
+import com.yuri.getcode.dto.BoardDto;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -8,25 +8,25 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class QuestionDao {
+public class BoardDao {
 
     @Autowired
     private SqlSession sqlSession;
     private static final String namespace = "com.yuri.getcode.questionMapper";
 
-    public int create(QuestionDto questionDto) {
-        return sqlSession.insert(namespace + ".create",questionDto);
+    public int create(BoardDto boardDto) {
+        return sqlSession.insert(namespace + ".create",boardDto);
     }
 
-    public int update(QuestionDto questionDto) {
-        return sqlSession.update(namespace + ".update",questionDto);
+    public int update(BoardDto boardDto) {
+        return sqlSession.update(namespace + ".update",boardDto);
     }
 
-    public QuestionDto findbyid(Long id) {
+    public BoardDto findbyid(Long id) {
         return sqlSession.selectOne(namespace + ".findbyid",id);
     }
 
-    public List<QuestionDto> selectall() {
+    public List<BoardDto> selectall() {
         return sqlSession.selectList(namespace + ".selectall");
     }
 

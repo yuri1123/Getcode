@@ -6,35 +6,35 @@
 <mapper namespace="com.yuri.getcode.questionMapper">
 
         <!-- 질문등록-->
-        <insert id="create" parameterType="com.yuri.getcode.dto.QuestionDto">
-          insert into question (subject, content, viewcnt, regDate, modifyDate, createdBy, modifiedBy)
+        <insert id="create" parameterType="com.yuri.getcode.dto.BoardDto">
+          insert into board (subject, content, viewcnt, regDate, modifyDate, createdBy, modifiedBy)
                 values (#{subject}, #{content},0,now(),now(),#{createdBy},#{createdBy})
         </insert>
 
         <!-- 질문수정-->
-        <update id="update" parameterType="com.yuri.getcode.dto.QuestionDto">
-            update question set
+        <update id="update" parameterType="com.yuri.getcode.dto.BoardDto">
+            update board set
             subject = #{subject}, content = #{content}, modifyDate = now(), modifiedBy=#{modifiedBy})
             where id=#{id}
         </update>
 
         <!-- 질문선택조회-->
-        <select id="findbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.QuestionDto">
-            select * from question where id=#{id}
+        <select id="findbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.BoardDto">
+            select * from board where id=#{id}
         </select>
 
          <!-- 질문전체조회-->
-        <select id="selectall" resultType="com.yuri.getcode.dto.QuestionDto">
-            select * from question
+        <select id="selectall" resultType="com.yuri.getcode.dto.BoardDto">
+            select * from board
         </select>
 
         <!-- 질문 삭제-->
         <select id="delete" parameterType="java.lang.Long">
-            delete from question where id=#{id}
+            delete from board where id=#{id}
         </select>
 
 <!--        조회수증가-->
         <update id="updateview" parameterType="java.lang.Long">
-            update question set viewcnt=viewcnt+1 where id=#{id}
+            update board set viewcnt=viewcnt+1 where id=#{id}
         </update>
 </mapper>

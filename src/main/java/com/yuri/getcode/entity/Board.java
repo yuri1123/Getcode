@@ -7,7 +7,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Question extends BaseEntity{
+public class Board extends BaseEntity{
 
         private Long id;
         private String subject;
