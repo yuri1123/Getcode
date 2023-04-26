@@ -3,10 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page session="true" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath }"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <html>
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <%@include file="../include/head.jsp" %>
 
     <style>

@@ -8,3 +8,4 @@
 <script src="/resources/assets/js/click-scroll.js"></script>
 <script src="/resources/assets/js/counter.js"></script>
 <script src="/resources/assets/js/custom.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
