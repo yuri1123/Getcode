@@ -132,7 +132,7 @@ public class StudyController {
         Map<String, Object> params = new HashMap<>();
         params.put("mystudyid", myStudy.getMystudyid());
         params.put("studyid", myStudyItemsDto.getStudyid());
-        MyStudyItemsDto myStudyItems1 = myStudyItemsService.findbymystudynum(params);
+        MyStudyItemsDto myStudyItems1 = myStudyItemsService.findbymystudynums(params);
         System.out.print(myStudyItems1);
 
         //동일한 스터디가 들어있지 않다면, 새로운 스터디를 담는 로직 실행

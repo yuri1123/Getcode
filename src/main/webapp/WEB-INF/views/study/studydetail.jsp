@@ -98,8 +98,8 @@
                                     <td> ${studyDto.studystart}</td>
                                 </tr>
                                 <tr>
-                                    <th>스터디 기간</th>
-                                    <td>${studyDto.period}</td>
+                                    <th>스터디 종료일</th>
+                                    <td>${studyDto.studyend}</td>
                                 </tr>
                                 <tr>
                                     <th>기술스택</th>

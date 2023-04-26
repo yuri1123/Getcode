@@ -7,6 +7,7 @@ import com.yuri.getcode.dto.MyStudyItemsDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -20,7 +21,11 @@ public class MyStudyItemsService {
         return mystudyitemsDao.createmystudyitem(myStudyItemsDto);
     }
 
-    public MyStudyItemsDto findbymystudynum(Map<String, Object> params){
-        return mystudyitemsDao.findbymystudynum(params);
+    public MyStudyItemsDto findbymystudynums(Map<String, Object> params){
+        return mystudyitemsDao.findbymystudynums(params);
     }
+    public List<MyStudyItemsDto> findbymystudyid(Long mystudyid){
+        return mystudyitemsDao.findbymystudyid(mystudyid);
+    }
+
 }

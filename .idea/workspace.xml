@@ -9,9 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 스터디 담기 수정&#10;- 스터디 상세페이지 구조 수정">
+    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 관리자역할 폭 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/changerole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/changerole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/MystudyitemsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/MystudyitemsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/StudyDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/StudyDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/Study.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/Study.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyItemsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyItemsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/createstudy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/createstudy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studyupdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studyupdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +247,8 @@
       <workItem from="1681779389765" duration="14453000" />
       <workItem from="1682300825927" duration="9582000" />
       <workItem from="1682386119676" duration="5406000" />
-      <workItem from="1682423851715" duration="16390000" />
+      <workItem from="1682423851715" duration="20914000" />
+      <workItem from="1682484096107" duration="2211000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -487,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682479014436</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="- 관리자역할 폭 수정">
+      <created>1682479666984</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1682479666984</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +548,8 @@
     <MESSAGE value="- 스터디 담기 생각해봄" />
     <MESSAGE value="- 스터디 담기 성공" />
     <MESSAGE value="- 스터디 담기 수정&#10;- 스터디 상세페이지 구조 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 스터디 담기 수정&#10;- 스터디 상세페이지 구조 수정" />
+    <MESSAGE value="- 관리자역할 폭 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 관리자역할 폭 수정" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

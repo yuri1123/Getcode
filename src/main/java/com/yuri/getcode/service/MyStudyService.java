@@ -27,5 +27,4 @@ public class MyStudyService {
     public MyStudyDto findbyuserid(Long userid){
         return mystudyDao.findbyuserid(userid);
     }
-
 }

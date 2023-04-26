@@ -7,14 +7,14 @@
 
         <!-- 스터디생성-->
         <insert id="create" parameterType="com.yuri.getcode.dto.StudyDto">
-          insert into study (studyname, studystart, period, recruitend, personnel,skillstack,position,connection,onoff,content,state,viewcnt,regDate,createdBy)
-                values (#{studyname}, #{studystart},#{period},#{recruitend},#{personnel},#{skillstack},#{position},#{connection},#{onoff},#{content},'apply',0,now(),#{createdBy})
+          insert into study (studyname, studystart, studyend, recruitend, personnel,skillstack,position,connection,onoff,content,state,viewcnt,regDate,createdBy)
+                values (#{studyname}, #{studystart},#{studyend},#{recruitend},#{personnel},#{skillstack},#{position},#{connection},#{onoff},#{content},'apply',0,now(),#{createdBy})
         </insert>
 
         <!-- 스터디수정-->
         <update id="update" parameterType="com.yuri.getcode.dto.StudyDto">
             update study set
-            studyname = #{studyname}, studystart = #{studystart},period = #{period},recruitend = #{recruitend},personnel = #{personnel},skillstack = #{skillstack},
+            studyname = #{studyname}, studystart = #{studystart},studyend = #{studyend},recruitend = #{recruitend},personnel = #{personnel},skillstack = #{skillstack},
             position = #{position},connection = #{connection},onoff = #{onoff},content = #{content},
             modifyDate = #{modifyDate},modifiedBy = #{modifiedBy})
             where id=#{id}

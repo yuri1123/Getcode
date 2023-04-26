@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page session="true" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath }"/>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 <html>
 <head>
     <%@include file="../include/head.jsp" %>
@@ -170,7 +171,7 @@
                                             <div class="mt-1 mb-1">
                                                 <p style="font-size: 14px;">
                                                     스터디 시작일 ${list.studystart} <br>
-                                                    스터디 예상 기간 ${list.period} <br>
+                                                    스터디 종료일 ${list.studyend} <br>
                                                     진행방법 ${list.onoff} <br>
                                             </div>
                                                 <%--                                        <p class="mb-2">${list.content}</p>--%>

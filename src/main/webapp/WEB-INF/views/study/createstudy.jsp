@@ -38,8 +38,8 @@
                                     <input type="date" id="studystart" name="studystart" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
-                                    <label class="text-right form-label" for="period">스터디 기간</label>
-                                    <input type="text" id="period" name="period" class="form-control form-control-lg" />
+                                    <label class="text-right form-label" for="studyend">스터디 종료일</label>
+                                    <input type="text" id="studyend" name="studyend" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
                                     <label class="text-right form-label" for="recruitend"> * 모집 종료일</label>

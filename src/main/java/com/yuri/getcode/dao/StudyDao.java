@@ -57,6 +57,5 @@ public class StudyDao {
         return sqlSession.update(namespace + ".updateview",id);
     }
     public List<StudyDto> selecttopview(){return sqlSession.selectList(namespace+".selecttopview");}
-
     public int createmystudy(UserDto userDto){return sqlSession.insert(namespace+".createmystudy");}
 }

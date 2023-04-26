@@ -11,7 +11,13 @@
         </insert>
 
         <!-- 마이스터디번호, 스터디번호로 해당 열 찾기 -->
-        <select id="findbymystudynum" parameterType="java.util.Map" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
+        <select id="findbymystudynums" parameterType="java.util.Map" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
                 select * from mystudyitems where studyid=#{studyid} and mystudyid=#{mystudyid};
         </select>
+
+<!--        마이스터디 id로 마이스터디아이템 전체 조회하기-->
+        <select id="findbymystudyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
+            select * from mystudyitems where mystudyid=#{mystudyid}
+        </select>
+
     </mapper>

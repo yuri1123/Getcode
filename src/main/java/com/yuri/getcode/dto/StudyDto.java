@@ -12,7 +12,7 @@ public class StudyDto {
     private Long id;
     private String studyname;
     private String studystart;
-    private String period;
+    private String studyend;
     private String recruitend;
     private int personnel;
     private String skillstack;
