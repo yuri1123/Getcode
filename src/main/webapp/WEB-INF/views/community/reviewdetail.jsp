@@ -102,36 +102,26 @@
             <%--                        </div>--%>
           </div>
 
-          <div class="author-comment d-flex mt-3 mb-4">
-            <img src="/resources/yuri/yuripic.png"
-                 class="img-fluid avatar-image" alt="">
+          <c:forEach items="${boardReplyDtos}" var="list">
+            <div class="author-comment d-flex mt-3 mb-4">
+              <img src="/resources/yuri/squirrel.png"
+                   class="img-fluid avatar-image" alt="">
 
-            <div class="author-comment-info ms-3">
-              <h6 class="mb-1">율류리</h6>
+              <div class="author-comment-info ms-3">
+                <h6 class="mb-1">${list.createdBy}</h6>
 
-              <p class="mb-0">참여하고 싶은데 좀 늦참해도 되나요?</p>
+                <p class="mb-0">${list.content}</p>
 
+              </div>
             </div>
-          </div>
-
-          <div class="author-comment d-flex mt-3 mb-4">
-            <img src="/resources/assets/images/avatar/portrait-young-redhead-bearded-male.jpg"
-                 class="img-fluid avatar-image" alt="">
-
-            <div class="author-comment-info ms-3">
-              <h6 class="mb-1">윌슨</h6>
-
-              <p class="mb-0">ㅎㅎ 너무 좋아보이는 스터디네요🎈😍😊</p>
-
-            </div>
-          </div>
-
-          <form class="custom-form comment-form mt-4" action="#" method="post" role="form">
+          </c:forEach>
+          <form class="custom-form comment-form mt-4" action="/community/createreply/${notice.id}" method="post" role="form">
             <h6 class="mb-3">Write a comment</h6>
 
-            <textarea name="comment-message" rows="4" class="form-control" id="comment-message"
+            <textarea name="content" rows="4" class="form-control" id="comment-message"
                       placeholder="Your comment here"></textarea>
-
+            <input type="hidden" value="${User.userid}" name="createdBy">
+            <input type="hidden" value="${User.userid}" name="modifiedBy">
             <div class="col-lg-3 col-md-4 col-6 ms-auto">
               <button type="submit" class="form-control">Comment</button>
             </div>

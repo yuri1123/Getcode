@@ -12,10 +12,10 @@ public class BoardDao {
 
     @Autowired
     private SqlSession sqlSession;
-    private static final String namespace = "com.yuri.getcode.questionMapper";
+    private static final String namespace = "com.yuri.getcode.boardMapper";
 
     public int create(BoardDto boardDto) {
-        return sqlSession.insert(namespace + ".create", boardDto);
+        return sqlSession.insert(namespace + ".createboard", boardDto);
     }
 
     public int updateboard(BoardDto boardDto) {

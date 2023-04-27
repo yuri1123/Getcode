@@ -1,10 +1,7 @@
 package com.yuri.getcode.controller;
 
 import com.yuri.getcode.dto.*;
-import com.yuri.getcode.service.BoardService;
-import com.yuri.getcode.service.MyStudyItemsService;
-import com.yuri.getcode.service.MyStudyService;
-import com.yuri.getcode.service.StudyService;
+import com.yuri.getcode.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,7 +21,8 @@ public class CommunityController {
 
     @Autowired
     private BoardService boardService;
-
+    @Autowired
+    private BoardReplyService boardReplyService;
     @Autowired
     private MyStudyItemsService myStudyItemsService;
     @Autowired
@@ -47,6 +45,8 @@ public class CommunityController {
         boardService.updateview(id);
         BoardDto notice = boardService.findbyid(id);
         model.addAttribute("notice", notice);
+        List<BoardReplyDto> boardReplyDtos = boardReplyService.selectallbyboardid(id);
+        model.addAttribute("boardReplyDtos",boardReplyDtos);
         return "/community/noticedetail";
     }
 
@@ -111,6 +111,8 @@ public class CommunityController {
         boardService.updateview(id);
         BoardDto qna = boardService.findbyid(id);
         model.addAttribute("qna", qna);
+        List<BoardReplyDto> boardReplyDtos = boardReplyService.selectallbyboardid(id);
+        model.addAttribute("boardReplyDtos",boardReplyDtos);
         return "/community/qnadetail";
     }
 
@@ -137,6 +139,8 @@ public class CommunityController {
         boardService.updateview(id);
         BoardDto review = boardService.findbyid(id);
         model.addAttribute("review", review);
+        List<BoardReplyDto> boardReplyDtos = boardReplyService.selectallbyboardid(id);
+        model.addAttribute("boardReplyDtos",boardReplyDtos);
         return "/community/reviewdetail";
     }
 
@@ -220,13 +224,61 @@ public class CommunityController {
 
     //    게시글 삭제하기
     @PostMapping("community/deleteboard/{id}")
-    String deleteboard(@PathVariable("id") Long id,Model model) {
-            int r = boardService.delete(id);
-            if(r>1){
-                model.addAttribute("msg","삭제가 완료되었습니다");
-            }
+    String deleteboard(@PathVariable("id") Long id, Model model) {
+        int r = boardService.delete(id);
+        if (r > 1) {
+            model.addAttribute("msg", "삭제가 완료되었습니다");
+        }
+        //타입에 따라 다른 페이지로 이동할 수 있게 함
+        BoardDto boardDto = boardService.findbyid(id);
+        String type = boardDto.getType();
 
-        return "redirect:/";
+        switch (type) {
+            case "NOTICE":
+                return "redirect:/community/noticelist";
+            case "QUESTION":
+                return "redirect:/community/qnalist";
+            case "REVIEW":
+                return "redirect:/community/reviewlist";
+            default:
+                return "redirect:/";
+        }
+    }
+
+    //댓글 달기
+    @PostMapping("community/createreply/{id}")
+    String createboardreply(@PathVariable("id") Long id, BoardReplyDto boardReplyDto, Model model,
+                            HttpServletRequest request) {
+
+        HttpSession session = request.getSession();
+        UserDto userDto = (UserDto) session.getAttribute("User");
+
+        if (userDto == null) {
+            model.addAttribute("msg", "로그인이 필요합니다.");
+            return "redirect:/user/login";
+        }
+
+        boardReplyDto.setBoardid(id);
+        int result = boardReplyService.createboardreply(boardReplyDto);
+        if (result > 1) {
+            model.addAttribute("msg", "댓글 작성이 완료되었습니다.");
+        }
+
+        //타입에 따라 다른 페이지로 이동할 수 있게 함
+        BoardDto boardDto = boardService.findbyid(id);
+        String type = boardDto.getType();
+
+        switch (type) {
+            case "NOTICE":
+                return "redirect:/community/noticedetail/{id}";
+            case "QUESTION":
+                return "redirect:/community/qnadetail/{id}";
+            case "REVIEW":
+                return "redirect:/community/reviewdetail/{id}";
+            default:
+                return "redirect:/";
+        }
+
     }
 
 }

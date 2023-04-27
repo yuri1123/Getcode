@@ -9,14 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 커뮤니티 리뷰 생성/수정/삭제&#10;- Qna 수정/삭제">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myboard.jsp" afterDir="false" />
+    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 내가 쓴 게시판">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/BoardReplyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/BoardReplyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/BoardReply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/BoardReplyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardReplyMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/yuri/squirrel.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/CommunityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/CommunityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/BoardDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myinfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myinfo.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mymadestudy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mymadestudy.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createquestion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createquestion.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createreview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createreview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/noticedetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/noticedetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/reviewdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/reviewdetail.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/WEB-INF/views/user",
+    "last_opened_file_path": "D:/Study/Getcode/src/main/webapp/resources/yuri",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +98,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\Getcode\src\main\webapp\resources\yuri" />
+      <recent name="D:\Study\Getcode\src\main\resources\mappers" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\user" />
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\community" />
-      <recent name="D:\Study\Getcode\src\main\resources\mappers" />
       <recent name="C:\yuris\GETCODE2\src\main\webapp\resources\yuri" />
-      <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\study" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Study\Getcode\src\main\webapp\WEB-INF\views\kind" />
@@ -242,7 +250,8 @@
       <workItem from="1682423851715" duration="20914000" />
       <workItem from="1682484096107" duration="4683000" />
       <workItem from="1682511797240" duration="12254000" />
-      <workItem from="1682557586658" duration="15376000" />
+      <workItem from="1682557586658" duration="15405000" />
+      <workItem from="1682596221674" duration="7826000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -545,7 +554,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682572849223</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="- 내가 쓴 게시판">
+      <created>1682574427229</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1682574427229</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +606,8 @@
     <MESSAGE value="- board 로 통일화" />
     <MESSAGE value="- 커뮤니티 조회/상세&#10;- 커뮤니티 질문 등록" />
     <MESSAGE value="- 커뮤니티 리뷰 생성/수정/삭제&#10;- Qna 수정/삭제" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 커뮤니티 리뷰 생성/수정/삭제&#10;- Qna 수정/삭제" />
+    <MESSAGE value="- 내가 쓴 게시판" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 내가 쓴 게시판" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
