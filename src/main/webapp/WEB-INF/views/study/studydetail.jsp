@@ -3,7 +3,19 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath }" />
 <html>
 <head>
-    <%@include file="../include/head.jsp"%>>
+    <%@include file="../include/head.jsp"%>
+    <style>
+        .bhover:hover {
+            /*background-color: #5bc1ac;*/
+            transition: all 0.2s ease-out;
+            box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+            top: -4px;
+            border: 1px solid #cccccc;
+            background-color: white;
+            cursor:pointer;
+        }
+    </style>
+
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
@@ -218,7 +230,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>>
+<%@include file="../include/js.jsp"%>
 
 
 </body>

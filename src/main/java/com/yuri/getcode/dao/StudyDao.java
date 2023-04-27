@@ -58,4 +58,6 @@ public class StudyDao {
     }
     public List<StudyDto> selecttopview(){return sqlSession.selectList(namespace+".selecttopview");}
     public int createmystudy(UserDto userDto){return sqlSession.insert(namespace+".createmystudy");}
+    public String findstudynamebyid(Long id){return sqlSession.selectOne(namespace+".findstudynamebyid",id);}
+
 }

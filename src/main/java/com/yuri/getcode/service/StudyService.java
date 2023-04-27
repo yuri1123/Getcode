@@ -55,6 +55,6 @@ public class StudyService{
         return studyDao.updateview(id);
     }
     public List<StudyDto> selecttopview(){return studyDao.selecttopview();}
-
+    public String findstudynamebyid(Long id){return studyDao.findstudynamebyid(id);}
 
 }

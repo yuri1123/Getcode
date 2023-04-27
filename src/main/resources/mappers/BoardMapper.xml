@@ -6,16 +6,14 @@
 <mapper namespace="com.yuri.getcode.questionMapper">
 
     <!-- 게시글등록-->
-    <insert id="create" parameterType="com.yuri.getcode.dto.BoardDto">
-        insert into board (type,subject,content,studyid,viewcnt,regDate,modifyDate,createdBy,modifiedBy)
-        values (#{type},#{subject},#{content},#{studyid},0,now(),now(),#{createdBy},#{modifiedBy})
+    <insert id="createboard" parameterType="com.yuri.getcode.dto.BoardDto">
+        insert into board (type,subject,content,studyid,studyname,viewcnt,regDate,modifyDate,createdBy,modifiedBy)
+        values (#{type},#{subject},#{content},#{studyid},#{studyname},0,now(),now(),#{createdBy},#{modifiedBy})
     </insert>
 
     <!-- 게시글수정-->
-    <update id="update" parameterType="com.yuri.getcode.dto.BoardDto">
-        update board set
-        subject = #{subject}, content = #{content},modifyDate = now(), modifiedBy=#{modifiedBy})
-        where id=#{id}
+    <update id="updateboard" parameterType="com.yuri.getcode.dto.BoardDto">
+        update board set subject=#{subject},studyid=#{studyid},studyname=#{studyname},content=#{content},modifyDate = now(), modifiedBy=#{modifiedBy} where id=#{id}
     </update>
 
     <!-- 게시글아이디로 전체조회-->
@@ -27,31 +25,17 @@
     <select id="selectall" resultType="com.yuri.getcode.dto.BoardDto">
         select * from board
     </select>
-
     <!--        notice 전체 조회-->
     <select id="selectnotice" resultType="com.yuri.getcode.dto.BoardDto">
         select * from board where type='NOTICE'
-    </select>
-
-    <!--        notice 상세 조회-->
-    <select id="findnoticebyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.BoardDto">
-        select * from board where type='NOTICE' and id=#{id}
     </select>
     <!--        qna 전체 조회-->
     <select id="selectqna" resultType="com.yuri.getcode.dto.BoardDto">
         select * from board where type='QNA'
     </select>
-    <!--        qna 상세 조회-->
-    <select id="findqnabyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.BoardDto">
-        select * from board where type='QNA' and id=#{id}
-    </select>
     <!--        review 전체 조회-->
     <select id="selectreview" resultType="com.yuri.getcode.dto.BoardDto">
         select * from board where type='REVIEW'
-    </select>
-    <!--        review 상세 조회-->
-    <select id="findreviewbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.BoardDto">
-        select * from board where type='REVIEW' and id=#{id}
     </select>
     <!--        내가쓴 게시글 전체 조회-->
     <select id="findbycreatedby" parameterType="java.lang.String" resultType="com.yuri.getcode.dto.BoardDto">

@@ -18,8 +18,8 @@ public class BoardService {
         return boardDao.create(boardDto);
     }
 
-    public int update(BoardDto questionDto) {
-        return boardDao.update(questionDto);
+    public int updateboard(BoardDto boardDto) {
+        return boardDao.updateboard(boardDto);
     }
 
     public BoardDto findbyid(Long id) {
@@ -50,14 +50,5 @@ public class BoardService {
 
     public List<BoardDto> findbycreatedby(String createdBy) {
         return boardDao.findbycreatedby(createdBy);
-    }
-    public BoardDto findnoticebyid(Long id) {
-        return boardDao.findnoticebyid(id);
-    }
-    public BoardDto findreviewbyid(Long id) {
-        return boardDao.findreviewbyid(id);
-    }
-    public BoardDto findqnabyid(Long id) {
-        return boardDao.findqnabyid(id);
     }
 }

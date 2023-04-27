@@ -18,8 +18,8 @@ public class BoardDao {
         return sqlSession.insert(namespace + ".create", boardDto);
     }
 
-    public int update(BoardDto boardDto) {
-        return sqlSession.update(namespace + ".update", boardDto);
+    public int updateboard(BoardDto boardDto) {
+        return sqlSession.update(namespace + ".updateboard", boardDto);
     }
 
     public BoardDto findbyid(Long id) {
@@ -42,28 +42,15 @@ public class BoardDao {
     public List<BoardDto> selectnotice() {
         return sqlSession.selectList(namespace + ".selectnotice");
     }
-
-//    notice 상세 조회
-public BoardDto findnoticebyid(Long id) {
-    return sqlSession.selectOne(namespace + ".findnoticebyid", id);
-}
     //    qna 전체 조회
     public List<BoardDto> selectqna() {
         return sqlSession.selectList(namespace + ".selectqna");
-    }
-    //    qna 상세 조회
-    public BoardDto findqnabyid(Long id) {
-        return sqlSession.selectOne(namespace + ".findqnabyid", id);
     }
     //    review 전체 조회
     public List<BoardDto> selectreview() {
         return sqlSession.selectList(namespace + ".selectreview");
     }
 
-    //    review 상세 조회
-    public BoardDto findreviewbyid(Long id) {
-        return sqlSession.selectOne(namespace + ".findreviewbyid", id);
-    }
     //내가쓴 게시글 전체 조회
     public List<BoardDto> findbycreatedby(String createdBy) {
         return sqlSession.selectList(namespace + ".findbycreatedby");

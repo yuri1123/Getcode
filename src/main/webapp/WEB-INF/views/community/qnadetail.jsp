@@ -4,6 +4,18 @@
 <html>
 <head>
     <%@include file="../include/head.jsp"%>
+    <style>
+    .bhover:hover {
+        /*background-color: #5bc1ac;*/
+        transition: all 0.2s ease-out;
+        box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+        top: -4px;
+        border: 1px solid #cccccc;
+        background-color: white;
+        cursor:pointer;
+    }
+    </style>
+
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
@@ -58,11 +70,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
-                        <hr class="mb-3">
-                        <div class="col-3 offset-8 justify-content-right text-right">
-                            <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
-                        </div>
+                    <div class="social-share border-top py-2 d-flex flex-wrap align-items-center justify-content-center">
+
                     </div>
 
                     <div class="news-block-body">
@@ -70,17 +79,29 @@
                         <blockquote>${qna.content}</blockquote>
                     </div>
 
-                    <div class="social-share border-top mt-5 py-4 d-flex flex-wrap align-items-center">
-                        <div class="tags-block me-auto">
-                            <%--                                <a href="#" class="tags-block-link">--%>
-                            <%--                                    ${studyDto.skillstack}--%>
-                            <%--                                </a>--%>
+                    <div class="social-share border-top mt-5 py-4 d-flex justify-content-end flex-wrap align-items-center">
+<%--                        <div class="tags-block me-auto">--%>
+                            <hr class="mb-3">
+                            <c:if test="${User.userid == qna.createdBy}">
+                                <div class="col-2 me-1 justify-content-right text-right">
+                                    <button type="button" class="form-control btn-primary bhover"><a href="/community/updatequestion/${qna.id}">수정하기</a></button>
+                                </div>
+                                <div class="col-2 me-1 justify-content-right text-right">
+                                    <form action="/community/deleteboard/${review.id}" type="form" method="post">
+                                        <button type="submit" onclick="if(confirm('정말로 삭제하시겠습니까?'));" class="form-control btn-primary bhover mt-3"><a href="">삭제하기</a></button>
+                                    </form>
+                                </div>
+                                <div class="col-2 me-1 justify-content-right text-right">
+                                    <button type="button" class="form-control btn-primary bhover"><a href="/community/qnalist">목록가기</a></button>
+                                </div>
+                            </c:if>
+                            <c:if test="${User.userid != qna.createdBy}">
+                                <div class="col-3  offset-8 justify-content-right text-right">
+                                    <button type="button" class="form-control btn-primary bhover"><a href="/community/qnalist">목록가기</a></button>
+                                </div>
+                            </c:if>
 
-                            <%--                                <a href="#" class="tags-block-link">--%>
-                            <%--                                    ${studyDto.position}--%>
-                            <%--                                </a>--%>
-
-                        </div>
+<%--                        </div>--%>
                     </div>
 
                     <div class="author-comment d-flex mt-3 mb-4">
@@ -129,7 +150,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>>
+<%@include file="../include/js.jsp"%>
 
 
 </body>

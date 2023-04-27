@@ -78,4 +78,9 @@
     <select id="selecttopview" resultType="com.yuri.getcode.dto.StudyDto">
         select * from study order by viewcnt desc limit 6;
     </select>
+
+<!--        스터디아이디로 스터디이름 가져오기-->
+    <select id="findstudynamebyid" parameterType="java.lang.Long" resultType="java.lang.String">
+        select studyname from study where id = #{id}
+    </select>
 </mapper>

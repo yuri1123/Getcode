@@ -74,7 +74,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>>
+<%@include file="../include/js.jsp"%>
 
 
 </body>

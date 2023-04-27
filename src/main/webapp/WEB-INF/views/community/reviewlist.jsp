@@ -17,7 +17,7 @@
                 <h2 class="mb-0">Review Board</h2>
             </div>
             <div class="col-lg-5 col-12">
-                <a href="${contextPath}/community/createquestion" class="custom-btn btn smoothscroll">Leave your review here!</a>
+                <a href="${contextPath}/community/createreview" class="custom-btn btn smoothscroll">Leave your review here!</a>
             </div>
 
         </div>
@@ -42,6 +42,7 @@
                                 <thead class="text-center">
                                 <tr>
                                     <th>no</th>
+                                    <th>study</th>
                                     <th>subject</th>
                                     <th>writer</th>
                                     <th>date</th>
@@ -52,6 +53,7 @@
                                 <c:forEach items="${reviewlist}" var="list">
                                 <tr>
                                     <td>${list.id}</td>
+                                    <td>${list.studyname}</td>
                                     <td><a href="${contextPath}/community/reviewdetail/${list.id}">${list.subject}</a></td>
                                     <td>${list.createdBy}</td>
                                     <td>${list.regDate}</td>
@@ -74,7 +76,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>>
+<%@include file="../include/js.jsp"%>
 
 
 </body>

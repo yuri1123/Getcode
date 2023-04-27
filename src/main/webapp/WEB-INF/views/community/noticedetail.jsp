@@ -4,6 +4,18 @@
 <html>
 <head>
     <%@include file="../include/head.jsp"%>
+    <style>
+        .bhover:hover {
+            /*background-color: #5bc1ac;*/
+            transition: all 0.2s ease-out;
+            box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+            top: -4px;
+            border: 1px solid #cccccc;
+            background-color: white;
+            cursor:pointer;
+        }
+    </style>
+
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
@@ -59,10 +71,6 @@
                         </div>
                     </div>
                         <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
-                            <hr class="mb-3">
-                            <div class="col-3 offset-8 justify-content-right text-right">
-                                <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
-                            </div>
                         </div>
 
                         <div class="news-block-body">
@@ -70,18 +78,14 @@
                             <blockquote>${notice.content}</blockquote>
                         </div>
 
-                        <div class="social-share border-top mt-5 py-4 d-flex flex-wrap align-items-center">
-                            <div class="tags-block me-auto">
-<%--                                <a href="#" class="tags-block-link">--%>
-<%--                                    ${studyDto.skillstack}--%>
-<%--                                </a>--%>
-
-<%--                                <a href="#" class="tags-block-link">--%>
-<%--                                    ${studyDto.position}--%>
-<%--                                </a>--%>
-
+                    <div class="social-share border-top mt-5 py-4 d-flex justify-content-end flex-wrap align-items-center">
+                        <hr class="mb-3">
+                            <div class="col-3  offset-8 justify-content-right text-right">
+                                <button type="button" class="form-control btn-primary bhover"><a href="/community/noticelist">목록가기</a></button>
                             </div>
-                        </div>
+
+                        <%--                        </div>--%>
+                    </div>
 
                         <div class="author-comment d-flex mt-3 mb-4">
                             <img src="/resources/yuri/yuripic.png"
@@ -129,7 +133,7 @@
 
 
 <%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>>
+<%@include file="../include/js.jsp"%>
 
 
 </body>

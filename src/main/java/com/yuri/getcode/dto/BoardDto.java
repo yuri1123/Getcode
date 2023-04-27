@@ -17,6 +17,7 @@ public class BoardDto {
     private String content;
     //스터디아이디
     private Long studyid;
+    private String studyname;
     private int viewcnt;
     private String regDate;
     private String modifyDate;
