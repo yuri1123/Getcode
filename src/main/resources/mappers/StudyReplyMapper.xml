@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 파일이름을 지칭하는 네임스페이스 -->
+<mapper namespace="com.yuri.getcode.studyreplyMapper">
+
+    <!-- 댓글등록-->
+    <insert id="createstudyreply" parameterType="com.yuri.getcode.dto.StudyReplyDto">
+        insert into studyreply (studyidr,content,regDate,modifyDate,createdBy,modifiedBy)
+        values (#{studyidr},#{content},now(),now(),#{createdBy},#{modifiedBy})
+    </insert>
+
+    <!-- 댓글수정-->
+    <update id="updatestudyreply" parameterType="com.yuri.getcode.dto.StudyReplyDto">
+        update studyreply set content=#{content},modifyDate=now(),modifiedBy=#{modifiedBy} where id=#{id}
+    </update>
+
+    <!--    게시물에 대한 댓글 전체 조회-->
+    <select id="selectallbystudyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.StudyReplyDto">
+        select * from studyreply where studyidr=#{studyidr}
+    </select>
+    <!-- 댓글 삭제-->
+    <select id="deletestudyreply" parameterType="java.lang.Long">
+        delete from studyreply where id=#{id}
+    </select>
+</mapper>

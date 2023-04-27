@@ -1,14 +1,12 @@
 package com.yuri.getcode.controller;
 
-import com.yuri.getcode.dto.MyStudyDto;
-import com.yuri.getcode.dto.MyStudyItemsDto;
-import com.yuri.getcode.dto.StudyDto;
-import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.dto.*;
 import com.yuri.getcode.entity.MyStudy;
 import com.yuri.getcode.entity.MyStudyItems;
 import com.yuri.getcode.entity.User;
 import com.yuri.getcode.service.MyStudyItemsService;
 import com.yuri.getcode.service.MyStudyService;
+import com.yuri.getcode.service.StudyReplyService;
 import com.yuri.getcode.service.StudyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +27,8 @@ public class StudyController {
 
     @Autowired
     private StudyService studyService;
+    @Autowired
+    private StudyReplyService studyReplyService;
     @Autowired
     private MyStudyService myStudyService;
     @Autowired
@@ -79,6 +79,8 @@ public class StudyController {
         studyService.updateview(id);
         StudyDto studyDto = studyService.findbyid(id);
         model.addAttribute("studyDto", studyDto);
+        List<StudyReplyDto> studyReplyDtos = studyReplyService.selectallbystudyid(id);
+        model.addAttribute("studyReplyDtos",studyReplyDtos);
         return "study/studydetail";
     }
 
@@ -107,7 +109,7 @@ public class StudyController {
 
     //나의 스터디에 담기
     @PostMapping("study/studyitems")
-    public String createmystudyitems(@ModelAttribute  MyStudyItemsDto myStudyItemsDto,@ModelAttribute MyStudyDto myStudyDto,
+    public String createmystudyitems(@ModelAttribute MyStudyItemsDto myStudyItemsDto, @ModelAttribute MyStudyDto myStudyDto,
                                      Model model, HttpServletRequest request) {
 
         //로그인하지 않았다면 로그인하세요 에러메시지 호출
@@ -117,7 +119,7 @@ public class StudyController {
             model.addAttribute("errormessage", "로그인이 필요합니다. 로그인 페이지로 이동합니다.");
             return "redirect:/user/login";
         }
-        
+
         //뷰에서 전달받은 로그인한 회원의 고유번호로 마이스터디 조회
         MyStudyDto myStudy = myStudyService.findbyuserid(userDto.getId());
         System.out.print(myStudy);
@@ -125,7 +127,7 @@ public class StudyController {
         if (myStudy == null) {
             int result1 = myStudyService.createmystudy(myStudyDto);
         }
-        model.addAttribute("mystudyid",myStudy.getMystudyid());
+        model.addAttribute("mystudyid", myStudy.getMystudyid());
 
         //마이스터디에 동일한 스터디가 들어있는지를 확인함
         Map<String, Object> params = new HashMap<>();
@@ -146,4 +148,29 @@ public class StudyController {
         }
         return "redirect:/study/browse";
     }
+
+    //댓글 달기
+    @PostMapping("study/createreply/{id}")
+    String createstudyreply(@PathVariable("id") Long id, StudyReplyDto studyReplyDto, Model model,
+                            HttpServletRequest request) {
+
+        HttpSession session = request.getSession();
+        UserDto userDto = (UserDto) session.getAttribute("User");
+
+        if (userDto == null) {
+            model.addAttribute("msg", "로그인이 필요합니다.");
+            return "redirect:/user/login";
+        }
+
+        studyReplyDto.setStudyidr(id);
+        int result = studyReplyService.createstudyreply(studyReplyDto);
+        if (result > 1) {
+            model.addAttribute("msg", "댓글 작성이 완료되었습니다.");
+        }
+
+        return "redirect:/study/studydetail/{id}";
+
+    }
+
+
 }
