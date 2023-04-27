@@ -74,18 +74,15 @@
             <div class="col-2">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="mysidebar " href="${contextPath}/user/mypage/${userDto.id}">My Study<br></a>
-                    <a class="mysidebar active" href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study<br></a>
-                    <a class="mysidebar " href="${contextPath}/user/myboard/${userDto.userid}">My Board<br></a>
+                    <a class="mysidebar " href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study<br></a>
+                    <a class="mysidebar active" href="${contextPath}/user/myboard/${userDto.userid}">My Board<br></a>
                     <a class="mysidebar " href="${contextPath}/user/myinfo/${userDto.id}">My Info<br></a>
                 </div>
             </div>
             <div class="col-10">
-                <%--                <div class="tab-content" id="v-pills-tabContent">--%>
-                <%--                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"--%>
-                <%--                         aria-labelledby="v-pills-home-tab">--%>
 
                 <div class="col-lg-12 col-12 text-center mb-4">
-                    <h2>You made these</h2>
+                    <h2>My Board List</h2>
                 </div>
                 <div class="col-lg-12 col-12 text-center mb-4">
 
@@ -93,34 +90,34 @@
                         <table class="table table-hover justify-content-center text-center">
                             <thead>
                             <tr>
-                                <th>스터디명</th>
-                                <th>포지션</th>
-                                <th>기술스택</th>
+                                <th>글번호</th>
+                                <th>게시판유형</th>
+                                <th>제목</th>
                                 <th>등록일</th>
-                                <th>시작일</th>
-                                <th>신청상태</th>
                                 <th>설정<th>
                             </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
-                            <c:forEach items="${studyDtos}" var="studyDto">
+                            <c:forEach items="${boardDtos}" var="boardDto">
                                 <tr>
-                                    <td>${studyDto.studyname}</td>
-                                    <td>${studyDto.position}</td>
-                                    <td>${studyDto.skillstack}</td>
-                                    <td><span class="badge bg-label-primary me-1">${studyDto.regDate}</span></td>
-                                    <td><span class="badge bg-label-info me-1">${studyDto.studystart}</span></td>
-                                    <td>
-                                        <c:if test="${studyDto.state == 'apply'}"><span class="badge bg-label-secondary me-1">${studyDto.state}</span></c:if>
-                                        <c:if test="${studyDto.state == 'permit'}"><span class="badge bg-label-warning me-1">${studyDto.state}</span></c:if>
-                                        <c:if test="${studyDto.state == 'decline'}"><span class="badge bg-label-danger me-1">${studyDto.state}</span></c:if>
-                                    </td>
+                                    <td>${boardDto.id}</td>
+                                    <c:if test="${boardDto.type == 'NOTICE'}">
+                                    <td>공지사항</td>
+                                    </c:if>
+                                    <c:if test="${boardDto.type == 'REVIEW'}">
+                                        <td>리뷰게시판</td>
+                                    </c:if>
+                                    <c:if test="${boardDto.type == 'QNA'}">
+                                        <td>Q&A게시판</td>
+                                    </c:if>
+                                    <td>${boardDto.subject}</td>
+                                    <td><span class="badge bg-label-primary me-1">${boardDto.regDate}</span></td>
                                     <td>
                                         <div class="dropdown">
                                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
                                             <div class="dropdown-menu" style="">
-                                                <a class="dropdown-item" href="/study/studyupdate/${studyDto.id}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                <a class="dropdown-item" href="/study/delete/${studyDto.id}"><i class="bx bx-trash me-1"></i>Delete</a>
+                                                <a class="dropdown-item" href="/study/studyupdate/${boardDto.id}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                <a class="dropdown-item" href="/study/delete/${boardDto.id}"><i class="bx bx-trash me-1"></i>Delete</a>
                                             </div>
                                         </div>
                                     </td>

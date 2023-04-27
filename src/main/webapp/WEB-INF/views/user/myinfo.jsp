@@ -76,7 +76,7 @@
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="mysidebar" href="${contextPath}/user/mypage/${userDto.id}">My Study<br></a>
                     <a class="mysidebar" href="${contextPath}/user/mymadestudy/${userDto.userid}">My Made Study<br></a>
-                    <a class="mysidebar" href="${contextPath}/user/myboard/${userDto.id}">My Board<br></a>
+                    <a class="mysidebar " href="${contextPath}/user/myboard/${userDto.userid}">My Board<br></a>
                     <a class="mysidebar active" href="${contextPath}/user/myinfo/${userDto.id}">My Info<br></a>
                 </div>
             </div>

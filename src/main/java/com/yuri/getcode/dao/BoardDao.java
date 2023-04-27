@@ -53,7 +53,7 @@ public class BoardDao {
 
     //내가쓴 게시글 전체 조회
     public List<BoardDto> findbycreatedby(String createdBy) {
-        return sqlSession.selectList(namespace + ".findbycreatedby");
+        return sqlSession.selectList(namespace + ".findbycreatedby",createdBy);
     }
 
 }

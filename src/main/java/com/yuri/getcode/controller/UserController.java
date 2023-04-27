@@ -1,14 +1,8 @@
 package com.yuri.getcode.controller;
 
-import com.yuri.getcode.dto.MyStudyDto;
-import com.yuri.getcode.dto.MyStudyItemsDto;
-import com.yuri.getcode.dto.StudyDto;
-import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.dto.*;
 import com.yuri.getcode.entity.User;
-import com.yuri.getcode.service.MyStudyItemsService;
-import com.yuri.getcode.service.MyStudyService;
-import com.yuri.getcode.service.StudyService;
-import com.yuri.getcode.service.UserService;
+import com.yuri.getcode.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +22,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private BoardService boardService;
     @Autowired
     private StudyService studyService;
     @Autowired
@@ -101,7 +97,7 @@ public class UserController {
             StudyDto studyDto = studyService.findbyid(myStudyItemsDtos.get(i).getStudyid());
             studyDtos.add(studyDto);
         }
-        model.addAttribute("studyDtos",studyDtos);
+        model.addAttribute("studyDtos", studyDtos);
 
         return "user/mypage";
     }
@@ -140,5 +136,14 @@ public class UserController {
         return "user/mymadestudy";
     }
 
-
+    // 내가 쓴 게시글 페이지 이동
+    @GetMapping("user/myboard/{userid}")
+    public String myboard(Model model, @PathVariable("userid") String userid) {
+        UserDto userDto = userService.selectbyuserid(userid);
+        model.addAttribute("userDto", userDto);
+        List<BoardDto> boardDtos = boardService.findbycreatedby(userid);
+        System.out.println(boardDtos);
+        model.addAttribute("boardDtos", boardDtos);
+        return "user/myboard";
+    }
 }
