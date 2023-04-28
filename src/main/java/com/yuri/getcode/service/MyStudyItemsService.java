@@ -27,5 +27,7 @@ public class MyStudyItemsService {
     public List<MyStudyItemsDto> findbymystudyid(Long mystudyid){
         return mystudyitemsDao.findbymystudyid(mystudyid);
     }
-
+    public List<MyStudyItemsDto> findbystudyid(Long studyid){
+        return mystudyitemsDao.findbystudyid(studyid);
+    }
 }

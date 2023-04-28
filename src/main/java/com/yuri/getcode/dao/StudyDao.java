@@ -49,8 +49,8 @@ public class StudyDao {
     public List<StudyDto> selectskillstack() {
         return sqlSession.selectList(namespace + ".selectskillstack");
     }
-    public int delete(Long id) {
-        return sqlSession.delete(namespace + ".delete",id);
+    public int deletestudy(Long id) {
+        return sqlSession.delete(namespace + ".deletestudy",id);
     }
 
     public int updateview(Long id) {

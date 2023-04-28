@@ -74,6 +74,26 @@
           </div>
 
           <div class="news-block-body">
+            <div class="card text-center">
+              <table class="table table-bordered table-hover justify-content-center text-center">
+                <colgroup>
+                  <col width="20%"/>
+                  <col width="80%"/>
+                </colgroup>
+                <thead class="table-light">
+                <tr>
+                  <th>스터디번호</th>
+                  <th>스터디제목</th>
+                </tr>
+                </thead>
+                <tbody class="justify-content-center align-middle text-center">
+                <tr>
+                  <td>${review.studyid}</td>
+                  <td>${review.studyname}</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
             <blockquote>${review.content}</blockquote>
           </div>
 
@@ -115,7 +135,7 @@
               </div>
             </div>
           </c:forEach>
-          <form class="custom-form comment-form mt-4" action="/community/createreply/${notice.id}" method="post" role="form">
+          <form class="custom-form comment-form mt-4" action="/community/createreply/${review.id}" method="post" role="form">
             <h6 class="mb-3">Write a comment</h6>
 
             <textarea name="content" rows="4" class="form-control" id="comment-message"

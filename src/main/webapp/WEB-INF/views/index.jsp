@@ -2,9 +2,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page session="true" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath }"/>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
 
 <head>
     <%@ include file="include/head.jsp" %>
+    <style>
+        .progress {
+            height: 13px;
+        }
+    </style>
 </head>
 
 <body>
@@ -132,44 +139,68 @@
                 <div class="col-lg-10 col-12 text-center mx-auto">
                     <h2 class="mb-5">인기있는 스터디를 확인해보세요!</h2>
                 </div>
-                <div class="container custom-form contact-form justify-content-center text-center" style=" margin-bottom: 100px;">
+                <div class="container custom-form contact-form justify-content-center text-center"
+                     style=" margin-bottom: 100px;">
                     <div class="row">
-
                         <c:forEach items="${studyDtos}" var="list">
                             <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 ">
                                 <div class="custom-block-wrap">
                                     <div class="custom-block">
                                         <div class="custom-block-body">
+                                            <div class="mb-2">
+                                                <a href="#" class="category-block-link badge">
+                                                        ${list.skillstack}
+                                                </a>
+
+                                                <a href="#" class="category-block-link badge">
+                                                        ${list.position}
+                                                </a>
+                                            </div>
                                             <h5 class="mb-3"
                                                 style="font-size: 19px; font-weight: bold">${list.studyname}</h5>
 
-                                            <p>${list.studyname}</p>
-
-                                            <div class="progress mt-4">
-                                                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75"
-                                                     aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="d-flex mt-2 justify-content-center align-content-center">
+                                                <div class="news-block-author mx-1">
+                                                    <p style="font-size: 16px;">
+                                                        <c:forEach items="${partnerMap[list.id]}" var="partner">
+                                                            <i class="bi-person custom-icon me-1"></i>
+                                                            ${partner}
+                                                        </c:forEach>
+                                                    </p>
+                                                </div>
                                             </div>
 
-                                            <div class="d-flex align-items-center my-2">
-                                                <p class="mb-0">
-                                                    <strong>Raised:</strong>
-                                                    $18,500
-                                                </p>
+                                            <div class="progress mt-4">
+                                                <div id="progress-bar-${list.id}" class="progress-bar"
+                                                     role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <script>
+                                                // 현재 인원 구하기
+                                                var currentPersonnel = ${fn:length(partnerMap[list.id])};
+                                                // 진행 상황 계산
+                                                var progress = Math.round((100 * currentPersonnel) / ${list.personnel});
+                                                // 프로그레스바 업데이트
+                                                $("#progress-bar-${list.id}").css("width", progress + "%").attr("aria-valuenow", progress).text(progress + "%");
+                                            </script>
 
+                                            <div class="d-flex align-items-center my-2">
+                                                <c:set var="partnerList" value="${partnerMap[list.id]}"/>
+                                                <p class="mb-0">
+                                                    <strong>Now:</strong>
+                                                        ${fn:length(partnerList)} 명
+                                                </p>
                                                 <p class="ms-auto mb-0">
-                                                    <strong>Goal:</strong>
-                                                    $32,000
+                                                    / ${list.personnel} 명
                                                 </p>
                                             </div>
                                         </div>
-                                        <a href="kind/donate.html" class="custom-btn btn">Study Details</a>
+                                        <a href="/study/studydetail/${list.id}" class="custom-btn btn">Study Details</a>
                                     </div>
                                 </div>
                             </div>
                         </c:forEach>
                     </div>
                 </div>
-
 
 
             </div>

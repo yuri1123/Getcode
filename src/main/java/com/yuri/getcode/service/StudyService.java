@@ -47,8 +47,8 @@ public class StudyService{
     public List<StudyDto> selectposition() {
         return studyDao.selectposition();
     }
-    public int delete(Long id) {
-        return studyDao.delete(id);
+    public int deletestudy(Long id) {
+        return studyDao.deletestudy(id);
     }
 
     public int updateview(Long id) {

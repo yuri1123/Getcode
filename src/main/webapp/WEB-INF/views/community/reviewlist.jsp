@@ -5,6 +5,11 @@
 <html>
 <head>
    <%@include file="../include/head.jsp"%>
+    <style>
+        .hoverhand {
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
@@ -51,10 +56,10 @@
                                 </thead>
                                 <tbody class="text-center">
                                 <c:forEach items="${reviewlist}" var="list">
-                                <tr>
+                                    <tr class="hoverhand" onclick="window.location='${contextPath}/community/reviewdetail/${list.id}';">
                                     <td>${list.id}</td>
                                     <td>${list.studyname}</td>
-                                    <td><a href="${contextPath}/community/reviewdetail/${list.id}">${list.subject}</a></td>
+                                    <td>${list.subject}</td>
                                     <td>${list.createdBy}</td>
                                     <td>${list.regDate}</td>
                                     <td>${list.viewcnt}</td>

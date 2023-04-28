@@ -75,12 +75,39 @@ public class StudyController {
 
     //스터디 상세 페이지 이동
     @GetMapping("study/studydetail/{id}")
-    public String stduydetail(Model model, @PathVariable("id") Long id) {
+    public String stduydetail(Model model, @PathVariable("id") Long id, HttpServletRequest request) {
         studyService.updateview(id);
+
+        HttpSession session = request.getSession();
+        UserDto userDto = (UserDto) session.getAttribute("User");
+
+        if (userDto == null) {
+            model.addAttribute("errormessage", "로그인이 필요합니다. 로그인 페이지로 이동합니다.");
+            return "redirect:/user/login";
+        }
+
         StudyDto studyDto = studyService.findbyid(id);
         model.addAttribute("studyDto", studyDto);
         List<StudyReplyDto> studyReplyDtos = studyReplyService.selectallbystudyid(id);
-        model.addAttribute("studyReplyDtos",studyReplyDtos);
+        model.addAttribute("studyReplyDtos", studyReplyDtos);
+
+        //스터디아이디로 studyitems를 조회함(해당 아이템을 가지고있는 사람들 조회)
+        //해당 리스트의 크기와 모집인원의 크기를 비교하여 같으면 true를 모델에 담아 뷰에 전달
+        List<MyStudyItemsDto> myStudyItemsDtos = myStudyItemsService.findbystudyid(id);
+        if (studyDto.getPersonnel() == myStudyItemsDtos.size()) {
+            model.addAttribute("personend", "true");
+        }
+
+        //참여자들 중에 현재 로그인한 회원의 아이디와 일치하는 것이 있으면, true를 반환하고 break를 걸어서
+        //다른 데이터의 조건식을 실행하지 않도록 함
+        for (int i = 0; i < myStudyItemsDtos.size(); i++) {
+            if (myStudyItemsDtos.get(i).getCreatedBy().equals(userDto.getUserid())) {
+                boolean joined = myStudyItemsDtos.get(i).getCreatedBy().equals(userDto.getUserid());
+                model.addAttribute("joined", "true");
+            break;
+            }
+        }
+
         return "study/studydetail";
     }
 
@@ -98,7 +125,22 @@ public class StudyController {
     public String updateid(StudyDto studyDto, Model model, @PathVariable("id") Long id) {
         int result = studyService.update(studyDto);
         if (result > 0) {
-            model.addAttribute("msg", "스터디를 생성하였습니다.");
+            model.addAttribute("msg", "스터디를 수정하였습니다.");
+        }
+        // 수정된 데이터 다시 불러오기
+        StudyDto updatedStudyDto = studyService.findbyid(id);
+        model.addAttribute("studyDto", updatedStudyDto);
+
+        return "redirect:/user/mymadestudy";
+    }
+
+    //스터디 삭제하기
+    @PostMapping("study/deletestudy/{id}")
+    public String deletestudy(Model model, @PathVariable("id") Long id){
+
+        int result = studyService.deletestudy(id);
+        if (result > 0) {
+            model.addAttribute("msg", "스터디를 삭제하였습니다.");
         }
         // 수정된 데이터 다시 불러오기
         StudyDto updatedStudyDto = studyService.findbyid(id);

@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <!-- 파일이름을 지칭하는 네임스페이스 -->
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 파일이름을 지칭하는 네임스페이스 -->
 <mapper namespace="com.yuri.getcode.mystudyitemsMapper">
 
-        <!-- 나의스터디에 스터디담기-->
-        <insert id="createmystudyitem" parameterType="com.yuri.getcode.dto.MyStudyItemsDto">
-            insert into mystudyitems set studyid=#{studyid}, mystudyid=#{mystudyid}, regDate=now(),modifyDate=now(),createdBy=#{createdBy},modifiedBy=#{createdBy}
-        </insert>
+    <!-- 나의스터디에 스터디담기-->
+    <insert id="createmystudyitem" parameterType="com.yuri.getcode.dto.MyStudyItemsDto">
+        insert into mystudyitems set studyid=#{studyid}, mystudyid=#{mystudyid},
+        regDate=now(),modifyDate=now(),createdBy=#{createdBy},modifiedBy=#{createdBy}
+    </insert>
 
-        <!-- 마이스터디번호, 스터디번호로 해당 열 찾기 -->
-        <select id="findbymystudynums" parameterType="java.util.Map" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
-                select * from mystudyitems where studyid=#{studyid} and mystudyid=#{mystudyid};
-        </select>
+    <!-- 마이스터디번호, 스터디번호로 해당 열 찾기 -->
+    <select id="findbymystudynums" parameterType="java.util.Map" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
+        select * from mystudyitems where studyid=#{studyid} and mystudyid=#{mystudyid};
+    </select>
 
-<!--        마이스터디 id로 마이스터디아이템 전체 조회하기-->
-        <select id="findbymystudyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
-            select * from mystudyitems where mystudyid=#{mystudyid}
-        </select>
+    <!--        마이스터디 id로 마이스터디아이템 전체 조회하기-->
+    <select id="findbymystudyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
+        select * from mystudyitems where mystudyid=#{mystudyid}
+    </select>
 
-    </mapper>
+    <!--        스터디 id로 마이스터디아이템 전체 조회하기-->
+    <!--    해당 study를 카트에 담은 사람들 구하기-->
+    <select id="findbystudyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.MyStudyItemsDto">
+        select * from mystudyitems where studyid=#{studyid}
+    </select>
+</mapper>

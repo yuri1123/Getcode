@@ -105,7 +105,7 @@
                             <tbody class="table-border-bottom-0">
                             <c:forEach items="${studyDtos}" var="studyDto">
                                 <tr>
-                                    <td>${studyDto.studyname}</td>
+                                    <td><a href="/study/studydetail/${studyDto.id}">${studyDto.studyname}</a></td>
                                     <td>${studyDto.position}</td>
                                     <td>${studyDto.skillstack}</td>
                                     <td><span class="badge bg-label-primary me-1">${studyDto.regDate}</span></td>

@@ -26,4 +26,7 @@ public class MystudyitemsDao {
     public List<MyStudyItemsDto> findbymystudyid(Long mystudyid){
         return sqlSession.selectList(namespace+".findbymystudyid",mystudyid);
     }
+    public List<MyStudyItemsDto> findbystudyid(Long studyid){
+        return sqlSession.selectList(namespace+".findbystudyid",studyid);
+    }
 }

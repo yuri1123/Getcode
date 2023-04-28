@@ -19,7 +19,8 @@
                 padding: 0 10px;
             }
         }
-        .mysidebar.active{
+
+        .mysidebar.active {
             background-color: #20c997;
             color: white;
             border-radius: 20px;
@@ -28,7 +29,7 @@
             padding: 10px;
         }
 
-        .mysidebar{
+        .mysidebar {
             color: #676666;
             border-radius: 20px;
             font-size: 18px;
@@ -36,7 +37,7 @@
             padding: 10px;
         }
 
-        .mysidebar:hover{
+        .mysidebar:hover {
             background-color: #ecfae4;
             color: #676666;
             border-radius: 20px;
@@ -94,7 +95,8 @@
                                 <th>게시판유형</th>
                                 <th>제목</th>
                                 <th>등록일</th>
-                                <th>설정<th>
+                                <th>설정
+                                <th>
                             </tr>
                             </thead>
                             <tbody class="table-border-bottom-0">
@@ -102,7 +104,7 @@
                                 <tr>
                                     <td>${boardDto.id}</td>
                                     <c:if test="${boardDto.type == 'NOTICE'}">
-                                    <td>공지사항</td>
+                                        <td>공지사항</td>
                                     </c:if>
                                     <c:if test="${boardDto.type == 'REVIEW'}">
                                         <td>리뷰게시판</td>
@@ -110,14 +112,39 @@
                                     <c:if test="${boardDto.type == 'QNA'}">
                                         <td>Q&A게시판</td>
                                     </c:if>
-                                    <td>${boardDto.subject}</td>
+
+                                    <c:if test="${boardDto.type == 'NOTICE'}">
+                                        <td><a href="/community/noticedetail/${boardDto.id}">${boardDto.subject}</a>
+                                        </td>
+                                    </c:if>
+                                    <c:if test="${boardDto.type == 'REVIEW'}">
+                                        <td><a href="/community/reviewdetail/${boardDto.id}">${boardDto.subject}</a>
+                                        </td>
+                                    </c:if>
+                                    <c:if test="${boardDto.type == 'QNA'}">
+                                        <td><a href="/community/qnadetail/${boardDto.id}">${boardDto.subject}</a></td>
+                                    </c:if>
                                     <td><span class="badge bg-label-primary me-1">${boardDto.regDate}</span></td>
                                     <td>
                                         <div class="dropdown">
-                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
+                                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                    class="bx bx-dots-vertical-rounded"></i></button>
                                             <div class="dropdown-menu" style="">
-                                                <a class="dropdown-item" href="/study/studyupdate/${boardDto.id}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                <a class="dropdown-item" href="/study/delete/${boardDto.id}"><i class="bx bx-trash me-1"></i>Delete</a>
+
+                                                <c:if test="${boardDto.type == 'NOTICE'}">
+                                                </c:if>
+                                                <c:if test="${boardDto.type == 'REVIEW'}">
+                                                    <a class="dropdown-item" href="/community/updatereview/${boardDto.id}"><i
+                                                            class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                </c:if>
+                                                <c:if test="${boardDto.type == 'QNA'}">
+                                                    <a class="dropdown-item"
+                                                       href="/community/updatequestion/${boardDto.id}"><i
+                                                            class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                </c:if>
+                                                <a class="dropdown-item" href="/study/deletestudy/${boardDto.id}">
+                                                    <i class="bx bx-trash me-1"></i>Delete</a>
                                             </div>
                                         </div>
                                     </td>
@@ -126,7 +153,6 @@
                             </tbody>
                         </table>
                     </div>
-
 
 
                 </div>

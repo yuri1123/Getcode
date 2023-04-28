@@ -51,7 +51,7 @@
         }
 
          .progress {
-             height: 15px;
+             height: 13px;
          }
     </style>
 

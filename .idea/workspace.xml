@@ -9,15 +9,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 게시판 댓글 CRUD">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyReplyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dto/StudyReplyDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/entity/StudyReply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyReplyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/StudyReplyMapper.xml" afterDir="false" />
+    <list default="true" id="6f42dd7b-ef11-470a-8332-e6dbdb4f0197" name="Changes" comment="- 스터디 댓글 기능 추가 crud">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/constant/BoardType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/constant/BoardType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/CommunityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/CommunityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/controller/StudyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/MystudyitemsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/MystudyitemsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/dao/StudyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyItemsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/MyStudyItemsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yuri/getcode/service/StudyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/mystudyitemsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/studyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createquestion.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createquestion.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createreview.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/createreview.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/noticelist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/noticelist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnalist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnalist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/reviewdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/reviewdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/reviewlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/reviewlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/studydetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mymadestudy.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mymadestudy.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/mypage.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,28 +82,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Study/Getcode/src/main/resources/mappers",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.41860464",
-    "settings.editor.selected.configurable": "project.propCompiler",
-    "spring.configuration.checksum": "5b1e5ccbaf17273c6602b7194774ff67",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Study/Getcode/src/main/resources/mappers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41860464&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5b1e5ccbaf17273c6602b7194774ff67&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Study\Getcode\src\main\resources\mappers" />
@@ -244,7 +259,8 @@
       <workItem from="1682484096107" duration="4683000" />
       <workItem from="1682511797240" duration="12254000" />
       <workItem from="1682557586658" duration="15405000" />
-      <workItem from="1682596221674" duration="10763000" />
+      <workItem from="1682596221674" duration="11385000" />
+      <workItem from="1682644163383" duration="17391000" />
     </task>
     <task id="LOCAL-00001" summary="- 회원가입 폼 작성&#10;- 기본 패키지 생성">
       <created>1680685062332</created>
@@ -561,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682606580017</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="- 스터디 댓글 기능 추가 crud">
+      <created>1682611082528</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1682611082528</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +606,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="- 회원가입 폼 작성&#10;- 기본 패키지 생성" />
     <MESSAGE value="- 페이지 추가" />
     <MESSAGE value="- 부트스트랩 변경" />
     <MESSAGE value="create" />
@@ -608,7 +630,8 @@
     <MESSAGE value="- 커뮤니티 리뷰 생성/수정/삭제&#10;- Qna 수정/삭제" />
     <MESSAGE value="- 내가 쓴 게시판" />
     <MESSAGE value="- 게시판 댓글 CRUD" />
-    <option name="LAST_COMMIT_MESSAGE" value="- 게시판 댓글 CRUD" />
+    <MESSAGE value="- 스터디 댓글 기능 추가 crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="- 스터디 댓글 기능 추가 crud" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

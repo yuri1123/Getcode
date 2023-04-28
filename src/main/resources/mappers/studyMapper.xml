@@ -65,7 +65,7 @@
         </select>
 
     <!-- 스터디 삭제-->
-        <select id="delete" parameterType="java.lang.Long">
+        <select id="deletestudy" parameterType="java.lang.Long">
             delete from study where id=#{id}
         </select>
 

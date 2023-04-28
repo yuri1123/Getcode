@@ -5,6 +5,11 @@
 <html>
 <head>
    <%@include file="../include/head.jsp"%>
+    <style>
+        .hoverhand {
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
 <%@ include file="../include/header.jsp"%>
@@ -38,7 +43,7 @@
 
                         <form action="${contextPath}/user/login" role="form" method="post">
 
-                            <table class="table table">
+                            <table class="table table-hover">
                                 <thead class="text-center">
                                 <tr>
                                     <th>no</th>
@@ -50,9 +55,9 @@
                                 </thead>
                                 <tbody class="text-center">
                                 <c:forEach items="${questionDtoList}" var="list">
-                                <tr>
+                                    <tr class="hoverhand" onclick="window.location='${contextPath}/community/qnadetail/${list.id}';">
                                     <td>${list.id}</td>
-                                    <td><a href="${contextPath}/community/qnadetail/${list.id}">${list.subject}</a></td>
+                                    <td>${list.subject}</td>
                                     <td>${list.createdBy}</td>
                                     <td>${list.regDate}</td>
                                     <td>${list.viewcnt}</td>

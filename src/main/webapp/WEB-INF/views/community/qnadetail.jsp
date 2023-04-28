@@ -117,7 +117,7 @@
                             </div>
                         </div>
                     </c:forEach>
-                    <form class="custom-form comment-form mt-4" action="/community/createreply/${notice.id}" method="post" role="form">
+                    <form class="custom-form comment-form mt-4" action="/community/createreply/${qna.id}" method="post" role="form">
                         <h6 class="mb-3">Write a comment</h6>
 
                         <textarea name="content" rows="4" class="form-control" id="comment-message"

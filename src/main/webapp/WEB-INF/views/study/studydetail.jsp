@@ -1,9 +1,11 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<c:set var="contextPath" value="${pageContext.request.contextPath }" />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath }"/>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <html>
 <head>
-    <%@include file="../include/head.jsp"%>
+    <%@include file="../include/head.jsp" %>
     <style>
         .bhover:hover {
             /*background-color: #5bc1ac;*/
@@ -12,13 +14,13 @@
             top: -4px;
             border: 1px solid #cccccc;
             background-color: white;
-            cursor:pointer;
+            cursor: pointer;
         }
     </style>
 
 </head>
 <body>
-<%@ include file="../include/header.jsp"%>
+<%@ include file="../include/header.jsp" %>
 
 <section class="cta-section section-padding section-bg">
     <div class="container">
@@ -30,7 +32,7 @@
 
             <div class="col-lg-5 col-12">
                 <%--                <a href="#section_4" class="custom-btn btn smoothscroll">button2</a>--%>
-<%--                <a href="${contextPath}/study/create" class="custom-btn btn smoothscroll">make study</a>--%>
+                <%--                <a href="${contextPath}/study/create" class="custom-btn btn smoothscroll">make study</a>--%>
             </div>
 
         </div>
@@ -38,7 +40,7 @@
 </section>
 
 
-<section class="section-padding" >
+<section class="section-padding">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-12">
@@ -71,10 +73,10 @@
                                 </p>
                             </div>
                         </div>
-<%--                        <div class="mb-3">--%>
-                            <form role="form" method="post" action="/study/studyitems">
-                        <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
-                            <hr class="mb-3">
+                        <%--                        <div class="mb-3">--%>
+                        <form role="form" method="post" action="/study/studyitems">
+                            <div class="social-share border-top py-2 d-flex flex-wrap align-items-center">
+                                <hr class="mb-3">
                                 <div>
                                     <input type="hidden" value="${User.id}" name="userid">
                                     <input type="hidden" value="${User.userid}" name="createdBy">
@@ -82,55 +84,81 @@
                                     <input type="hidden" value="${studyDto.id}" name="studyid">
                                     <input type="hidden" value="${mystudyid}" name="mystudyid">
                                 </div>
-                            <div class="col-3 offset-3 me-1 justify-content-right text-right">
-                                <button type="submit" class="form-control btn-primary" onclick="if(confirm('이 스터디에 참여하시겠습니까?'));"><a href="/study/browse">참여하기</a></button>
+                                <div class="col-3 offset-3 me-1 justify-content-right text-right">
+                                    <c:choose>
+                                        <c:when test="${joined == 'true'}">
+                                            <button type="submit" class="form-control btn-primary" disabled>
+                                                <a>참여중</a>
+                                            </button>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <c:set var="now" value="<%=new java.util.Date()%>" />
+                                            <c:if test="${studyDto.recruitend <= now}">
+                                                <button type="submit" class="form-control btn-primary" disabled><a>기한마감</a>
+                                                </button>
+                                            </c:if>
+                                            <c:if test="${studyDto.recruitend > now}">
+                                                <c:if test="${personend != false}">
+                                                    <button type="submit" class="form-control btn-primary bhover"
+                                                            href="/study/studyitems"
+                                                            onclick="if(confirm('이 스터디에 참여하시겠습니까?'));"><a>참여하기</a></button>
+                                                </c:if>
+                                                <c:if test="${personend == true}">
+                                                    <button type="submit" class="form-control btn-primary" disabled>
+                                                        <a>모집마감</a></button>
+                                                </c:if>
+                                            </c:if>
+                                        </c:otherwise>
+                                    </c:choose>
+
+                                </div>
+                                <div class="col-3 justify-content-right text-right">
+                                    <button type="button" class="form-control btn-primary bhover" href="/study/browse">
+                                        <a>목록가기</a></button>
+                                </div>
                             </div>
-                            <div class="col-3 justify-content-right text-right">
-                                <button type="button" class="form-control btn-primary"><a href="/study/browse">목록가기</a></button>
-                            </div>
-                        </div>
-                            </form>
+                        </form>
 
                         <div class="news-block-body">
                             <div class="card text-center">
                                 <table class="table table-bordered table-hover justify-content-center text-center">
-                                <colgroup>
-                                    <col width="40%"/>
-                                    <col width="60%"/>
-                                </colgroup>
+                                    <colgroup>
+                                        <col width="40%"/>
+                                        <col width="60%"/>
+                                    </colgroup>
                                     <thead class="table-light">
                                     <tr>
                                         <th>구분</th>
                                         <th>내용</th>
                                     </tr>
                                     </thead>
-                                <tbody class="justify-content-center align-middle text-center">
-                                <tr>
-                                    <th>스터디 시작일</th>
-                                    <td> ${studyDto.studystart}</td>
-                                </tr>
-                                <tr>
-                                    <th>스터디 종료일</th>
-                                    <td>${studyDto.studyend}</td>
-                                </tr>
-                                <tr>
-                                    <th>기술스택</th>
-                                    <td> ${studyDto.skillstack}</td>
-                                </tr>
-                                <tr>
-                                    <th>모집 포지션</th>
-                                    <td>${studyDto.position}</td>
-                                </tr>
-                                <tr>
-                                    <th>연락방법</th>
-                                    <td>${studyDto.connection}</td>
-                                </tr>
-                                <tr>
-                                    <th>진행방법</th>
-                                    <td>${studyDto.onoff}</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                                    <tbody class="justify-content-center align-middle text-center">
+                                    <tr>
+                                        <th>스터디 시작일</th>
+                                        <td> ${studyDto.studystart}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>스터디 종료일</th>
+                                        <td>${studyDto.studyend}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>기술스택</th>
+                                        <td> ${studyDto.skillstack}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>모집 포지션</th>
+                                        <td>${studyDto.position}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>연락방법</th>
+                                        <td>${studyDto.connection}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>진행방법</th>
+                                        <td>${studyDto.onoff}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
                             <blockquote>${studyDto.content}</blockquote>
                         </div>
@@ -161,7 +189,8 @@
                                 </div>
                             </div>
                         </c:forEach>
-                        <form class="custom-form comment-form mt-4" action="/study/createreply/${studyDto.id}" method="post" role="form">
+                        <form class="custom-form comment-form mt-4" action="/study/createreply/${studyDto.id}"
+                              method="post" role="form">
                             <h6 class="mb-3">Write a comment</h6>
 
                             <textarea name="content" rows="4" class="form-control" id="comment-message"
@@ -177,14 +206,13 @@
             </div>
 
 
-
         </div>
     </div>
 </section>
 
 
-<%@include file="../include/footer.jsp"%>
-<%@include file="../include/js.jsp"%>
+<%@include file="../include/footer.jsp" %>
+<%@include file="../include/js.jsp" %>
 
 
 </body>

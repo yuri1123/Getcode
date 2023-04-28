@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="col-12">
                                     <%--                                <label class="text-right form-label" for="summernote"> * 질문 내용</label>--%>
-                                    <textarea id="summernote" name="content" class="form-control" >
+                                    <textarea id="summernote" name="content" class="form-control" >${boardDto.content}
                                     </textarea>
                                 </div>
                                 <script>

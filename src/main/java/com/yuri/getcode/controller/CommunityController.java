@@ -236,7 +236,7 @@ public class CommunityController {
         switch (type) {
             case "NOTICE":
                 return "redirect:/community/noticelist";
-            case "QUESTION":
+            case "QNA":
                 return "redirect:/community/qnalist";
             case "REVIEW":
                 return "redirect:/community/reviewlist";
@@ -271,7 +271,7 @@ public class CommunityController {
         switch (type) {
             case "NOTICE":
                 return "redirect:/community/noticedetail/{id}";
-            case "QUESTION":
+            case "QNA":
                 return "redirect:/community/qnadetail/{id}";
             case "REVIEW":
                 return "redirect:/community/reviewdetail/{id}";
