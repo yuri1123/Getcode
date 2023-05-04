@@ -3,8 +3,12 @@ package com.yuri.getcode.controller;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.yuri.getcode.dto.BoardDto;
 import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
+import com.yuri.getcode.entity.Board;
+import com.yuri.getcode.service.BoardService;
+import com.yuri.getcode.service.MyStudyService;
 import com.yuri.getcode.service.StudyService;
 import com.yuri.getcode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +16,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.*;
 
+import java.beans.PropertyEditorSupport;
+import java.security.Principal;
 import java.util.*;
 
 @Controller
@@ -24,7 +29,11 @@ public class AdminController {
     @Autowired
     private StudyService studyService;
     @Autowired
+    private MyStudyService myStudyService;
+    @Autowired
     private UserService userService;
+    @Autowired
+    private BoardService boardService;
 
     //관리자 메인페이지 이동
     @GetMapping("admin")
@@ -114,6 +123,17 @@ public class AdminController {
         return "admin/studylist";
     }
 
+    //관리자 스터디 삭제하기
+    @DeleteMapping("admin/study/delete/{id}")
+    public @ResponseBody ResponseEntity deleteStudy(
+            @PathVariable("id") Long id) {
+
+        //스터디 삭제
+        int result = studyService.deletestudy(id);
+        return new ResponseEntity<Long>(id, HttpStatus.OK);
+    }
+
+
     //관리자 신청현황 페이지 이동
     @GetMapping("admin/applystudy")
     String applystudy(Model model) {
@@ -146,7 +166,21 @@ public class AdminController {
         return "admin/userlist";
     }
 
-    //유저 권한 수정하기
+    //관리자 유저 삭제하기
+    @DeleteMapping("admin/user/delete/{id}")
+    public @ResponseBody ResponseEntity deleteUser(
+            @PathVariable("id") Long id, Model model) {
+        //마이스터디 삭제
+        int result1 = myStudyService.deletemystudy(id);
+        //유저 삭제
+        int result = userService.deleteuser(id);
+        if (result > 0 && result1 > 0) {
+            model.addAttribute("msg", "해당 회원이 삭제되었습니다.");
+        }
+        return new ResponseEntity<Long>(id, HttpStatus.OK);
+    }
+
+    //유저 권한 수정하기 페이지 이동
     @GetMapping("admin/changerole")
     String changerole(Model model) {
         List<UserDto> userDto = userService.selectall();
@@ -154,4 +188,72 @@ public class AdminController {
         return "admin/changerole";
     }
 
+    //유저 권한 수정하기
+    @PutMapping(value="/admin/userrole/modify")
+    public @ResponseBody ResponseEntity updateUserRole(@RequestParam("id") Long id, @RequestParam("role") String role) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("id", id);
+        params.put("role", role);
+        int result = userService.updaterole(params);
+
+        if (result > 0) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    //커뮤니티
+    //공지사항 전체보기
+    @GetMapping("/admin/noticelist")
+    public String adminNoticeList(Model model){
+        List<BoardDto> boardDtos = boardService.selectnotice();
+        model.addAttribute("boardDtos",boardDtos);
+        return "admin/noticelist";
+    }
+
+    //공지사항 등록 페이지 이동
+    @GetMapping("admin/notice/register")
+    public String adminNoticeRegister(Model model){
+        model.addAttribute("state","등록");
+        return "admin/noticeregister";
+    }
+
+    //공지사항 등록하기
+    @PostMapping("admin/notice/register")
+    String createNotice(BoardDto boardDto) {
+        boardDto.setType("NOTICE");
+        int result = boardService.create(boardDto);
+        System.out.println(result);
+        return "redirect:/admin/noticelist";
+    }
+
+
+    //공지사항 수정 페이지 이동
+    @GetMapping("admin/notice/modify/{id}")
+    public String adminNoticeModify(@PathVariable("id") Long id, Model model){
+        BoardDto boardDto = boardService.findbyid(id);
+        model.addAttribute("boardDto", boardDto);
+        model.addAttribute("state", "수정");
+        return "admin/noticeregister";
+    }
+
+    // 공지사항 수정하기
+    @PostMapping("admin/notice/modify/{id}")
+    String updateNotice(@PathVariable("id") Long id, Model model, BoardDto boardDto) {
+        int result = boardService.updateboard(boardDto);
+        if (result > 1) {
+            model.addAttribute("msg", "업데이트가 완료되었습니다.");
+        }
+        return "redirect:/admin/noticelist";
+    }
+
+
+    //Q&A 전체보기
+    @GetMapping("admin/qnalist")
+    public String adminQnaList(Model model){
+        List<BoardDto> boardDtos = boardService.selectqna();
+        model.addAttribute("boardDtos",boardDtos);
+        return "admin/qnalist";
+    }
 }

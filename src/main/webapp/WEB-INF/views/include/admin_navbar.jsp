@@ -93,72 +93,63 @@
         </li>
 
         <li class="menu-header small text-uppercase">
-            <span class="menu-header-text">스터디 관리</span>
+            <span class="menu-header-text">STUDY</span>
         </li>
         <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">스터디 관리하기</div>
+            <a href="/admin/studylist" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-book-heart"></i>
+                <div data-i18n="Analytics">스터디 전체보기</div>
             </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="/admin/studylist" class="menu-link">
-                        <div data-i18n="Account">스터디 전체보기</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="/admin/applystudy" class="menu-link">
-                        <div data-i18n="Notifications">스터디 신청 현황</div>
-                    </a>
-                </li>
-            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/applystudy" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-registered"></i>
+                <div data-i18n="Analytics">스터디 신청 현황</div>
+            </a>
         </li>
 
 
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
-                <div data-i18n="Authentications">몰루</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="auth-login-basic.html" class="menu-link" target="_blank">
-                        <div data-i18n="Basic">랄라</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="auth-register-basic.html" class="menu-link" target="_blank">
-                        <div data-i18n="Basic">깔깔</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="auth-forgot-password-basic.html" class="menu-link" target="_blank">
-                        <div data-i18n="Basic">껄껄</div>
-                    </a>
-                </li>
-            </ul>
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">USER</span>
         </li>
 
-        <!-- Misc -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">USER</span></li>
         <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-dock-top"></i>
-                <div data-i18n="Account Settings">유저 관리</div>
+            <a href="/admin/userlist" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-user-account"></i>
+                <div data-i18n="Analytics">유저 전체보기</div>
             </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="/admin/userlist" class="menu-link">
-                        <div data-i18n="Account">유저 전체 보기</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="/admin/changerole" class="menu-link">
-                        <div data-i18n="Notifications">스터디 신청 현황</div>
-                    </a>
-                </li>
-            </ul>
         </li>
+        <li class="menu-item">
+            <a href="/admin/changerole" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user-circle"></i>
+                <div data-i18n="Analytics">유저 권한 관리</div>
+            </a>
+        </li>
+
+        <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">COMMUNITY</span></li>
+
+        <li class="menu-item">
+            <a href="/admin/noticelist" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-clipboard"></i>
+                <div data-i18n="Analytics">공지사항 전체보기</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/notice/register" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-edit"></i>
+                <div data-i18n="Analytics">공지사항 등록</div>
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="/admin/qnalist" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-question-mark"></i>
+                <div data-i18n="Analytics">Q&A 답변등록</div>
+            </a>
+        </li>
+
+
+
     </ul>
 </aside>
 <!-- / Menu -->

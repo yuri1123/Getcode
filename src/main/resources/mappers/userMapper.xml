@@ -65,4 +65,8 @@
                 select count(*) as totalcount from user;
         </select>
 
+<!--        회원 삭제하기-->
+        <delete id="deleteuser" parameterType="java.lang.Long">
+                delete from user where id=#{id}
+        </delete>
 </mapper>

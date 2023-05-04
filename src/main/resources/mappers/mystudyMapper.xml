@@ -13,7 +13,7 @@
 
          <!-- 나의스터디 삭제-->
         <select id="deletemystudy" parameterType="java.lang.Long">
-            delete from mystudy where mystudyid=#{mystudyid}
+            delete from mystudy where userid=#{userid}
         </select>
 
 <!--        회원아이디로 나의스터디카트 조회하기-->

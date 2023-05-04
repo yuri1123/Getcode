@@ -38,14 +38,13 @@
         <th>유저아이디</th>
         <th>유저닉네임</th>
         <th>유저권한</th>
-        <th>권한변경</th>
         <th>가입일자</th>
         <th>설정</th>
       </tr>
       </thead>
       <tbody class="table-border-bottom-0">
       <c:forEach items="${userDto}" var="userDto">
-      <tr>
+      <tr data-id="${userDto.id}">
         <td>${userDto.id}</td>
         <td>${userDto.userid}</td>
         <td>${userDto.nickname}</td>
@@ -58,8 +57,33 @@
           <div class="dropdown">
             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
             <div class="dropdown-menu" style="">
-              <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-              <a class="dropdown-item" href="#"><i class="bx bx-trash me-1"></i>Delete</a>
+              <a class="dropdown-item" href="#" onclick="deleteUser(this)">
+                <i class="bx bx-trash me-1"></i> Delete
+              </a>
+              <script>
+                function deleteUser(obj) {
+                  if (confirm("정말로 이 유저를 삭제하시겠습니까?")) {
+                    let id = $(obj).closest('tr').data('id');
+                    if (!id) {
+                      id = ${userDto.id};
+                    }// 해당 열의 id값 추출
+                    var url = "/admin/user/delete/" + id;
+                    $.ajax({
+                      url: url,
+                      type: "DELETE",
+                      dataType: "json",
+                      cache: false,
+                      success: function(result, status) {
+                        alert(${msg})
+                        location.href = '/admin/userlist';
+                      },
+                      error: function(jqXHR, status, error) {
+                        alert("삭제 실패");
+                      }
+                    });
+                  }
+                }
+              </script>
             </div>
           </div>
         </td>

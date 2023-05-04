@@ -142,8 +142,8 @@
                      style=" margin-bottom: 100px;">
                     <div class="row">
                         <c:forEach items="${studyDtos}" var="list">
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0 ">
-                                <div class="custom-block-wrap">
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0  ">
+                                <div class="custom-block-wrap mb-5">
                                     <div class="custom-block">
                                         <div class="custom-block-body">
                                             <div class="mb-2">

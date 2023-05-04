@@ -18,4 +18,6 @@ public class MyStudyService {
     public MyStudyDto findbyuserid(Long userid){
         return mystudyDao.findbyuserid(userid);
     }
+
+    public int deletemystudy(Long userid){return mystudyDao.deletemystudy(userid);}
 }

@@ -45,4 +45,5 @@ public class UserService {
 
     public List<Map<String,Object>> countuserbymonth(){return userDao.countuserbymonth();}
     public int totalusercount(){return userDao.totalusercount();}
+    public int deleteuser(Long id){return userDao.deleteuser(id);}
 }

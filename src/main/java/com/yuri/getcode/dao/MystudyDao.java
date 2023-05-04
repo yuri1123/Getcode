@@ -27,4 +27,8 @@ public class MystudyDao {
         return sqlSession.selectOne(namespace+".findbyuserid",userid);
     }
 
+    public int deletemystudy(Long id){
+        return sqlSession.delete(namespace+".deletemystudy",id);
+    }
+
 }

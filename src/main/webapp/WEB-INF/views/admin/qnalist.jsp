@@ -27,71 +27,49 @@
 
       <!--content-->
 <div class="col-lg-12 col-12 text-center mb-5 mt-4">
-  <h2 style="font-size: 43px;">Study List</h2>
+  <h2 style="font-size: 43px;">Q&A List</h2>
 </div>
       <div class="col-lg-10 offset-1 col-12 justify-content-center text-center mb-5 mt-4">
   <div class="card text-center">
     <table class="table table-hover">
       <thead>
       <tr>
-        <th>스터디명</th>
-        <th>포지션</th>
-        <th>기술스택</th>
-        <th>참여자</th>
+        <th>번호</th>
+        <th>글제목</th>
+        <th>글쓴이</th>
         <th>등록일</th>
-        <th>시작일</th>
-        <th>신청상태</th>
         <th>설정</th>
       </tr>
       </thead>
       <tbody class="table-border-bottom-0">
-      <c:forEach items="${studyDto}" var="studyDto">
-      <tr data-id="${studyDto.id}">
-        <td>${studyDto.studyname}</td>
-        <td>${studyDto.position}</td>
-        <td>${studyDto.skillstack}</td>
-        <td>
-          <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center justify-content-center text-center">
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-              <img src="/resources/yuri/yuripic.png" alt="Avatar" class="rounded-circle">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-              <img src="/resources/yuri/yuripic.png" alt="Avatar" class="rounded-circle">
-            </li>
-            <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-              <img src="/resources/yuri/yuripic.png" alt="Avatar" class="rounded-circle">
-            </li>
-          </ul>
-        </td>
-        <td><span class="badge bg-label-primary me-1">${studyDto.regDate}</span></td>
-        <td><span class="badge bg-label-info me-1">${studyDto.studystart}</span></td>
-        <td>
-          <c:if test="${studyDto.state == 'apply'}"><span class="badge bg-label-secondary me-1">${studyDto.state}</span></c:if>
-          <c:if test="${studyDto.state == 'permit'}"><span class="badge bg-label-warning me-1">${studyDto.state}</span></c:if>
-          <c:if test="${studyDto.state == 'decline'}"><span class="badge bg-label-danger me-1">${studyDto.state}</span></c:if>
-        </td>
+      <c:forEach items="${boardDtos}" var="boardDto">
+      <tr data-id="${boardDto.id}">
+        <td>${boardDto.id}</td>
+        <td>${boardDto.subject}</td>
+        <td>${boardDto.createdBy}</td>
+        <td>${boardDto.regDate}</td>
         <td>
           <div class="dropdown">
             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-vertical-rounded"></i></button>
             <div class="dropdown-menu" style="">
-            <a class="dropdown-item" href="#" onclick="deleteStudy(this)">
+            <a class="dropdown-item" href="#" onclick="deleteQuestion(this)">
               <i class="bx bx-trash me-1"></i> Delete
             </a>
               <script>
-                function deleteStudy(obj) {
-                  if (confirm("정말로 이 스터디를 삭제하시겠습니까?")) {
+                function deleteQuestion(obj) {
+                  if (confirm("정말로 이 공지글을 삭제하시겠습니까?")) {
                     let id = $(obj).closest('tr').data('id');
                     if (!id) {
-                      id = ${studyDto.id};
+                      id = ${boardDto.id};
                     }// 해당 열의 id값 추출
-                    var url = "/admin/study/delete/" + id;
+                    var url = "/admin/notice/delete/" + id;
                     $.ajax({
                       url: url,
                       type: "DELETE",
                       dataType: "json",
                       cache: false,
                       success: function(result, status) {
-                        location.href = '/admin/studylist';
+                        location.href = '/admin/noticelist';
                       },
                       error: function(jqXHR, status, error) {
                         alert("삭제 실패");

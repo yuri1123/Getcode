@@ -50,4 +50,7 @@ public class UserDao {
         return sqlSession.selectOne(namespace+".totalusercount");
     }
 
+    public int deleteuser(Long id){
+        return sqlSession.delete(namespace+".deleteuser",id);
+    }
 }
