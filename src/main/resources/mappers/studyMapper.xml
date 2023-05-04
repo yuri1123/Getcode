@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <!-- 파일이름을 지칭하는 네임스페이스 -->
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 파일이름을 지칭하는 네임스페이스 -->
 <mapper namespace="com.yuri.getcode.studyMapper">
 
-        <!-- 스터디생성-->
-        <insert id="create" parameterType="com.yuri.getcode.dto.StudyDto">
-          insert into study (studyname, studystart, studyend, recruitend, personnel,skillstack,position,connection,onoff,content,state,viewcnt,regDate,createdBy)
-                values (#{studyname}, #{studystart},#{studyend},#{recruitend},#{personnel},#{skillstack},#{position},#{connection},#{onoff},#{content},'apply',0,now(),#{createdBy})
-        </insert>
+    <!-- 스터디생성-->
+    <insert id="create" parameterType="com.yuri.getcode.dto.StudyDto">
+        insert into study (studyname, studystart, studyend, recruitend,
+        personnel,skillstack,position,connection,onoff,content,state,viewcnt,regDate,createdBy)
+        values (#{studyname},
+        #{studystart},#{studyend},#{recruitend},#{personnel},#{skillstack},#{position},#{connection},#{onoff},#{content},'apply',0,now(),#{createdBy})
+    </insert>
 
-        <!-- 스터디수정-->
-        <update id="update" parameterType="com.yuri.getcode.dto.StudyDto">
-            update study set
-            studyname = #{studyname}, studystart = #{studystart},studyend = #{studyend},recruitend = #{recruitend},personnel = #{personnel},skillstack = #{skillstack},
-            position = #{position},connection = #{connection},onoff = #{onoff},content = #{content},
-            modifyDate = #{modifyDate},modifiedBy = #{modifiedBy})
-            where id=#{id}
-        </update>
+    <!-- 스터디수정-->
+    <update id="update" parameterType="com.yuri.getcode.dto.StudyDto">
+        update study set
+        studyname = #{studyname}, studystart = #{studystart},studyend = #{studyend},recruitend = #{recruitend},personnel
+        = #{personnel},skillstack = #{skillstack},
+        position = #{position},connection = #{connection},onoff = #{onoff},content = #{content},
+        modifyDate = #{modifyDate},modifiedBy = #{modifiedBy})
+        where id=#{id}
+    </update>
 
-<!--    스터디 등록 상태 수정-->
+    <!--    스터디 등록 상태 수정-->
     <update id="updatestate" parameterType="java.util.Map">
         update study set state = #{state} where id=#{id}
     </update>
 
-        <!-- 스터디 선택 조회-->
-        <select id="findbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.StudyDto">
-            select * from study where id=#{id}
-        </select>
+    <!-- 스터디 선택 조회-->
+    <select id="findbyid" parameterType="java.lang.Long" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study where id=#{id}
+    </select>
 
-         <!-- 스터디 전체조회-->
-        <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">
-            select * from study order by regDate desc
-        </select>
+    <!-- 스터디 전체조회-->
+    <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study order by regDate desc
+    </select>
 
     <!-- 최근 신청한 4건 조회-->
     <select id="selectfour" resultType="com.yuri.getcode.dto.StudyDto">
@@ -45,42 +48,58 @@
         select * from study where state='permit';
     </select>
 
-<!--    카테고리(position) 리스트 조회-->
+    <!--    카테고리(position) 리스트 조회-->
     <select id="selectposition" resultType="com.yuri.getcode.dto.StudyDto">
         select position,count(*) as count from study where state='permit' group by position;
     </select>
-<!--    기술스택(skillstack) 리스트 조회-->
+    <!--    기술스택(skillstack) 리스트 조회-->
     <select id="selectskillstack" resultType="com.yuri.getcode.dto.StudyDto">
         select distinct skillstack from study
     </select>
 
     <!-- 나의 스터디 조회-->
-<!--    <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">-->
-<!--        select * from study-->
-<!--    </select>-->
+    <!--    <select id="selectall" resultType="com.yuri.getcode.dto.StudyDto">-->
+    <!--        select * from study-->
+    <!--    </select>-->
 
     <!-- 내가 쓴 스터디 조회-->
-        <select id="selectbyme" parameterType="java.lang.String" resultType="com.yuri.getcode.dto.StudyDto">
-            select * from study where createdBy=#{createdBy}
-        </select>
+    <select id="selectbyme" parameterType="java.lang.String" resultType="com.yuri.getcode.dto.StudyDto">
+        select * from study where createdBy=#{createdBy}
+    </select>
 
     <!-- 스터디 삭제-->
-        <select id="deletestudy" parameterType="java.lang.Long">
-            delete from study where id=#{id}
-        </select>
+    <select id="deletestudy" parameterType="java.lang.Long">
+        delete from study where id=#{id}
+    </select>
 
-<!--        조회수증가-->
-        <update id="updateview" parameterType="java.lang.Long">
-            update study set viewcnt=viewcnt+1 where id=#{id}
-        </update>
+    <!--        조회수증가-->
+    <update id="updateview" parameterType="java.lang.Long">
+        update study set viewcnt=viewcnt+1 where id=#{id}
+    </update>
 
-<!--    조회수 높은 스터디 조회-->
+    <!--    조회수 높은 스터디 조회-->
     <select id="selecttopview" resultType="com.yuri.getcode.dto.StudyDto">
         select * from study order by viewcnt desc limit 6;
     </select>
 
-<!--        스터디아이디로 스터디이름 가져오기-->
+    <!--        스터디아이디로 스터디이름 가져오기-->
     <select id="findstudynamebyid" parameterType="java.lang.Long" resultType="java.lang.String">
         select studyname from study where id = #{id}
+    </select>
+
+    <!--    스터디 포지션별 스터디 수 조회하기-->
+    <select id="countstudybyposition" resultType="java.util.Map">
+        select position,count(*) as studycount from study group by position;
+    </select>
+
+    <!--    월별 스터디 수 조회하기-->
+    <select id="countstudybymonth" resultType="java.util.Map">
+        select count(*) as count ,date_format(regDate, '%Y-%m') as regDate from study
+        group by date_format(regDate, '%Y-%m') order by regDate asc;
+    </select>
+
+<!--    전체 스터디 수 조회하기-->
+    <select id ="totalstudycount" resultType="java.lang.Integer">
+        select count(*) as totalcount from study;
     </select>
 </mapper>

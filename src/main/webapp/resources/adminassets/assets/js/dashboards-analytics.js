@@ -420,15 +420,17 @@
 
   // Order Statistics Chart
   // --------------------------------------------------------------------
-  const chartOrderStatistics = document.querySelector('#orderStatisticsChart'),
+
+
+  const chartOrderStatistics = document.querySelector('#orderStatisticsChart2'),
     orderChartConfig = {
       chart: {
         height: 165,
         width: 130,
         type: 'donut'
       },
-      labels: ['Electronic', 'Sports', 'Decor', 'Fashion'],
-      series: [85, 15, 50, 50],
+      labels: positions,
+      series: studyCounts,
       colors: [config.colors.primary, config.colors.secondary, config.colors.info, config.colors.success],
       stroke: {
         width: 5,
@@ -473,9 +475,9 @@
                 show: true,
                 fontSize: '0.8125rem',
                 color: axisColor,
-                label: 'Weekly',
+                label: 'Position',
                 formatter: function (w) {
-                  return '38%';
+                  return '0';
                 }
               }
             }
@@ -488,13 +490,14 @@
     statisticsChart.render();
   }
 
-  // Income Chart - Area chart
+  // StudyCount Chart - Area chart
   // --------------------------------------------------------------------
-  const incomeChartEl = document.querySelector('#incomeChart'),
+
+  const incomeChartEl = document.querySelector('#studycountchart'),
     incomeChartConfig = {
       series: [
         {
-          data: [24, 21, 30, 22, 42, 26, 35, 29]
+          data: counts
         }
       ],
       chart: {
@@ -551,14 +554,14 @@
         borderColor: borderColor,
         strokeDashArray: 3,
         padding: {
-          top: -20,
-          bottom: -8,
-          left: -10,
-          right: 8
+          // top: -20,
+          // bottom: -8,
+          left: 10,
+          right: -5
         }
       },
       xaxis: {
-        categories: ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        categories: regDates,
         axisBorder: {
           show: false
         },
@@ -577,15 +580,117 @@
         labels: {
           show: false
         },
-        min: 10,
-        max: 50,
-        tickAmount: 4
+        // min: 10,
+        // max: 50,
+        tickAmount: 1
       }
     };
   if (typeof incomeChartEl !== undefined && incomeChartEl !== null) {
     const incomeChart = new ApexCharts(incomeChartEl, incomeChartConfig);
     incomeChart.render();
   }
+
+  // UserCount Chart - Area chart
+  // --------------------------------------------------------------------
+
+  const usercountChartEl = document.querySelector('#usercountchart'),
+      usercountConfig = {
+        series: [
+          {
+            data: usercounts
+          }
+        ],
+        chart: {
+          height: 215,
+          parentHeightOffset: 0,
+          parentWidthOffset: 0,
+          toolbar: {
+            show: false
+          },
+          type: 'area'
+        },
+        dataLabels: {
+          enabled: false
+        },
+        stroke: {
+          width: 2,
+          curve: 'smooth'
+        },
+        legend: {
+          show: false
+        },
+        markers: {
+          size: 6,
+          colors: 'transparent',
+          strokeColors: 'transparent',
+          strokeWidth: 4,
+          discrete: [
+            {
+              fillColor: config.colors.white,
+              seriesIndex: 0,
+              dataPointIndex: 7,
+              strokeColor: config.colors.primary,
+              strokeWidth: 2,
+              size: 6,
+              radius: 8
+            }
+          ],
+          hover: {
+            size: 7
+          }
+        },
+        colors: [config.colors.primary],
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shade: shadeColor,
+            shadeIntensity: 0.6,
+            opacityFrom: 0.5,
+            opacityTo: 0.25,
+            stops: [0, 95, 100]
+          }
+        },
+        grid: {
+          borderColor: borderColor,
+          strokeDashArray: 3,
+          padding: {
+            // top: -20,
+            // bottom: -8,
+            left: 10,
+            right: -5
+          }
+        },
+        xaxis: {
+          categories: userregDates,
+          axisBorder: {
+            show: false
+          },
+          axisTicks: {
+            show: false
+          },
+          labels: {
+            show: true,
+            style: {
+              fontSize: '13px',
+              colors: axisColor
+            }
+          }
+        },
+        yaxis: {
+          labels: {
+            show: false
+          },
+          // min: 10,
+          // max: 50,
+          tickAmount: 1
+        }
+      };
+  if (typeof usercountChartEl !== undefined && usercountChartEl !== null) {
+    const usercountChart = new ApexCharts(usercountChartEl, usercountConfig);
+    usercountChart.render();
+  }
+
+
 
   // Expenses Mini Chart - Radial Chart
   // --------------------------------------------------------------------

@@ -4,6 +4,7 @@ import com.yuri.getcode.constant.Role;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -24,8 +25,10 @@ public class UserDto {
     private String sex;
     private String role;
     private String regDate;
-
     private String modifyDate;
     private String createdBy;
     private String modifiedBy;
+    private String avatarimage;
+    private String avatarImageType;
+
 }

@@ -57,4 +57,7 @@ public class StudyService{
     public List<StudyDto> selecttopview(){return studyDao.selecttopview();}
     public String findstudynamebyid(Long id){return studyDao.findstudynamebyid(id);}
 
+    public List<Map<String,Object>> countStudyByPosition(){return studyDao.countStudyByPosition();}
+    public List<Map<String,Object>> countstudybymonth(){return studyDao.countstudybymonth();}
+    public int totalstudycount(){return studyDao.totalstudycount();}
 }

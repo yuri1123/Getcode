@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
                                     <label class="text-right form-label" for="studyend">스터디 종료일</label>
-                                    <input type="text" id="studyend" name="studyend" class="form-control form-control-lg" />
+                                    <input type="date" id="studyend" name="studyend" class="form-control form-control-lg" />
                                 </div>
                                 <div class="form-outline form-white mb-6 col-md-6">
                                     <label class="text-right form-label" for="recruitend"> * 모집 종료일</label>

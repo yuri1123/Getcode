@@ -20,22 +20,34 @@ public class UserDao {
     }
 
     public UserDto login(UserDto userDto) {
-        return sqlSession.selectOne(namespace+".login", userDto);
+        return sqlSession.selectOne(namespace + ".login", userDto);
     }
 
-    public List<UserDto> selectall(){
-        return sqlSession.selectList(namespace+".selectall");
-    }
-    public int updaterole(Map<String,Object> params){
-        return sqlSession.update(namespace+".updaterole",params);
-    }
-    public int updateinfo(UserDto userDto){return sqlSession.update(namespace+".updateinfo",userDto);}
-    public UserDto selectinfo(Long id){
-        return sqlSession.selectOne(namespace+".selectinfo",id);
-    }
-    public UserDto selectbyuserid(String userid){
-        return sqlSession.selectOne(namespace+".selectbyuserid",userid);
+    public List<UserDto> selectall() {
+        return sqlSession.selectList(namespace + ".selectall");
     }
 
+    public int updaterole(Map<String, Object> params) {
+        return sqlSession.update(namespace + ".updaterole", params);
+    }
+
+    public int updateinfo(UserDto userDto) {
+        return sqlSession.update(namespace + ".updateinfo", userDto);
+    }
+
+    public UserDto selectinfo(Long id) {
+        return sqlSession.selectOne(namespace + ".selectinfo", id);
+    }
+
+    public UserDto selectbyuserid(String userid) {
+        return sqlSession.selectOne(namespace + ".selectbyuserid", userid);
+    }
+
+    public List<Map<String, Object>> countuserbymonth() {
+        return sqlSession.selectList(namespace + ".countuserbymonth");
+    }
+    public int totalusercount(){
+        return sqlSession.selectOne(namespace+".totalusercount");
+    }
 
 }

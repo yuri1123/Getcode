@@ -4,6 +4,7 @@ import com.yuri.getcode.constant.Role;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -22,7 +23,8 @@ public class User extends BaseEntity{
     private String birthday;
     private String sex;
     private String role;
-
+    private String avatarimage;
+    private String avatarImageType;
     }
 
 

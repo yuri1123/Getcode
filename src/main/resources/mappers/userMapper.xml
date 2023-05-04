@@ -24,9 +24,24 @@
                 update user set role=#{role} where id = #{id}
         </update>
 
-<!--        회원정보 수정-->
         <update id="updateinfo" parameterType="com.yuri.getcode.dto.UserDto">
-                update user set username=#{username}, nickname=#{nickname},email=#{email},phonenumber=#{phonenumber}, postcode=#{postcode},address1=#{address1}, address2=#{address2},birthday=#{birthday},sex=#{sex},modifyDate=now(), modifiedBy=#{modifiedBy} where id=#{id}
+                UPDATE user
+                SET
+                avatarimage=#{avatarimage.Data},
+                avatarImageType=#{avatarImageType}
+                username=#{username},
+                nickname=#{nickname},
+                email=#{email},
+                phonenumber=#{phonenumber},
+                postcode=#{postcode},
+                address1=#{address1},
+                address2=#{address2},
+                birthday=#{birthday},
+                sex=#{sex},
+                modifyDate=now(),
+                modifiedBy=#{modifiedBy},
+
+                WHERE id=#{id}
         </update>
 
 <!--        회원정보 조회하기(고유번호로)-->
@@ -37,6 +52,17 @@
         <!--        회원정보 조회하기(회원아이디로)-->
         <select id="selectbyuserid" parameterType="java.lang.String" resultType="com.yuri.getcode.dto.UserDto">
                 select * from user where userid=#{userid}
+        </select>
+
+        <!--    월별 회원 수 조회하기-->
+        <select id="countuserbymonth" resultType="java.util.Map">
+                select count(*) as count ,date_format(regDate, '%Y-%m') as regDate from user
+                group by date_format(regDate, '%Y-%m') order by regDate asc;
+        </select>
+
+        <!--    전체 회원 수 조회하기-->
+        <select id ="totalusercount" resultType="java.lang.Integer">
+                select count(*) as totalcount from user;
         </select>
 
 </mapper>

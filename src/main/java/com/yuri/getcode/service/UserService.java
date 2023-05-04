@@ -43,5 +43,6 @@ public class UserService {
         return userDao.selectbyuserid(userid);
     }
 
-
+    public List<Map<String,Object>> countuserbymonth(){return userDao.countuserbymonth();}
+    public int totalusercount(){return userDao.totalusercount();}
 }
