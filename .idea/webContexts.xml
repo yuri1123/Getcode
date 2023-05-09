@@ -7,6 +7,7 @@
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community/qnadetail.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/community" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include/admin_navbar.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/include" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mystudycommunity/chat.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/mystudycommunity" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/browse.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study/createstudy.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/study" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/myinfo.jsp" value="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user" />

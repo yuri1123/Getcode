@@ -45,9 +45,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 col-12">
                 <div class="news-block">
-
                     <div class="news-block-info">
-
                         <div class="news-block-title justify-content-center text-center">
                             <h4>${studyDto.studyname}</h4>
                         </div>

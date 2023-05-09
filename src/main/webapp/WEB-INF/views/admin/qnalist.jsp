@@ -45,7 +45,7 @@
       <c:forEach items="${boardDtos}" var="boardDto">
       <tr data-id="${boardDto.id}">
         <td>${boardDto.id}</td>
-        <td>${boardDto.subject}</td>
+        <td><a href="${contextPath}/admin/qnadetail/${boardDto.id}">${boardDto.subject}</a></td>
         <td>${boardDto.createdBy}</td>
         <td>${boardDto.regDate}</td>
         <td>

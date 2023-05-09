@@ -171,7 +171,7 @@
 
 
                                             <%--                                                <a href="/study/studydetail/${list.id}" class="custom-btn btn m-1">Study Detail</a>--%>
-                                        <a href="#" class="custom-btn btn m-2" style="border-radius: 15px;">Enter
+                                        <a href="${contextPath}/mycommunity/mystudymain/${study.id}" class="custom-btn btn m-2" style="border-radius: 15px;">Enter
                                             Room</a>
                                             <%--                                    onclick="return confirm('스터디에 참여하시겠습니까?');--%>
                                     </div>

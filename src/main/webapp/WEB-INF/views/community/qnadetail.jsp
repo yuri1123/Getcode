@@ -41,9 +41,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 col-12">
                 <div class="news-block">
-
                     <div class="news-block-info">
-
                         <div class="news-block-title justify-content-center text-center">
                             <h4>${qna.subject}</h4>
                         </div>
@@ -80,14 +78,13 @@
                     </div>
 
                     <div class="social-share border-top mt-5 py-4 d-flex justify-content-end flex-wrap align-items-center">
-<%--                        <div class="tags-block me-auto">--%>
                             <hr class="mb-3">
                             <c:if test="${User.userid == qna.createdBy}">
                                 <div class="col-2 me-1 justify-content-right text-right">
                                     <button type="button" class="form-control btn-primary bhover"><a href="/community/updatequestion/${qna.id}">수정하기</a></button>
                                 </div>
                                 <div class="col-2 me-1 justify-content-right text-right">
-                                    <form action="/community/deleteboard/${review.id}" type="form" method="post">
+                                    <form action="/community/deleteboard/${qna.id}" type="form" method="post">
                                         <button type="submit" onclick="if(confirm('정말로 삭제하시겠습니까?'));" class="form-control btn-primary bhover mt-3"><a href="">삭제하기</a></button>
                                     </form>
                                 </div>
@@ -117,25 +114,20 @@
                             </div>
                         </div>
                     </c:forEach>
-                    <form class="custom-form comment-form mt-4" action="/community/createreply/${qna.id}" method="post" role="form">
-                        <h6 class="mb-3">Write a comment</h6>
+<%--                    <form class="custom-form comment-form mt-4" action="/community/createreply/${qna.id}" method="post" role="form">--%>
+<%--                        <h6 class="mb-3">Write a comment</h6>--%>
 
-                        <textarea name="content" rows="4" class="form-control" id="comment-message"
-                                  placeholder="Your comment here"></textarea>
-                        <input type="hidden" value="${User.userid}" name="createdBy">
-                        <input type="hidden" value="${User.userid}" name="modifiedBy">
-                        <div class="col-lg-3 col-md-4 col-6 ms-auto">
-                            <button type="submit" class="form-control">Comment</button>
-                        </div>
-                    </form>
+<%--                        <textarea name="content" rows="4" class="form-control" id="comment-message"--%>
+<%--                                  placeholder="Your comment here"></textarea>--%>
+<%--                        <input type="hidden" value="${User.userid}" name="createdBy">--%>
+<%--                        <input type="hidden" value="${User.userid}" name="modifiedBy">--%>
+<%--                        <div class="col-lg-3 col-md-4 col-6 ms-auto">--%>
+<%--                            <button type="submit" class="form-control">Comment</button>--%>
+<%--                        </div>--%>
+<%--                    </form>--%>
                 </div>
             </div>
         </div>
-
-
-
-    </div>
-    </div>
 </section>
 
 

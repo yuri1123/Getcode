@@ -4,13 +4,11 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.yuri.getcode.dto.BoardDto;
+import com.yuri.getcode.dto.BoardReplyDto;
 import com.yuri.getcode.dto.StudyDto;
 import com.yuri.getcode.dto.UserDto;
 import com.yuri.getcode.entity.Board;
-import com.yuri.getcode.service.BoardService;
-import com.yuri.getcode.service.MyStudyService;
-import com.yuri.getcode.service.StudyService;
-import com.yuri.getcode.service.UserService;
+import com.yuri.getcode.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +17,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.beans.PropertyEditorSupport;
 import java.security.Principal;
 import java.util.*;
@@ -34,6 +34,8 @@ public class AdminController {
     private UserService userService;
     @Autowired
     private BoardService boardService;
+    @Autowired
+    private BoardReplyService boardReplyService;
 
     //관리자 메인페이지 이동
     @GetMapping("admin")
@@ -189,7 +191,7 @@ public class AdminController {
     }
 
     //유저 권한 수정하기
-    @PutMapping(value="/admin/userrole/modify")
+    @PutMapping(value = "/admin/userrole/modify")
     public @ResponseBody ResponseEntity updateUserRole(@RequestParam("id") Long id, @RequestParam("role") String role) {
         Map<String, Object> params = new HashMap<>();
         params.put("id", id);
@@ -206,16 +208,16 @@ public class AdminController {
     //커뮤니티
     //공지사항 전체보기
     @GetMapping("/admin/noticelist")
-    public String adminNoticeList(Model model){
+    public String adminNoticeList(Model model) {
         List<BoardDto> boardDtos = boardService.selectnotice();
-        model.addAttribute("boardDtos",boardDtos);
+        model.addAttribute("boardDtos", boardDtos);
         return "admin/noticelist";
     }
 
     //공지사항 등록 페이지 이동
     @GetMapping("admin/notice/register")
-    public String adminNoticeRegister(Model model){
-        model.addAttribute("state","등록");
+    public String adminNoticeRegister(Model model) {
+        model.addAttribute("state", "등록");
         return "admin/noticeregister";
     }
 
@@ -231,7 +233,7 @@ public class AdminController {
 
     //공지사항 수정 페이지 이동
     @GetMapping("admin/notice/modify/{id}")
-    public String adminNoticeModify(@PathVariable("id") Long id, Model model){
+    public String adminNoticeModify(@PathVariable("id") Long id, Model model) {
         BoardDto boardDto = boardService.findbyid(id);
         model.addAttribute("boardDto", boardDto);
         model.addAttribute("state", "수정");
@@ -251,9 +253,41 @@ public class AdminController {
 
     //Q&A 전체보기
     @GetMapping("admin/qnalist")
-    public String adminQnaList(Model model){
+    public String adminQnaList(Model model) {
         List<BoardDto> boardDtos = boardService.selectqna();
-        model.addAttribute("boardDtos",boardDtos);
+        model.addAttribute("boardDtos", boardDtos);
         return "admin/qnalist";
     }
+
+    //qna 상세보기
+    @GetMapping("admin/qnadetail/{id}")
+    public String adminQnaDetail(@PathVariable("id") Long id, Model model) {
+        boardService.updateview(id);
+        BoardDto qna = boardService.findbyid(id);
+        model.addAttribute("qna", qna);
+        List<BoardReplyDto> boardReplyDtos = boardReplyService.selectallbyboardid(id);
+        model.addAttribute("boardReplyDtos", boardReplyDtos);
+        return "admin/qnadetail";
+    }
+
+    //qna 답글 달기
+    @PostMapping("admin/createreply/{id}")
+    String createqnareply(@PathVariable("id") Long id, BoardReplyDto boardReplyDto, Model model,
+                          HttpServletRequest request) {
+
+
+        boardReplyDto.setBoardid(id);
+        int result = boardReplyService.createboardreply(boardReplyDto);
+        if (result > 1) {
+            model.addAttribute("msg", "댓글 작성이 완료되었습니다.");
+        }
+
+        //타입에 따라 다른 페이지로 이동할 수 있게 함
+        BoardDto boardDto = boardService.findbyid(id);
+        String type = boardDto.getType();
+
+        return "redirect:/admin/qnadetail/{id}";
+    }
+
 }
+
