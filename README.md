@@ -1,5 +1,5 @@
 # Getcode
-GetCode 프로젝트 
+
 ![image](https://github.com/yuri1123/Getcode/assets/95734523/9d70c16a-c4ef-478d-8e07-bcee1caeeb74)
 ![image](https://github.com/yuri1123/Getcode/assets/95734523/c6258c63-acba-4cc2-9a73-56bf467fca38)
 ![image](https://github.com/yuri1123/Getcode/assets/95734523/d0293c80-12ba-4d0a-804a-fe79cb5aeb28)
